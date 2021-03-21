@@ -1,0 +1,453 @@
+@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock/> .
+@prefix aa: <http://www.city.ac.uk/ds/inm713/aaron_altrock/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.city.ac.uk/ds/inm713/aaron_altrock/> .
+
+<http://www.city.ac.uk/ds/inm713/aaron_altrock/> rdf:type owl:Ontology ;
+                                                  rdfs:comment "This ontology is to define restaurants and menu items globally." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/derives
+aa:derives rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain aa:menuItem ;
+           rdfs:range aa:generic_dish ;
+           rdfs:comment "A menu item is derived from a generic dish.  Only one generic dish is derived by a specific venue (e.g. Cheese Pizza cannot be interpreted as two for the same venue)."@en ;
+           rdfs:label "derives"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/follows_in_style_of
+aa:follows_in_style_of rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain aa:venue ;
+                       rdfs:range aa:venue_style ;
+                       rdfs:comment "Venue styles from a particular cuisine or ambience."@en ;
+                       rdfs:label "follows in style of"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_city_of
+aa:has_city_of rdf:type owl:ObjectProperty ;
+               rdfs:domain aa:state ;
+               rdfs:range aa:city ;
+               rdfs:comment "A state has a city of."@en ;
+               rdfs:label "has city of"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_in_city
+aa:has_in_city rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain aa:city ;
+               rdfs:range aa:venue ;
+               rdfs:comment "City has venue.  Only one particular venue of an organisation with a specific post code exists in a city."@en ;
+               rdfs:label "has in city"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_ingredient_of
+aa:has_ingredient_of rdf:type owl:ObjectProperty ;
+                     rdfs:domain aa:menuItem ;
+                     rdfs:range aa:ingredient ;
+                     rdfs:comment "Defines a specific venue uses which ingridient to produce its specific menu item."@en ;
+                     rdfs:label "cooks with"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_state
+aa:has_state rdf:type owl:ObjectProperty ;
+             rdfs:domain aa:country ;
+             rdfs:range aa:state ;
+             rdfs:comment "A country has a state."@en ;
+             rdfs:label "has state"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_in
+aa:has_venue_in rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain aa:organisation ;
+                rdfs:range aa:venue ;
+                rdfs:comment "An organisation has at least one venue.  Each venue is a specific location."@en ;
+                rdfs:label "has venue in"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_derived_from
+aa:is_derived_from rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain aa:generic_dish ;
+                   rdfs:range aa:menuItem ;
+                   rdfs:comment "Is derived from a generic dish into a menu item.  Only one menu item is derived from one generic dish for a specific venue."@en ;
+                   rdfs:label "is derived as"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_followed_in_style_by
+aa:is_followed_in_style_by rdf:type owl:ObjectProperty ;
+                           rdfs:domain aa:venue_style ;
+                           rdfs:range aa:venue ;
+                           rdfs:comment "Venue follows a style of setting"@en ;
+                           rdfs:label "is followed in style by"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_country
+aa:is_in_country rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain aa:state ;
+                 rdfs:range aa:country ;
+                 rdfs:comment "A state belongs to a country.  A state can only beong to one country."@en ;
+                 rdfs:label "is in country"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_organisation
+aa:is_in_organisation rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain aa:venue ;
+                      rdfs:range aa:organisation ;
+                      rdfs:comment "A venue is in an organisation.  A venue can only belong to one organisation."@en ;
+                      rdfs:label "is in organisation"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_state
+aa:is_in_state rdf:type owl:ObjectProperty ;
+               rdfs:domain aa:city ;
+               rdfs:range aa:state ;
+               rdfs:comment "A city is in a state."@en ,
+                            "A city is in state."@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_ingredient_of
+aa:is_ingredient_of rdf:type owl:ObjectProperty ;
+                    rdfs:domain aa:ingredient ;
+                    rdfs:range aa:menuItem ;
+                    rdfs:comment "Is ingredient of a menu item."@en ;
+                    rdfs:label "is ingredient of"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_sold_by
+aa:is_sold_by rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain aa:menuItem ;
+              rdfs:range aa:venue ;
+              rdfs:comment "A specific menu item is sold by a specific venue.  Only one menu item can be sold by one venue."@en ;
+              rdfs:label "is sold by"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in
+aa:locates_in rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain aa:venue ;
+              rdfs:range aa:city ;
+              rdfs:comment "Locates in which city."@en ;
+              rdfs:label "locates in"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/sells
+aa:sells rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain aa:venue ;
+         rdfs:range aa:menuItem ;
+         rdfs:comment "sells at a specific venue.  A venue can only sell one menu item of one name."@en ;
+         rdfs:label "sells"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/address
+aa:address rdf:type owl:DatatypeProperty ;
+           rdfs:domain aa:venue ;
+           rdfs:range xsd:string ;
+           rdfs:comment "First line of address of the venue."@en ;
+           rdfs:label "Address"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/cost
+aa:cost rdf:type owl:DatatypeProperty ;
+        rdfs:domain aa:menuItem ;
+        rdfs:range xsd:float ;
+        rdfs:comment "Cost of a menu item at a specific venue."@en ;
+        rdfs:label "Price"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/currency
+aa:currency rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf aa:cost ;
+            rdfs:domain aa:country ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Currency that is charged for the price."@en ;
+            rdfs:label "Currency"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/description
+aa:description rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain aa:menuItem ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Additional comments included for the menu item at a specific venue.  Only one comment per menu item."@en ;
+               rdfs:label "Extra description"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode
+aa:postcode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf aa:address ;
+            rdfs:domain aa:venue ;
+            rdfs:range xsd:string ;
+            rdfs:comment "post code that forms part of an address"@en ;
+            rdfs:label "Zip code"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/city
+aa:city rdf:type owl:Class ;
+        rdfs:subClassOf aa:state ;
+        owl:disjointWith aa:country ,
+                         aa:state ;
+        rdfs:comment "An urban area within a state."@en ;
+        rdfs:label "City"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/country
+aa:country rdf:type owl:Class ;
+           owl:disjointWith aa:state ;
+           rdfs:comment "Country contains states and cities within."@en ;
+           rdfs:label "Country"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish
+aa:generic_dish rdf:type owl:Class ;
+                owl:disjointWith aa:ingredient ,
+                                 aa:menuItem ;
+                rdfs:comment "A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself."@en ;
+                rdfs:label "Generic dish"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient
+aa:ingredient rdf:type owl:Class ;
+              owl:disjointWith aa:menuItem ;
+              rdfs:comment "Ingredients for producing a menu item in an eatery.  An ingredient cannot be a generic dish nor a menu item at a specific venue."@en ;
+              rdfs:label "Ingredient"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem
+aa:menuItem rdf:type owl:Class ;
+            rdfs:subClassOf aa:venue ;
+            rdfs:comment "A specific dish served in a venue that is an interpretation of a generic dish."@en ;
+            rdfs:label "Menu Item"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation
+aa:organisation rdf:type owl:Class ;
+                rdfs:comment "An organisation consisting of one or more venues."@en ;
+                rdfs:label "Organisation"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/state
+aa:state rdf:type owl:Class ;
+         rdfs:subClassOf aa:country ;
+         rdfs:comment "A state that forms part of a country."@en ;
+         rdfs:label "US state"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/venue
+aa:venue rdf:type owl:Class ;
+         rdfs:subClassOf aa:organisation ;
+         owl:disjointWith aa:venue_style ;
+         rdfs:comment "A venue serving food of a specific location and is part of a wider organisation.  Each venue can be eateries with different styles, serving different menu items."@en ;
+         rdfs:label "Eatery venue"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style
+aa:venue_style rdf:type owl:Class ;
+               rdfs:comment "The settings of a venue that represents its ambience or cuisine.  A venue setting cannot be a venue itself e.g. a restaurant cannot be called 'American Restaurant'."@en ;
+               rdfs:label "Venue Setting"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant
+aa:American_Restaurant rdf:type owl:NamedIndividual ,
+                                aa:venue_style ;
+                       aa:is_followed_in_style_by aa:MA_2601 ;
+                       rdfs:label "American Restaurant"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Bend
+aa:Bend rdf:type owl:NamedIndividual ,
+                 aa:city ;
+        aa:has_in_city aa:OR_97701 ;
+        aa:is_in_state aa:OR .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza
+aa:Bianca_Pizza rdf:type owl:NamedIndividual ,
+                         aa:generic_dish ;
+                aa:derives aa:OR_97701_Bianca_Pizza ;
+                rdfs:label "Bianca Pizza"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza
+aa:Cheese_Pizza rdf:type owl:NamedIndividual ,
+                         aa:generic_dish ;
+                aa:derives aa:MA_2601_Cheese_Pizza ,
+                           aa:OR_97701_Cheese_Pizza ;
+                rdfs:label "Cheese Pizza"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant
+aa:French_Restaurant rdf:type owl:NamedIndividual ,
+                              aa:venue_style ;
+                     aa:is_followed_in_style_by aa:MA_2601 ;
+                     rdfs:label "French Restaurant"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Hyannis
+aa:Hyannis rdf:type owl:NamedIndividual ,
+                    aa:city ;
+           aa:has_in_city aa:MA_2601 ;
+           aa:is_in_state aa:MA .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise
+aa:Little_Pizza_Paradise rdf:type owl:NamedIndividual ,
+                                  aa:organisation ;
+                         aa:has_venue_in aa:OR_97701 ;
+                         rdfs:label "Little Pizza Paradise"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA
+aa:MA rdf:type owl:NamedIndividual ,
+               aa:state ;
+      aa:has_city_of aa:Hyannis ;
+      aa:is_in_country aa:US ;
+      rdfs:comment "A state in North East of the US."@en ;
+      rdfs:label "Massachusetts"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601
+aa:MA_2601 rdf:type owl:NamedIndividual ,
+                    aa:venue ;
+           aa:follows_in_style_of aa:American_Restaurant ,
+                                  aa:French_Restaurant ,
+                                  aa:Seafood_Restaurant ;
+           aa:is_in_organisation aa:Roadhouse_Cafe ;
+           aa:locates_in aa:Hyannis ;
+           aa:sells aa:Cheese_Pizza ;
+           aa:address "478 South St"@en ;
+           aa:postcode 2601 ;
+           rdfs:label "Roadhouse Cafe"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601_Cheese_Pizza
+aa:MA_2601_Cheese_Pizza rdf:type owl:NamedIndividual ,
+                                 aa:menuItem ;
+                        aa:has_ingredient_of aa:cheese ;
+                        aa:is_derived_from aa:Cheese_Pizza ;
+                        aa:sells aa:MA_2601 ;
+                        aa:cost "8.95"@en ;
+                        rdfs:comment "Cheese Pizza served at Roadhouse Cafe"@en ;
+                        rdfs:label "Cheese Pizza from Roundhouse Cafe"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR
+aa:OR rdf:type owl:NamedIndividual ,
+               aa:state ;
+      aa:has_city_of aa:Bend ;
+      aa:is_in_country aa:US ;
+      rdfs:comment "A state in the North West of the US."@en ;
+      rdfs:label "Oregon"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701
+aa:OR_97701 rdf:type owl:NamedIndividual ,
+                     aa:venue ;
+            aa:follows_in_style_of aa:Pizza_Place ;
+            aa:is_in_organisation aa:Little_Pizza_Paradise ;
+            aa:locates_in aa:Bend ;
+            aa:sells aa:Bianca_Pizza ,
+                     aa:Cheese_Pizza ;
+            aa:address "Cascade Village Mall Across From Target"@en ;
+            aa:postcode 97701 ;
+            rdfs:label "Little Pizza Paradise"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Bianca_Pizza
+aa:OR_97701_Bianca_Pizza rdf:type owl:NamedIndividual ,
+                                  aa:menuItem ;
+                         aa:is_derived_from aa:Bianca_Pizza ;
+                         aa:is_sold_by aa:OR_97701 ;
+                         aa:cost "22.50"@en ;
+                         rdfs:comment "Bianca Pizza served at Little Pizza Paradise"@en ;
+                         rdfs:label "Bianca Pizza from Little Pizza Paradise with zip code 97701"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Cheese_Pizza
+aa:OR_97701_Cheese_Pizza rdf:type owl:NamedIndividual ,
+                                  aa:menuItem ;
+                         aa:has_ingredient_of aa:cheese ;
+                         aa:is_derived_from aa:Cheese_Pizza ;
+                         aa:is_sold_by aa:OR_97701 ;
+                         aa:cost "18.95"@en ;
+                         rdfs:comment "Cheese Pizza served at Little Pizza Paradise"@en ;
+                         rdfs:label "Cheese Pizza from Little Pizza Paradise with zip code 97701"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place
+aa:Pizza_Place rdf:type owl:NamedIndividual ,
+                        aa:venue_style ;
+               aa:is_followed_in_style_by aa:OR_97701 ;
+               rdfs:label "Pizza Place"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe
+aa:Roadhouse_Cafe rdf:type owl:NamedIndividual ,
+                           aa:organisation ;
+                  aa:has_venue_in aa:MA_2601 ;
+                  rdfs:label "Roundhouse Cafe"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant
+aa:Seafood_Restaurant rdf:type owl:NamedIndividual ,
+                               aa:venue_style ;
+                      aa:is_followed_in_style_by aa:MA_2601 ;
+                      rdfs:label "Seafood Restaurant"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/US
+aa:US rdf:type owl:NamedIndividual ,
+               aa:country ;
+      aa:has_state aa:MA ,
+                   aa:OR ;
+      aa:currency "USD"@en ;
+      rdfs:comment "US as the country with US states and cities being subclasses of this."@en ;
+      rdfs:label "United States of America"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese
+aa:cheese rdf:type owl:NamedIndividual ,
+                   aa:ingredient ;
+          aa:is_ingredient_of aa:Cheese_Pizza .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( aa:MA_2601_Cheese_Pizza
+                        aa:OR_97701_Cheese_Pizza
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
