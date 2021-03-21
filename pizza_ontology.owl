@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.city.ac.uk/ds/inm713/aaron_altrock/"
+     xml:base="http://www.city.ac.uk/ds/inm713/aaron_altrock/"
+     xmlns:aa="http://www.city.ac.uk/ds/inm713/aaron_altrock/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
+        <rdfs:comment>This ontology is to define restaurants and menu items globally.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/cooks_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/cooks_with">
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in">
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/sells -->
+
+    <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/sells">
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/styles_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/styles_from">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/settings"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/address">
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/cost">
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/currency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/currency">
+        <rdfs:subPropertyOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/cost"/>
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/description">
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode">
+        <rdfs:subPropertyOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/address"/>
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/city -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/city">
+        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/country -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem">
+        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/settings -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/settings"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/state -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/state">
+        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/venue -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/settings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Bend -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bend">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
+        <locates_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/settings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Hyannis -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Hyannis">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
+        <locates_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <locates_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bend"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza"/>
+        <styles_from rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place"/>
+        <address xml:lang="en">Cascade Village Mall Across From Target</address>
+        <postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97701</postcode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise_Bianca_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise_Bianca_Pizza">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise"/>
+        <cost xml:lang="en">22.50</cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise_Cheese_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise_Cheese_Pizza">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <cooks_with rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise"/>
+        <cost xml:lang="en">18.95</cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
+        <locates_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/US"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/OR -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
+        <locates_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/US"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/settings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <locates_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Hyannis"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza"/>
+        <styles_from rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant"/>
+        <styles_from rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant"/>
+        <styles_from rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant"/>
+        <address xml:lang="en">478 South St</address>
+        <postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2601</postcode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe_Cheese_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe_Cheese_Pizza">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <cooks_with rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza"/>
+        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe"/>
+        <cost xml:lang="en">8.95</cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/settings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/US -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/US">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
+        <currency xml:lang="en">USD</currency>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
