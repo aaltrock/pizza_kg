@@ -8,6 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
+        <owl:imports rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/"/>
         <rdfs:comment>This ontology is to define restaurants and menu items globally.</rdfs:comment>
     </owl:Ontology>
     
@@ -27,10 +28,8 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/derives -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/derives">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
-        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish"/>
         <rdfs:comment xml:lang="en">A menu item is derived from a generic dish.  Only one generic dish is derived by a specific venue (e.g. Cheese Pizza cannot be interpreted as two for the same venue).</rdfs:comment>
         <rdfs:label xml:lang="en">derives</rdfs:label>
     </owl:ObjectProperty>
@@ -40,9 +39,8 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/follows_in_style_of -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/follows_in_style_of">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
-        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
+        <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle"/>
         <rdfs:comment xml:lang="en">Venue styles from a particular cuisine or ambience.</rdfs:comment>
         <rdfs:label xml:lang="en">follows in style of</rdfs:label>
     </owl:ObjectProperty>
@@ -63,8 +61,6 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/has_in_city -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_in_city">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:comment xml:lang="en">City has venue.  Only one particular venue of an organisation with a specific post code exists in a city.</rdfs:comment>
@@ -95,10 +91,9 @@
     
 
 
-    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_in -->
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_at -->
 
-    <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_at">
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:comment xml:lang="en">An organisation has at least one venue.  Each venue is a specific location.</rdfs:comment>
@@ -111,8 +106,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_derived_from">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
         <rdfs:comment xml:lang="en">Is derived from a generic dish into a menu item.  Only one menu item is derived from one generic dish for a specific venue.</rdfs:comment>
         <rdfs:label xml:lang="en">is derived as</rdfs:label>
@@ -123,7 +117,7 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/is_followed_in_style_by -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_followed_in_style_by">
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
+        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:comment xml:lang="en">Venue follows a style of setting</rdfs:comment>
         <rdfs:label xml:lang="en">is followed in style by</rdfs:label>
@@ -134,7 +128,6 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_country -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_country">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
         <rdfs:comment xml:lang="en">A state belongs to a country.  A state can only beong to one country.</rdfs:comment>
@@ -146,7 +139,6 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_organisation -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_organisation">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
         <rdfs:comment xml:lang="en">A venue is in an organisation.  A venue can only belong to one organisation.</rdfs:comment>
@@ -180,7 +172,8 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/is_sold_by -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_sold_by">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:comment xml:lang="en">A specific menu item is sold by a specific venue.  Only one menu item can be sold by one venue.</rdfs:comment>
@@ -192,7 +185,6 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
         <rdfs:comment xml:lang="en">Locates in which city.</rdfs:comment>
@@ -204,10 +196,11 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/sells -->
 
     <owl:ObjectProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/sells">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
         <rdfs:range rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
-        <rdfs:comment xml:lang="en">sells at a specific venue.  A venue can only sell one menu item of one name.</rdfs:comment>
+        <rdfs:comment xml:lang="en">sells at a specific venue.</rdfs:comment>
         <rdfs:label xml:lang="en">sells</rdfs:label>
     </owl:ObjectProperty>
     
@@ -227,8 +220,7 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/address -->
 
     <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/address">
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:comment xml:lang="en">First line of address of the venue.</rdfs:comment>
         <rdfs:label xml:lang="en">Address</rdfs:label>
     </owl:DatatypeProperty>
@@ -238,22 +230,9 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/cost -->
 
     <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/cost">
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:comment xml:lang="en">Cost of a menu item at a specific venue.</rdfs:comment>
         <rdfs:label xml:lang="en">Price</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/currency -->
-
-    <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/currency">
-        <rdfs:subPropertyOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/cost"/>
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Currency that is charged for the price.</rdfs:comment>
-        <rdfs:label xml:lang="en">Currency</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -261,9 +240,8 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/description -->
 
     <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Additional comments included for the menu item at a specific venue.  Only one comment per menu item.</rdfs:comment>
         <rdfs:label xml:lang="en">Extra description</rdfs:label>
     </owl:DatatypeProperty>
@@ -273,9 +251,7 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode -->
 
     <owl:DatatypeProperty rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode">
-        <rdfs:subPropertyOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/address"/>
-        <rdfs:domain rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:comment xml:lang="en">post code that forms part of an address</rdfs:comment>
         <rdfs:label xml:lang="en">Zip code</rdfs:label>
     </owl:DatatypeProperty>
@@ -293,10 +269,23 @@
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Location -->
+
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Location"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/city -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/city">
-        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_state"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Location"/>
         <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
         <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
         <rdfs:comment xml:lang="en">An urban area within a state.</rdfs:comment>
@@ -308,6 +297,20 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/country -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/country">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/US"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_state"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Location"/>
         <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
         <rdfs:comment xml:lang="en">Country contains states and cities within.</rdfs:comment>
         <rdfs:label xml:lang="en">Country</rdfs:label>
@@ -315,11 +318,17 @@
     
 
 
-    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish -->
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish -->
 
-    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish">
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/derives"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
-        <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
         <rdfs:comment xml:lang="en">A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself.</rdfs:comment>
         <rdfs:label xml:lang="en">Generic dish</rdfs:label>
     </owl:Class>
@@ -329,7 +338,13 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient">
-        <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_ingredient_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">Ingredients for producing a menu item in an eatery.  An ingredient cannot be a generic dish nor a menu item at a specific venue.</rdfs:comment>
         <rdfs:label xml:lang="en">Ingredient</rdfs:label>
     </owl:Class>
@@ -339,7 +354,37 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem">
-        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_ingredient_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_derived_from"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_derived_from"/>
+                <owl:allValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_sold_by"/>
+                <owl:allValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_sold_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A specific dish served in a venue that is an interpretation of a generic dish.</rdfs:comment>
         <rdfs:label xml:lang="en">Menu Item</rdfs:label>
     </owl:Class>
@@ -349,6 +394,14 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_at"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An organisation consisting of one or more venues.</rdfs:comment>
         <rdfs:label xml:lang="en">Organisation</rdfs:label>
     </owl:Class>
@@ -358,7 +411,85 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/state -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/state">
-        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AK"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AL"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AR"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AS"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AZ"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/CA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/CO"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/CT"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/DC"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/DE"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/FL"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/FM"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/GA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/GU"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/HI"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/IA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ID"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/IL"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/IN"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/KS"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/KY"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/LA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MD"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ME"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MH"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MI"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MN"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MO"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MP"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MS"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MT"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NC"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ND"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NE"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NH"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NJ"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NM"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NV"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NY"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OH"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OK"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/PA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/PR"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/PW"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/RI"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/SC"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/SD"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/TN"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/TX"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/UT"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/VA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/VI"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/VT"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WA"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WI"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WV"/>
+                    <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WY"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/has_city_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_country"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Location"/>
         <rdfs:comment xml:lang="en">A state that forms part of a country.</rdfs:comment>
         <rdfs:label xml:lang="en">US state</rdfs:label>
     </owl:Class>
@@ -368,17 +499,54 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/venue -->
 
     <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue">
-        <rdfs:subClassOf rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
-        <owl:disjointWith rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/follows_in_style_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_organisation"/>
+                <owl:allValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in"/>
+                <owl:allValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_organisation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A venue serving food of a specific location and is part of a wider organisation.  Each venue can be eateries with different styles, serving different menu items.</rdfs:comment>
         <rdfs:label xml:lang="en">Eatery venue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style -->
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle -->
 
-    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style">
+    <owl:Class rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/is_followed_in_style_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The settings of a venue that represents its ambience or cuisine.  A venue setting cannot be a venue itself e.g. a restaurant cannot be called &apos;American Restaurant&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">Venue Setting</rdfs:label>
     </owl:Class>
@@ -396,10 +564,40 @@
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/AK -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AK"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/AL -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AL"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/AR -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AR"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/AS -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AS"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/AZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/AZ"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle"/>
         <is_followed_in_style_by rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601"/>
         <rdfs:label xml:lang="en">American Restaurant</rdfs:label>
     </owl:NamedIndividual>
@@ -419,17 +617,35 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish"/>
         <derives rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Bianca_Pizza"/>
         <rdfs:label xml:lang="en">Bianca Pizza</rdfs:label>
     </owl:NamedIndividual>
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/CA"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/CO"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/CT -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/CT"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/generic_dish"/>
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/genericDish"/>
         <derives rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601_Cheese_Pizza"/>
         <derives rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Cheese_Pizza"/>
         <rdfs:label xml:lang="en">Cheese Pizza</rdfs:label>
@@ -437,13 +653,55 @@
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/DC -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/DC"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/DE -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/DE"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/FL -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/FL"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/FM -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/FM"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle"/>
         <is_followed_in_style_by rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601"/>
         <rdfs:label xml:lang="en">French Restaurant</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/GA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/GA"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/GU -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/GU"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/HI -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/HI"/>
     
 
 
@@ -457,11 +715,53 @@
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/IA"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ID"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/IL -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/IL"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/IN -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/IN"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/KS -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/KS"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/KY -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/KY"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/LA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/LA"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise">
         <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
-        <has_venue_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701"/>
+        <has_venue_at rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701"/>
         <rdfs:label xml:lang="en">Little Pizza Paradise</rdfs:label>
     </owl:NamedIndividual>
     
@@ -470,9 +770,7 @@
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MA -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
         <has_city_of rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Hyannis"/>
-        <is_in_country rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/US"/>
         <rdfs:comment xml:lang="en">A state in North East of the US.</rdfs:comment>
         <rdfs:label xml:lang="en">Massachusetts</rdfs:label>
     </owl:NamedIndividual>
@@ -502,7 +800,7 @@
         <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem"/>
         <has_ingredient_of rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese"/>
         <is_derived_from rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza"/>
-        <sells rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601"/>
+        <is_sold_by rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601"/>
         <cost xml:lang="en">8.95</cost>
         <rdfs:comment xml:lang="en">Cheese Pizza served at Roadhouse Cafe</rdfs:comment>
         <rdfs:label xml:lang="en">Cheese Pizza from Roundhouse Cafe</rdfs:label>
@@ -510,12 +808,124 @@
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MD -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MD"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/ME -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ME"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MH -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MH"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MI -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MI"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MN -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MN"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MO -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MO"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MP -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MP"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MS -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MS"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/MT -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/MT"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NC -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NC"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/ND -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/ND"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NE -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NE"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NH -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NH"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NJ -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NJ"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NM -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NM"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NV -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NV"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/NY -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/NY"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/OH -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OH"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/OK -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OK"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/OR -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/state"/>
         <has_city_of rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Bend"/>
-        <is_in_country rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/US"/>
         <rdfs:comment xml:lang="en">A state in the North West of the US.</rdfs:comment>
         <rdfs:label xml:lang="en">Oregon</rdfs:label>
     </owl:NamedIndividual>
@@ -565,13 +975,36 @@
     
 
 
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/PA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/PA"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/PR -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/PR"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/PW -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/PW"/>
+    
+
+
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
-        <is_followed_in_style_by rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701"/>
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle"/>
         <rdfs:label xml:lang="en">Pizza Place</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/RI -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/RI"/>
     
 
 
@@ -579,32 +1012,100 @@
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe">
         <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/organisation"/>
-        <has_venue_in rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601"/>
         <rdfs:label xml:lang="en">Roundhouse Cafe</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/SC -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/SC"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/SD -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/SD"/>
     
 
 
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venue_style"/>
-        <is_followed_in_style_by rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601"/>
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/venueStyle"/>
         <rdfs:label xml:lang="en">Seafood Restaurant</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/TN -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/TN"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/TX -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/TX"/>
     
 
 
     <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/US -->
 
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/US">
-        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/country"/>
         <has_state rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/MA"/>
         <has_state rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/OR"/>
-        <currency xml:lang="en">USD</currency>
         <rdfs:comment xml:lang="en">US as the country with US states and cities being subclasses of this.</rdfs:comment>
         <rdfs:label xml:lang="en">United States of America</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/UT -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/UT"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/VA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/VA"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/VI -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/VI"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/VT -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/VT"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/WA -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WA"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/WI -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WI"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/WV -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WV"/>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/WY -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/WY"/>
     
 
 
@@ -613,6 +1114,14 @@
     <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese">
         <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
         <is_ingredient_of rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.city.ac.uk/ds/inm713/aaron_altrock/tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/tomato">
+        <rdf:type rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient"/>
     </owl:NamedIndividual>
     
 
