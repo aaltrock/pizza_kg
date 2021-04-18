@@ -174,6 +174,13 @@ aa:description rdf:type owl:DatatypeProperty ;
                rdfs:label "Extra description"@en .
 
 
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_pizza_topping
+aa:is_pizza_topping rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:comment "a flag to record whether ingredient is a pizza topping" ;
+                    rdfs:label "Is_Pizza_Topping" .
+
+
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode
 aa:postcode rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
@@ -251,10 +258,6 @@ aa:menuItem rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty aa:is_derived_from ;
                               owl:someValuesFrom aa:genericDish
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aa:is_derived_from ;
-                              owl:allValuesFrom aa:genericDish
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty aa:is_sold_by ;
@@ -782,12 +785,14 @@ aa:WY rdf:type owl:NamedIndividual .
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese
 aa:cheese rdf:type owl:NamedIndividual ,
                    aa:ingredient ;
-          aa:is_ingredient_of aa:Cheese_Pizza .
+          aa:is_ingredient_of aa:Cheese_Pizza ;
+          aa:is_pizza_topping "true"^^xsd:boolean .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/tomato
 aa:tomato rdf:type owl:NamedIndividual ,
-                   aa:ingredient .
+                   aa:ingredient ;
+          aa:is_pizza_topping "true"^^xsd:boolean .
 
 
 #################################################################
