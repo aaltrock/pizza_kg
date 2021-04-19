@@ -9,6 +9,12 @@ import pprint as pp
 import spacy as sp
 import nltk
 import en_core_web_sm
+import random
+from src import ner
+
+
+# Set random seed
+random.seed(0)
 
 # Load NLTK files Punkt sentence tokeniser and part of speech tagger
 nltk.download('punkt')
@@ -74,7 +80,7 @@ clean_df['postcode'] = clean_df['postcode'].apply(str)
 clean_df['postcode'] = [pcd if len(pcd) > 0 else '0' for pcd in clean_df['postcode']]
 
 
-# For categories eExplode the delimited string into lists for each row
+# For categories explode the delimited string into lists for each row
 def __explode_str(s, delim=','):
     if len(s) > 0:
         return s.split(delim)
@@ -90,53 +96,12 @@ clean_df['categories'] = cat_ls
 # Item description - set to string and replace NaN to None
 clean_df['item description'] = [None if pd.isna(v) else str(v) for v in clean_df['item description']]
 
+"""
+Run NLP to identify pizza toppings
+"""
 
-# NER by NLTK over item description text corpora
-def prepare_text_nltk(txt):
-    if txt is not None:
-        # Source: https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da
-        tokens = nltk.word_tokenize(text=txt)
-        sent = nltk.pos_tag(tokens)
-        return sent
-    else:
-        return None
-
-
-clean_df['nltk_item_desc'] = clean_df['item description'].apply(prepare_text_nltk)
-
-# NER by Spacy over item description text corpora
-def ner_spacy(txt):
-    if txt is not None:
-        # Source: https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da
-        doc = nlp(txt)
-        return [(tkn.text, tkn.label_) for tkn in doc.ents]
-
-
-clean_df['spacy_item_desc'] = clean_df['item description'].apply(ner_spacy)
-
-
-
-
-def getExternalKGURI(name):
-    '''
-    Approximate solution: We get the entity with highest lexical similarity
-    The use of context may be necessary in some cases
-    '''
-    dbpedia = DBpediaLookup()
-    entities = dbpedia.getKGEntities(name, 5)
-    # print("Entities from DBPedia:")
-    current_sim = -1
-    current_uri = ''
-    for ent in entities:
-        isub_score = isub(name, ent.label)
-        if current_sim < isub_score:
-            current_uri = ent.ident
-            current_sim = isub_score
-
-        # print(current_uri)
-    return current_uri
-
-
+# Run NLTK and spcCy NER (inc training NER model with pizza toppings)
+clean_df = ner.run_ner(clean_df, trn_data_file_nm='ner_training_data.xlsx', sheet_nm='trn_data_items_ingredient')
 
 """
 Derive master lists of categories, menu items and item descriptions by splitting delimited strings
