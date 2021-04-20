@@ -103,6 +103,24 @@ Run NLP to identify pizza toppings
 # Run NLTK and spcCy NER (inc training NER model with pizza toppings)
 clean_df = ner.run_ner(clean_df, trn_data_file_nm='ner_training_data.xlsx', sheet_nm='trn_data_items_ingredient')
 
+# bespoke stop words listing to rid
+stop_words_ls = ['pizza', 'topping', 'any', 'item', 'max', 'daily', 'whip', 'meal', 'no', 'optional',
+                 'inch', 'day', 'top', 'each', 'size', 'make', 'free', 'off', 'love', 'and', 'pricing', 'specialty',
+                 'week', 'long', 'freshly', 'creation', 'add', 'combination', 'hearty', 'oven', 'pan']
+
+# Post topping NER cleansing (lower, lemma, remove digits, remove specific stop words)
+clean_df = ner.clean_topping_ner(clean_df, stop_words_ls)
+
+# Unroll to keep tokens only as the toppings listing
+clean_df['toppings'] = clean_df['spacy_ner_clean'].apply(lambda ls: [tkn for tkn, tag in ls] if ls is not None else None)
+
+# Create new variables 'organisation' and 'venue'
+clean_df['organisation'] = clean_df['name'].copy()
+clean_df['venue'] = clean_df.apply(lambda row: row['name'] + '_' + row['postcode'], axis=1)
+
+# Save output to Excel file for record
+clean_df.to_excel('clean_df.xlsx', index=False)
+
 """
 Derive master lists of categories, menu items and item descriptions by splitting delimited strings
 """
@@ -110,11 +128,9 @@ Derive master lists of categories, menu items and item descriptions by splitting
 # Retrieve master lists - removing duplicates:
 
 # organisation
-clean_df['organisation'] = clean_df['name'].copy()
 org_ls = list(set(clean_df['name']))
 
 # venue (organisation + post code)
-clean_df['venue'] = clean_df.apply(lambda row: row['name'] + '_' + row['postcode'], axis=1)
 ven_ls = list(set(list(clean_df['venue'])))
 
 # location (address, city, postcode)
@@ -124,12 +140,10 @@ ven_ls = list(set(list(clean_df['venue'])))
 
 # menu items
 
-# item description
+# (pizza toppings) - item descriptoin
+toppings_ls = [ls for ls in clean_df['toppings'] if ls is not None]
+toppings_ls = list(set([x for y in toppings_ls for x in y]))
 
-
-
-# categorise item description (tokenise, uni-gram/bi-grams, stop words removal)
-# categorise menu items
 
 
 """

@@ -5,6 +5,7 @@ import en_core_web_sm
 import random
 from spacy.util import minibatch
 from spacy.training import Example
+import re
 
 
 def run_ner(src_df, trn_data_file_nm, sheet_nm):
@@ -110,4 +111,56 @@ def run_ner(src_df, trn_data_file_nm, sheet_nm):
     return src_df
 
 
+# Post NER cleansing for pizza topping entity tags
+def clean_topping_ner(src_df, stop_words_ls=[]):
+    print('Cleaning topping entities...', end='\r')
+    # Load spaCy model to lemmatise later
+    spcy = sp.load('en_core_web_sm')
 
+    # Set lower case to all tokens
+    def to_lower(ls):
+        if ls is not None:
+            return [(tkn.lower(), tag) for tkn, tag in ls]
+        else:
+            return None
+
+    print('Set all entity tokens to lower case...', end='\r')
+    src_df['spacy_ner_clean'] = src_df['spacy_ner_init'].apply(to_lower)
+
+    # lemmatisation
+    def to_lemma(ls, nlp):
+        if ls is not None:
+            res_ls = []
+            for tkn, tag in ls:
+                sen = nlp(tkn)
+                for __tkn in sen:
+                    res_ls += [(__tkn.lemma_, tag)]
+            return res_ls
+        else:
+            return None
+
+    print('Lemmatise entity tokens...', end='\r')
+    src_df['spacy_ner_clean'] = src_df['spacy_ner_clean'].apply(lambda ls: to_lemma(ls, spcy))
+
+    # Remove any tokens containing digits (e.g. weight)
+    def rm_non_alpha_tokens(ls):
+        if ls is not None:
+            res_ls = [(tkn, tag) for tkn, tag in ls if re.search(r'\d', tkn) is None]
+            res_ls = [(tkn, tag) for tkn, tag in res_ls if re.match(r'\W', tkn) is None]
+            return res_ls
+        else:
+            return None
+
+    print('Remove tokens containing non-alpha characters...', end='\r')
+    src_df['spacy_ner_clean'] = src_df['spacy_ner_clean'].apply(rm_non_alpha_tokens)
+
+    # Remove tokens for exactly e.g. 'pizza' or 'topping' for a given stop words list
+    def rm_pizza_token(ls, __stop_words_ls):
+        if ls is not None:
+            return [(tkn, tag) for tkn, tag in ls if tkn not in __stop_words_ls]
+        else:
+            return None
+    print('Remove tokens as "pizza" or "topping"...', end='\r')
+    src_df['spacy_ner_clean'] = src_df['spacy_ner_clean'].apply(lambda ls: rm_pizza_token(ls, stop_words_ls))
+
+    return src_df
