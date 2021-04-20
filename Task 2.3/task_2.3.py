@@ -10,7 +10,7 @@ import spacy as sp
 import nltk
 import en_core_web_sm
 import random
-from src import ner
+from src import ner, city_states
 
 
 # Set random seed
@@ -58,22 +58,9 @@ Column clean up
 
 clean_df = src_df.copy()
 
-# remove invalid US states
-states_ls = ['AK', 'AL', 'AR', 'AS', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'FM', 'GA',
-             'GU', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MH',
-             'MI', 'MN', 'MO', 'MP', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV',
-             'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'PW', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT',
-             'VA', 'VI', 'VT', 'WA', 'WI', 'WV', 'WY']
-
-
-def __clean_state(st, st_ls):
-    if st in st_ls:
-        return st
-    else:
-        return None
-
-
-clean_df['state'] = [__clean_state(st, states_ls) for st in clean_df['state']]
+# Read in the zip code ranges
+zip_rng_df = pd.read_excel('zip_code_ranges.xlsx', header=0)
+clean_df = city_states.clean(clean_df, zip_rng_df)
 
 # impute blank zip codes with '0' (placeholder), not leaving it None so that venue data are filled
 clean_df['postcode'] = clean_df['postcode'].apply(str)
@@ -90,11 +77,17 @@ def __explode_str(s, delim=','):
         return ''
 
 
+"""
+Create new variables for the triples
+"""
+
+# Categories: Exploding nested string into list
 cat_ls = [__explode_str(s) for s in clean_df['categories']]
 clean_df['categories'] = cat_ls
 
 # Item description - set to string and replace NaN to None
 clean_df['item description'] = [None if pd.isna(v) else str(v) for v in clean_df['item description']]
+
 
 """
 Run NLP to identify pizza toppings
@@ -120,6 +113,7 @@ clean_df['venue'] = clean_df.apply(lambda row: row['name'] + '_' + row['postcode
 
 # Save output to Excel file for record
 clean_df.to_excel('clean_df.xlsx', index=False)
+print('Saved cleaned data frame to file clean_df.xlsx for record.')
 
 """
 Derive master lists of categories, menu items and item descriptions by splitting delimited strings
@@ -133,7 +127,10 @@ org_ls = list(set(clean_df['name']))
 # venue (organisation + post code)
 ven_ls = list(set(list(clean_df['venue'])))
 
-# location (address, city, postcode)
+# cities in state
+
+
+# location (venue, address), (venue, city), (venue, postcode)
 
 
 # categories
