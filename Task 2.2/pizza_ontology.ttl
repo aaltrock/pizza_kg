@@ -8,7 +8,7 @@
 
 <http://www.city.ac.uk/ds/inm713/aaron_altrock/> rdf:type owl:Ontology ;
                                                   owl:imports <http://www.city.ac.uk/ds/inm713/aaron_altrock/> ;
-                                                  rdfs:comment "This ontology is to define restaurants and menu items globally." .
+                                                  rdfs:comment "This ontology is to define restaurants and menu items in the United States." .
 
 #################################################################
 #    Object Properties
@@ -46,20 +46,20 @@
              rdfs:label "has in city"@en .
 
 
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_ingredient_of
-:has_ingredient_of rdf:type owl:ObjectProperty ;
-                   rdfs:domain :menuItem ;
-                   rdfs:range :ingredient ;
-                   rdfs:comment "Defines a specific venue uses which ingridient to produce its specific menu item."@en ;
-                   rdfs:label "cooks with"@en .
-
-
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_state
 :has_state rdf:type owl:ObjectProperty ;
            rdfs:domain :country ;
            rdfs:range :state ;
            rdfs:comment "A country has a state."@en ;
            rdfs:label "has state"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_topping
+:has_topping rdf:type owl:ObjectProperty ;
+             rdfs:domain :menuItem ;
+             rdfs:range :ingredient ;
+             rdfs:comment "Defines a specific venue uses which toppings to produce its specific menu item."@en ;
+             rdfs:label "cooks with"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_venue_at
@@ -111,14 +111,6 @@
                           "A city is in state."@en .
 
 
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_ingredient_of
-:is_ingredient_of rdf:type owl:ObjectProperty ;
-                  rdfs:domain :ingredient ;
-                  rdfs:range :menuItem ;
-                  rdfs:comment "Is ingredient of a menu item."@en ;
-                  rdfs:label "is ingredient of"@en .
-
-
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_sold_by
 :is_sold_by rdf:type owl:ObjectProperty ,
                      owl:AsymmetricProperty ,
@@ -127,6 +119,14 @@
             rdfs:range :venue ;
             rdfs:comment "A specific menu item is sold by a specific venue.  Only one menu item can be sold by one venue."@en ;
             rdfs:label "is sold by"@en .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_topping_of
+:is_topping_of rdf:type owl:ObjectProperty ;
+               rdfs:domain :ingredient ;
+               rdfs:range :menuItem ;
+               rdfs:comment "Is a pizza topping of a menu item."@en ;
+               rdfs:label "is topping of"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in
@@ -171,13 +171,6 @@
              rdf:type owl:FunctionalProperty ;
              rdfs:comment "Additional comments included for the menu item at a specific venue.  Only one comment per menu item."@en ;
              rdfs:label "Extra description"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_pizza_topping
-:is_pizza_topping rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf owl:topDataProperty ;
-                  rdfs:comment "a flag to record whether ingredient is a pizza topping" ;
-                  rdfs:label "Is_Pizza_Topping" .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/postcode
@@ -236,7 +229,7 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/ingredient
 :ingredient rdf:type owl:Class ;
             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty :is_ingredient_of ;
+                                  owl:onProperty :is_topping_of ;
                                   owl:someValuesFrom :menuItem
                                 ] ;
             rdfs:subClassOf owl:Thing ;
@@ -251,7 +244,7 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/menuItem
 :menuItem rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :has_ingredient_of ;
+                            owl:onProperty :has_topping ;
                             owl:someValuesFrom :ingredient
                           ] ,
                           [ rdf:type owl:Restriction ;
@@ -566,7 +559,7 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601_Cheese_Pizza
 :MA_2601_Cheese_Pizza rdf:type owl:NamedIndividual ,
                                :menuItem ;
-                      :has_ingredient_of :cheese ;
+                      :has_topping :cheese ;
                       :is_derived_from :Cheese_Pizza ;
                       :is_sold_by :MA_2601 ;
                       :cost "8.95"@en ;
@@ -683,7 +676,7 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Cheese_Pizza
 :OR_97701_Cheese_Pizza rdf:type owl:NamedIndividual ,
                                 :menuItem ;
-                       :has_ingredient_of :cheese ;
+                       :has_topping :cheese ;
                        :is_derived_from :Cheese_Pizza ;
                        :is_sold_by :OR_97701 ;
                        :cost "18.95"@en ;
@@ -784,14 +777,12 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese
 :cheese rdf:type owl:NamedIndividual ,
                  :ingredient ;
-        :is_ingredient_of :Cheese_Pizza ;
-        :is_pizza_topping "true"^^xsd:boolean .
+        :is_topping_of :Cheese_Pizza .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/tomato
 :tomato rdf:type owl:NamedIndividual ,
-                 :ingredient ;
-        :is_pizza_topping "true"^^xsd:boolean .
+                 :ingredient .
 
 
 #################################################################

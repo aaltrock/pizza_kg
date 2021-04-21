@@ -83,12 +83,6 @@ def run_ner(src_df, trn_data_file_nm, sheet_nm):
                         print('annotation: {}'.format(annotation))
                         print('losses: {}'.format(losses))
 
-    # Test the spaCy model
-    # print('Testing')
-    # doc = nlp('pizza cheese sauce')
-    # for ent in doc.ents:
-    #     print(str((doc, ent.text, ent.label_)))
-
     # Apply NLTK and Spacy NER to the source data frame
     # NER by NLTK over item description text corpora
     def prepare_text_nltk(txt):

@@ -14,7 +14,7 @@
     <Import>http://www.city.ac.uk/ds/inm713/aaron_altrock/</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>This ontology is to define restaurants and menu items globally.</Literal>
+        <Literal>This ontology is to define restaurants and menu items in the United States.</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="city"/>
@@ -59,10 +59,10 @@
         <ObjectProperty IRI="has_in_city"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="has_ingredient_of"/>
+        <ObjectProperty IRI="has_state"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="has_state"/>
+        <ObjectProperty IRI="has_topping"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="has_venue_at"/>
@@ -83,10 +83,10 @@
         <ObjectProperty IRI="is_in_state"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="is_ingredient_of"/>
+        <ObjectProperty IRI="is_sold_by"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="is_sold_by"/>
+        <ObjectProperty IRI="is_topping_of"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="locates_in"/>
@@ -102,9 +102,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="description"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="is_pizza_topping"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="postcode"/>
@@ -370,7 +367,7 @@
     <EquivalentClasses>
         <Class IRI="ingredient"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="is_ingredient_of"/>
+            <ObjectProperty IRI="is_topping_of"/>
             <Class IRI="menuItem"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
@@ -485,7 +482,7 @@
     <SubClassOf>
         <Class IRI="menuItem"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="has_ingredient_of"/>
+            <ObjectProperty IRI="has_topping"/>
             <Class IRI="ingredient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -731,7 +728,7 @@
         <NamedIndividual IRI="Cheese_Pizza"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_ingredient_of"/>
+        <ObjectProperty IRI="has_topping"/>
         <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
         <NamedIndividual IRI="cheese"/>
     </ObjectPropertyAssertion>
@@ -786,7 +783,7 @@
         <NamedIndividual IRI="OR_97701"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_ingredient_of"/>
+        <ObjectProperty IRI="has_topping"/>
         <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
         <NamedIndividual IRI="cheese"/>
     </ObjectPropertyAssertion>
@@ -811,7 +808,7 @@
         <NamedIndividual IRI="OR"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_ingredient_of"/>
+        <ObjectProperty IRI="is_topping_of"/>
         <NamedIndividual IRI="cheese"/>
         <NamedIndividual IRI="Cheese_Pizza"/>
     </ObjectPropertyAssertion>
@@ -850,16 +847,6 @@
         <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
         <Literal xml:lang="en">18.95</Literal>
     </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="is_pizza_topping"/>
-        <NamedIndividual IRI="cheese"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="is_pizza_topping"/>
-        <NamedIndividual IRI="tomato"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="is_derived_from"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -893,12 +880,12 @@
         <Class IRI="city"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="has_ingredient_of"/>
-        <Class IRI="menuItem"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="has_state"/>
         <Class IRI="country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_topping"/>
+        <Class IRI="menuItem"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="has_venue_at"/>
@@ -925,12 +912,12 @@
         <Class IRI="city"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="is_ingredient_of"/>
-        <Class IRI="ingredient"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="is_sold_by"/>
         <Class IRI="menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_topping_of"/>
+        <Class IRI="ingredient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="locates_in"/>
@@ -957,12 +944,12 @@
         <Class IRI="venue"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="has_ingredient_of"/>
-        <Class IRI="ingredient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="has_state"/>
         <Class IRI="state"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_topping"/>
+        <Class IRI="ingredient"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="has_venue_at"/>
@@ -989,12 +976,12 @@
         <Class IRI="state"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="is_ingredient_of"/>
-        <Class IRI="menuItem"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="is_sold_by"/>
         <Class IRI="venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_topping_of"/>
+        <Class IRI="menuItem"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="locates_in"/>
@@ -1014,10 +1001,6 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="description"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="is_pizza_topping"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1239,16 +1222,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>has_ingredient_of</IRI>
-        <Literal xml:lang="en">Defines a specific venue uses which ingridient to produce its specific menu item.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_ingredient_of</IRI>
-        <Literal xml:lang="en">cooks with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>has_state</IRI>
         <Literal xml:lang="en">A country has a state.</Literal>
     </AnnotationAssertion>
@@ -1256,6 +1229,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>has_state</IRI>
         <Literal xml:lang="en">has state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>has_topping</IRI>
+        <Literal xml:lang="en">Defines a specific venue uses which toppings to produce its specific menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_topping</IRI>
+        <Literal xml:lang="en">cooks with</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1329,26 +1312,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>is_ingredient_of</IRI>
-        <Literal xml:lang="en">Is ingredient of a menu item.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>is_ingredient_of</IRI>
-        <Literal xml:lang="en">is ingredient of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>is_pizza_topping</IRI>
-        <Literal>a flag to record whether ingredient is a pizza topping</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>is_pizza_topping</IRI>
-        <Literal>Is_Pizza_Topping</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>is_sold_by</IRI>
         <Literal xml:lang="en">A specific menu item is sold by a specific venue.  Only one menu item can be sold by one venue.</Literal>
     </AnnotationAssertion>
@@ -1356,6 +1319,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>is_sold_by</IRI>
         <Literal xml:lang="en">is sold by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_topping_of</IRI>
+        <Literal xml:lang="en">Is a pizza topping of a menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_topping_of</IRI>
+        <Literal xml:lang="en">is topping of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
