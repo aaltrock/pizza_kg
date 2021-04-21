@@ -1,0 +1,1445 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.city.ac.uk/ds/inm713/aaron_altrock/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.city.ac.uk/ds/inm713/aaron_altrock/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology is to define restaurants and menu items globally.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="city"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="genericDish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ingredient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="menuItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="organisation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="state"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="venue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="venueStyle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="derives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="follows_in_style_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_city_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_in_city"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_ingredient_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_state"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_venue_at"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_derived_from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_followed_in_style_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_in_country"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_in_organisation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_in_state"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_ingredient_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_sold_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="locates_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="sells"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="cost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="is_pizza_topping"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="postcode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AZ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="American_Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Bend"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Bianca_Pizza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="French_Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="GA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="GU"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Hyannis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="IA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="IL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="IN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="KS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="KY"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Little_Pizza_Paradise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MA_2601"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ME"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ND"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NJ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NY"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OR_97701"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PW"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Pizza_Place"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Roadhouse_Cafe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Seafood_Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="TN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="TX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="UT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="VA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="VI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="VT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WY"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="cheese"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="tomato"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="city"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="is_in_state"/>
+            <Class IRI="state"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="country"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="US"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="has_state"/>
+            <Class IRI="state"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="genericDish"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="derives"/>
+            <Class IRI="menuItem"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="ingredient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="is_ingredient_of"/>
+            <Class IRI="menuItem"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="state"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="AK"/>
+            <NamedIndividual IRI="AL"/>
+            <NamedIndividual IRI="AR"/>
+            <NamedIndividual IRI="AS"/>
+            <NamedIndividual IRI="AZ"/>
+            <NamedIndividual IRI="CA"/>
+            <NamedIndividual IRI="CO"/>
+            <NamedIndividual IRI="CT"/>
+            <NamedIndividual IRI="DC"/>
+            <NamedIndividual IRI="DE"/>
+            <NamedIndividual IRI="FL"/>
+            <NamedIndividual IRI="FM"/>
+            <NamedIndividual IRI="GA"/>
+            <NamedIndividual IRI="GU"/>
+            <NamedIndividual IRI="HI"/>
+            <NamedIndividual IRI="IA"/>
+            <NamedIndividual IRI="ID"/>
+            <NamedIndividual IRI="IL"/>
+            <NamedIndividual IRI="IN"/>
+            <NamedIndividual IRI="KS"/>
+            <NamedIndividual IRI="KY"/>
+            <NamedIndividual IRI="LA"/>
+            <NamedIndividual IRI="MA"/>
+            <NamedIndividual IRI="MD"/>
+            <NamedIndividual IRI="ME"/>
+            <NamedIndividual IRI="MH"/>
+            <NamedIndividual IRI="MI"/>
+            <NamedIndividual IRI="MN"/>
+            <NamedIndividual IRI="MO"/>
+            <NamedIndividual IRI="MP"/>
+            <NamedIndividual IRI="MS"/>
+            <NamedIndividual IRI="MT"/>
+            <NamedIndividual IRI="NC"/>
+            <NamedIndividual IRI="ND"/>
+            <NamedIndividual IRI="NE"/>
+            <NamedIndividual IRI="NH"/>
+            <NamedIndividual IRI="NJ"/>
+            <NamedIndividual IRI="NM"/>
+            <NamedIndividual IRI="NV"/>
+            <NamedIndividual IRI="NY"/>
+            <NamedIndividual IRI="OH"/>
+            <NamedIndividual IRI="OK"/>
+            <NamedIndividual IRI="OR"/>
+            <NamedIndividual IRI="PA"/>
+            <NamedIndividual IRI="PR"/>
+            <NamedIndividual IRI="PW"/>
+            <NamedIndividual IRI="RI"/>
+            <NamedIndividual IRI="SC"/>
+            <NamedIndividual IRI="SD"/>
+            <NamedIndividual IRI="TN"/>
+            <NamedIndividual IRI="TX"/>
+            <NamedIndividual IRI="UT"/>
+            <NamedIndividual IRI="VA"/>
+            <NamedIndividual IRI="VI"/>
+            <NamedIndividual IRI="VT"/>
+            <NamedIndividual IRI="WA"/>
+            <NamedIndividual IRI="WI"/>
+            <NamedIndividual IRI="WV"/>
+            <NamedIndividual IRI="WY"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="state"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="has_city_of"/>
+            <Class IRI="city"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="state"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="is_in_country"/>
+            <Class IRI="country"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="venue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="follows_in_style_of"/>
+            <Class IRI="venue"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="venueStyle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="is_followed_in_style_by"/>
+            <Class IRI="venue"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="city"/>
+        <Class IRI="location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="country"/>
+        <Class IRI="location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="genericDish"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ingredient"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="menuItem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="has_ingredient_of"/>
+            <Class IRI="ingredient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="menuItem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="is_derived_from"/>
+            <Class IRI="genericDish"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="menuItem"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="is_sold_by"/>
+            <Class IRI="venue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="menuItem"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="is_sold_by"/>
+            <Class IRI="venue"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organisation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organisation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="has_venue_at"/>
+            <Class IRI="venue"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="state"/>
+        <Class IRI="location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="venue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="is_in_organisation"/>
+            <Class IRI="organisation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="venue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="locates_in"/>
+            <Class IRI="city"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="venue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="is_in_organisation"/>
+            <Class IRI="organisation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="venue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="locates_in"/>
+            <Class IRI="city"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="venueStyle"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="city"/>
+        <Class IRI="country"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="city"/>
+        <Class IRI="state"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="country"/>
+        <Class IRI="state"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="genericDish"/>
+        <Class IRI="ingredient"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="venueStyle"/>
+        <NamedIndividual IRI="American_Restaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="city"/>
+        <NamedIndividual IRI="Bend"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="Bianca_Pizza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="venueStyle"/>
+        <NamedIndividual IRI="French_Restaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="city"/>
+        <NamedIndividual IRI="Hyannis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="organisation"/>
+        <NamedIndividual IRI="Little_Pizza_Paradise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="venue"/>
+        <NamedIndividual IRI="MA_2601"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="menuItem"/>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="venue"/>
+        <NamedIndividual IRI="OR_97701"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="menuItem"/>
+        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="menuItem"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="venueStyle"/>
+        <NamedIndividual IRI="Pizza_Place"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="organisation"/>
+        <NamedIndividual IRI="Roadhouse_Cafe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="venueStyle"/>
+        <NamedIndividual IRI="Seafood_Restaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ingredient"/>
+        <NamedIndividual IRI="cheese"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ingredient"/>
+        <NamedIndividual IRI="tomato"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_followed_in_style_by"/>
+        <NamedIndividual IRI="American_Restaurant"/>
+        <NamedIndividual IRI="MA_2601"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_in_city"/>
+        <NamedIndividual IRI="Bend"/>
+        <NamedIndividual IRI="OR_97701"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_in_state"/>
+        <NamedIndividual IRI="Bend"/>
+        <NamedIndividual IRI="OR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="derives"/>
+        <NamedIndividual IRI="Bianca_Pizza"/>
+        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="derives"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="derives"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_followed_in_style_by"/>
+        <NamedIndividual IRI="French_Restaurant"/>
+        <NamedIndividual IRI="MA_2601"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_in_city"/>
+        <NamedIndividual IRI="Hyannis"/>
+        <NamedIndividual IRI="MA_2601"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_in_state"/>
+        <NamedIndividual IRI="Hyannis"/>
+        <NamedIndividual IRI="MA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_venue_at"/>
+        <NamedIndividual IRI="Little_Pizza_Paradise"/>
+        <NamedIndividual IRI="OR_97701"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_city_of"/>
+        <NamedIndividual IRI="MA"/>
+        <NamedIndividual IRI="Hyannis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="follows_in_style_of"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <NamedIndividual IRI="American_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="follows_in_style_of"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <NamedIndividual IRI="French_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="follows_in_style_of"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <NamedIndividual IRI="Seafood_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_in_organisation"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <NamedIndividual IRI="Roadhouse_Cafe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="locates_in"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <NamedIndividual IRI="Hyannis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sells"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_ingredient_of"/>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+        <NamedIndividual IRI="cheese"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_derived_from"/>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_sold_by"/>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+        <NamedIndividual IRI="MA_2601"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_city_of"/>
+        <NamedIndividual IRI="OR"/>
+        <NamedIndividual IRI="Bend"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="follows_in_style_of"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <NamedIndividual IRI="Pizza_Place"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_in_organisation"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <NamedIndividual IRI="Little_Pizza_Paradise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="locates_in"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <NamedIndividual IRI="Bend"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sells"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <NamedIndividual IRI="Bianca_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="sells"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_derived_from"/>
+        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
+        <NamedIndividual IRI="Bianca_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_sold_by"/>
+        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
+        <NamedIndividual IRI="OR_97701"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_ingredient_of"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+        <NamedIndividual IRI="cheese"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_derived_from"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_sold_by"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+        <NamedIndividual IRI="OR_97701"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_state"/>
+        <NamedIndividual IRI="US"/>
+        <NamedIndividual IRI="MA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="has_state"/>
+        <NamedIndividual IRI="US"/>
+        <NamedIndividual IRI="OR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="is_ingredient_of"/>
+        <NamedIndividual IRI="cheese"/>
+        <NamedIndividual IRI="Cheese_Pizza"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="address"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <Literal xml:lang="en">478 South St</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="postcode"/>
+        <NamedIndividual IRI="MA_2601"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2601</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="cost"/>
+        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
+        <Literal xml:lang="en">8.95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="address"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <Literal xml:lang="en">Cascade Village Mall Across From Target</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="postcode"/>
+        <NamedIndividual IRI="OR_97701"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">97701</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="cost"/>
+        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
+        <Literal xml:lang="en">22.50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="cost"/>
+        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
+        <Literal xml:lang="en">18.95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="is_pizza_topping"/>
+        <NamedIndividual IRI="cheese"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="is_pizza_topping"/>
+        <NamedIndividual IRI="tomato"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="is_derived_from"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="is_sold_by"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="sells"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="is_sold_by"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="sells"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="derives"/>
+        <Class IRI="menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="follows_in_style_of"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_city_of"/>
+        <Class IRI="state"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_in_city"/>
+        <Class IRI="city"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_ingredient_of"/>
+        <Class IRI="menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_state"/>
+        <Class IRI="country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_venue_at"/>
+        <Class IRI="organisation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_derived_from"/>
+        <Class IRI="genericDish"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_followed_in_style_by"/>
+        <Class IRI="venueStyle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_in_country"/>
+        <Class IRI="state"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_in_organisation"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_in_state"/>
+        <Class IRI="city"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_ingredient_of"/>
+        <Class IRI="ingredient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is_sold_by"/>
+        <Class IRI="menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="locates_in"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sells"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="derives"/>
+        <Class IRI="genericDish"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="follows_in_style_of"/>
+        <Class IRI="venueStyle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_city_of"/>
+        <Class IRI="city"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_in_city"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_ingredient_of"/>
+        <Class IRI="ingredient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_state"/>
+        <Class IRI="state"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_venue_at"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_derived_from"/>
+        <Class IRI="menuItem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_followed_in_style_by"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_in_country"/>
+        <Class IRI="country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_in_organisation"/>
+        <Class IRI="organisation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_in_state"/>
+        <Class IRI="state"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_ingredient_of"/>
+        <Class IRI="menuItem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is_sold_by"/>
+        <Class IRI="venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="locates_in"/>
+        <Class IRI="city"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sells"/>
+        <Class IRI="menuItem"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="address"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="cost"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="description"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="is_pizza_topping"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="postcode"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="description"/>
+    </FunctionalDataProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>American_Restaurant</IRI>
+        <Literal xml:lang="en">American Restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Bianca_Pizza</IRI>
+        <Literal xml:lang="en">Bianca Pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Cheese_Pizza</IRI>
+        <Literal xml:lang="en">Cheese Pizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>French_Restaurant</IRI>
+        <Literal xml:lang="en">French Restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Little_Pizza_Paradise</IRI>
+        <Literal xml:lang="en">Little Pizza Paradise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MA</IRI>
+        <Literal xml:lang="en">A state in North East of the US.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MA</IRI>
+        <Literal xml:lang="en">Massachusetts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MA_2601</IRI>
+        <Literal xml:lang="en">Roadhouse Cafe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MA_2601_Cheese_Pizza</IRI>
+        <Literal xml:lang="en">Cheese Pizza served at Roadhouse Cafe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MA_2601_Cheese_Pizza</IRI>
+        <Literal xml:lang="en">Cheese Pizza from Roundhouse Cafe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OR</IRI>
+        <Literal xml:lang="en">A state in the North West of the US.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OR</IRI>
+        <Literal xml:lang="en">Oregon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OR_97701</IRI>
+        <Literal xml:lang="en">Little Pizza Paradise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OR_97701_Bianca_Pizza</IRI>
+        <Literal xml:lang="en">Bianca Pizza served at Little Pizza Paradise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OR_97701_Bianca_Pizza</IRI>
+        <Literal xml:lang="en">Bianca Pizza from Little Pizza Paradise with zip code 97701</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OR_97701_Cheese_Pizza</IRI>
+        <Literal xml:lang="en">Cheese Pizza served at Little Pizza Paradise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OR_97701_Cheese_Pizza</IRI>
+        <Literal xml:lang="en">Cheese Pizza from Little Pizza Paradise with zip code 97701</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Pizza_Place</IRI>
+        <Literal xml:lang="en">Pizza Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Roadhouse_Cafe</IRI>
+        <Literal xml:lang="en">Roundhouse Cafe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Seafood_Restaurant</IRI>
+        <Literal xml:lang="en">Seafood Restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>US</IRI>
+        <Literal xml:lang="en">US as the country with US states and cities being subclasses of this.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>US</IRI>
+        <Literal xml:lang="en">United States of America</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>address</IRI>
+        <Literal xml:lang="en">First line of address of the venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>address</IRI>
+        <Literal xml:lang="en">Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>city</IRI>
+        <Literal xml:lang="en">An urban area within a state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>city</IRI>
+        <Literal xml:lang="en">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>cost</IRI>
+        <Literal xml:lang="en">Cost of a menu item at a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>cost</IRI>
+        <Literal xml:lang="en">Price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>country</IRI>
+        <Literal xml:lang="en">Country contains states and cities within.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>country</IRI>
+        <Literal xml:lang="en">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>derives</IRI>
+        <Literal xml:lang="en">A menu item is derived from a generic dish.  Only one generic dish is derived by a specific venue (e.g. Cheese Pizza cannot be interpreted as two for the same venue).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>derives</IRI>
+        <Literal xml:lang="en">derives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>description</IRI>
+        <Literal xml:lang="en">Additional comments included for the menu item at a specific venue.  Only one comment per menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>description</IRI>
+        <Literal xml:lang="en">Extra description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>follows_in_style_of</IRI>
+        <Literal xml:lang="en">Venue styles from a particular cuisine or ambience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>follows_in_style_of</IRI>
+        <Literal xml:lang="en">follows in style of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>genericDish</IRI>
+        <Literal xml:lang="en">A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>genericDish</IRI>
+        <Literal xml:lang="en">Generic dish</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>has_city_of</IRI>
+        <Literal xml:lang="en">A state has a city of.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_city_of</IRI>
+        <Literal xml:lang="en">has city of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>has_in_city</IRI>
+        <Literal xml:lang="en">City has venue.  Only one particular venue of an organisation with a specific post code exists in a city.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_in_city</IRI>
+        <Literal xml:lang="en">has in city</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>has_ingredient_of</IRI>
+        <Literal xml:lang="en">Defines a specific venue uses which ingridient to produce its specific menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_ingredient_of</IRI>
+        <Literal xml:lang="en">cooks with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>has_state</IRI>
+        <Literal xml:lang="en">A country has a state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_state</IRI>
+        <Literal xml:lang="en">has state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>has_venue_at</IRI>
+        <Literal xml:lang="en">An organisation has at least one venue.  Each venue is a specific location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_venue_at</IRI>
+        <Literal xml:lang="en">has venue in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ingredient</IRI>
+        <Literal xml:lang="en">Ingredients for producing a menu item in an eatery.  An ingredient cannot be a generic dish nor a menu item at a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ingredient</IRI>
+        <Literal xml:lang="en">Ingredient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_derived_from</IRI>
+        <Literal xml:lang="en">Is derived from a generic dish into a menu item.  Only one menu item is derived from one generic dish for a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_derived_from</IRI>
+        <Literal xml:lang="en">is derived as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_followed_in_style_by</IRI>
+        <Literal xml:lang="en">Venue follows a style of setting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_followed_in_style_by</IRI>
+        <Literal xml:lang="en">is followed in style by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_in_country</IRI>
+        <Literal xml:lang="en">A state belongs to a country.  A state can only beong to one country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_in_country</IRI>
+        <Literal xml:lang="en">is in country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_in_organisation</IRI>
+        <Literal xml:lang="en">A venue is in an organisation.  A venue can only belong to one organisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_in_organisation</IRI>
+        <Literal xml:lang="en">is in organisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_in_state</IRI>
+        <Literal xml:lang="en">A city is in a state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_in_state</IRI>
+        <Literal xml:lang="en">A city is in state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_ingredient_of</IRI>
+        <Literal xml:lang="en">Is ingredient of a menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_ingredient_of</IRI>
+        <Literal xml:lang="en">is ingredient of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_pizza_topping</IRI>
+        <Literal>a flag to record whether ingredient is a pizza topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_pizza_topping</IRI>
+        <Literal>Is_Pizza_Topping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>is_sold_by</IRI>
+        <Literal xml:lang="en">A specific menu item is sold by a specific venue.  Only one menu item can be sold by one venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_sold_by</IRI>
+        <Literal xml:lang="en">is sold by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>locates_in</IRI>
+        <Literal xml:lang="en">Locates in which city.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>locates_in</IRI>
+        <Literal xml:lang="en">locates in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>menuItem</IRI>
+        <Literal xml:lang="en">A specific dish served in a venue that is an interpretation of a generic dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>menuItem</IRI>
+        <Literal xml:lang="en">Menu Item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>organisation</IRI>
+        <Literal xml:lang="en">An organisation consisting of one or more venues.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>organisation</IRI>
+        <Literal xml:lang="en">Organisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>postcode</IRI>
+        <Literal xml:lang="en">post code that forms part of an address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>postcode</IRI>
+        <Literal xml:lang="en">Zip code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>sells</IRI>
+        <Literal xml:lang="en">sells at a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sells</IRI>
+        <Literal xml:lang="en">sells</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>state</IRI>
+        <Literal xml:lang="en">A state that forms part of a country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>state</IRI>
+        <Literal xml:lang="en">US state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>venue</IRI>
+        <Literal xml:lang="en">A venue serving food of a specific location and is part of a wider organisation.  Each venue can be eateries with different styles, serving different menu items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>venue</IRI>
+        <Literal xml:lang="en">Eatery venue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>venueStyle</IRI>
+        <Literal xml:lang="en">The settings of a venue that represents its ambience or cuisine.  A venue setting cannot be a venue itself e.g. a restaurant cannot be called &apos;American Restaurant&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>venueStyle</IRI>
+        <Literal xml:lang="en">Venue Setting</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

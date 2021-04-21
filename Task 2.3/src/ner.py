@@ -3,6 +3,7 @@
 import pandas as pd
 import spacy as sp
 import nltk
+from nltk.corpus import stopwords
 import en_core_web_sm
 import random
 from spacy.util import minibatch
@@ -143,6 +144,18 @@ def clean_topping_ner(src_df, stop_words_ls=[]):
 
     print('Lemmatise entity tokens...', end='\r')
     src_df['spacy_ner_clean'] = src_df['spacy_ner_clean'].apply(lambda ls: to_lemma(ls, spcy))
+
+    # Remove English stop words
+    def rm_stop_words(ls, gen_stp_wds_ls):
+        if ls is not None:
+            res_ls = [(tkn, tag) for tkn, tag in ls if tkn not in gen_stp_wds_ls]
+            return res_ls
+        else:
+            return None
+
+    print('Remove English stop words...', end='\r')
+    gen_stp_wds_ls = list(stopwords.words('english'))
+    src_df['spacy_ner_clean'] = src_df['spacy_ner_clean'].apply(lambda ls: rm_stop_words(ls, gen_stp_wds_ls))
 
     # Remove any tokens containing digits (e.g. weight)
     def rm_non_alpha_tokens(ls):
