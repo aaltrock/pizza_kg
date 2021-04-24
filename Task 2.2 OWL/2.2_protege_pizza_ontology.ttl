@@ -419,27 +419,6 @@
 :AZ rdf:type owl:NamedIndividual .
 
 
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/American_Restaurant
-:American_Restaurant rdf:type owl:NamedIndividual ,
-                              :venueStyle ;
-                     :is_followed_in_style_by :MA_2601 ;
-                     rdfs:label "American Restaurant"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Bend
-:Bend rdf:type owl:NamedIndividual ,
-               :city ;
-      :has_in_city :OR_97701 ;
-      :is_in_state :OR .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Bianca_Pizza
-:Bianca_Pizza rdf:type owl:NamedIndividual ,
-                       :genericDish ;
-              :derives :OR_97701_Bianca_Pizza ;
-              rdfs:label "Bianca Pizza"@en .
-
-
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/CA
 :CA rdf:type owl:NamedIndividual .
 
@@ -450,14 +429,6 @@
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/CT
 :CT rdf:type owl:NamedIndividual .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Cheese_Pizza
-:Cheese_Pizza rdf:type owl:NamedIndividual ,
-                       :genericDish ;
-              :derives :MA_2601_Cheese_Pizza ,
-                       :OR_97701_Cheese_Pizza ;
-              rdfs:label "Cheese Pizza"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/DC
@@ -476,13 +447,6 @@
 :FM rdf:type owl:NamedIndividual .
 
 
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/French_Restaurant
-:French_Restaurant rdf:type owl:NamedIndividual ,
-                            :venueStyle ;
-                   :is_followed_in_style_by :MA_2601 ;
-                   rdfs:label "French Restaurant"@en .
-
-
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/GA
 :GA rdf:type owl:NamedIndividual .
 
@@ -493,13 +457,6 @@
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/HI
 :HI rdf:type owl:NamedIndividual .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Hyannis
-:Hyannis rdf:type owl:NamedIndividual ,
-                  :city ;
-         :has_in_city :MA_2601 ;
-         :is_in_state :MA .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/IA
@@ -530,43 +487,10 @@
 :LA rdf:type owl:NamedIndividual .
 
 
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Little_Pizza_Paradise
-:Little_Pizza_Paradise rdf:type owl:NamedIndividual ,
-                                :organisation ;
-                       :has_venue_at :OR_97701 ;
-                       rdfs:label "Little Pizza Paradise"@en .
-
-
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA
 :MA rdf:type owl:NamedIndividual ;
-    :has_city_of :Hyannis ;
     rdfs:comment "A state in North East of the US."@en ;
     rdfs:label "Massachusetts"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601
-:MA_2601 rdf:type owl:NamedIndividual ,
-                  :venue ;
-         :follows_in_style_of :American_Restaurant ,
-                              :French_Restaurant ,
-                              :Seafood_Restaurant ;
-         :is_in_organisation :Roadhouse_Cafe ;
-         :locates_in :Hyannis ;
-         :sells :Cheese_Pizza ;
-         :address "478 South St"@en ;
-         :postcode 2601 ;
-         rdfs:label "Roadhouse Cafe"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MA_2601_Cheese_Pizza
-:MA_2601_Cheese_Pizza rdf:type owl:NamedIndividual ,
-                               :menuItem ;
-                      :has_topping :cheese ;
-                      :is_derived_from :Cheese_Pizza ;
-                      :is_sold_by :MA_2601 ;
-                      :cost "8.95"^^xsd:double ;
-                      rdfs:comment "Cheese Pizza served at Roadhouse Cafe"@en ;
-                      rdfs:label "Cheese Pizza from Roundhouse Cafe"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/MD
@@ -647,43 +571,8 @@
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR
 :OR rdf:type owl:NamedIndividual ;
-    :has_city_of :Bend ;
     rdfs:comment "A state in the North West of the US."@en ;
     rdfs:label "Oregon"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701
-:OR_97701 rdf:type owl:NamedIndividual ,
-                   :venue ;
-          :follows_in_style_of :Pizza_Place ;
-          :is_in_organisation :Little_Pizza_Paradise ;
-          :locates_in :Bend ;
-          :sells :Bianca_Pizza ,
-                 :Cheese_Pizza ;
-          :address "Cascade Village Mall Across From Target"@en ;
-          :postcode 97701 ;
-          rdfs:label "Little Pizza Paradise"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Bianca_Pizza
-:OR_97701_Bianca_Pizza rdf:type owl:NamedIndividual ,
-                                :menuItem ;
-                       :is_derived_from :Bianca_Pizza ;
-                       :is_sold_by :OR_97701 ;
-                       :cost "22.5"^^xsd:double ;
-                       rdfs:comment "Bianca Pizza served at Little Pizza Paradise"@en ;
-                       rdfs:label "Bianca Pizza from Little Pizza Paradise with zip code 97701"@en .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/OR_97701_Cheese_Pizza
-:OR_97701_Cheese_Pizza rdf:type owl:NamedIndividual ,
-                                :menuItem ;
-                       :has_topping :cheese ;
-                       :is_derived_from :Cheese_Pizza ;
-                       :is_sold_by :OR_97701 ;
-                       :cost "18.95"^^xsd:double ;
-                       rdfs:comment "Cheese Pizza served at Little Pizza Paradise"@en ;
-                       rdfs:label "Cheese Pizza from Little Pizza Paradise with zip code 97701"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/PA
@@ -698,20 +587,8 @@
 :PW rdf:type owl:NamedIndividual .
 
 
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Pizza_Place
-:Pizza_Place rdf:type owl:NamedIndividual ,
-                      :venueStyle ;
-             rdfs:label "Pizza Place"@en .
-
-
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/RI
 :RI rdf:type owl:NamedIndividual .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Roadhouse_Cafe
-:Roadhouse_Cafe rdf:type owl:NamedIndividual ,
-                         :organisation ;
-                rdfs:label "Roundhouse Cafe"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/SC
@@ -720,12 +597,6 @@
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/SD
 :SD rdf:type owl:NamedIndividual .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/Seafood_Restaurant
-:Seafood_Restaurant rdf:type owl:NamedIndividual ,
-                             :venueStyle ;
-                    rdfs:label "Seafood Restaurant"@en .
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/TN
@@ -774,28 +645,6 @@
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/WY
 :WY rdf:type owl:NamedIndividual .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese
-:cheese rdf:type owl:NamedIndividual ,
-                 :ingredient ;
-        :is_topping_of :Cheese_Pizza .
-
-
-###  http://www.city.ac.uk/ds/inm713/aaron_altrock/tomato
-:tomato rdf:type owl:NamedIndividual ,
-                 :ingredient .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :MA_2601_Cheese_Pizza
-                        :OR_97701_Cheese_Pizza
-                      )
-] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

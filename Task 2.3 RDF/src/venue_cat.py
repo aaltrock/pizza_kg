@@ -11,6 +11,20 @@ def __explode_str(s, delim=','):
     else:
         return ''
 
+
+# lemmatisation using pre-trained spaCy model
+def lemma_tokens(ls, nlp):
+    if ls is not None:
+        res_ls = []
+        for tkn in ls:
+            print('Lemmatise token: {}...'.format(tkn), end='\r')
+            sen = nlp(tkn)
+            for __tkn in sen:
+                res_ls += [__tkn.lemma_]
+        return res_ls
+    else:
+        return None
+
 """
 Helper func to clean up venue categories:
 - lower case
@@ -22,7 +36,7 @@ Helper func to clean up venue categories:
 """
 
 # Cleaning function for pizza categories per the above description
-def __post_cat_clean(df, stop_words_ls=[], cat_sub_words_ls=[]):
+def __cat_clean(df, stop_words_ls, cat_sub_words_ls, nlp):
     print('Cleaning up venue categories...', end='\r')
     df_ls = []
     for i, row in df.iterrows():
@@ -62,6 +76,9 @@ def __post_cat_clean(df, stop_words_ls=[], cat_sub_words_ls=[]):
                 gen_stp_wds_ls = list(stopwords.words('english'))
                 res_ls = [token for token in res_ls if token not in gen_stp_wds_ls]
 
+                # Lemmatise words to reduce token to single form
+                res_ls = lemma_tokens(res_ls, nlp)
+
                 # Remove duplicate tokens
                 res_ls = list(set(res_ls))
         df_ls += [res_ls]
@@ -69,12 +86,13 @@ def __post_cat_clean(df, stop_words_ls=[], cat_sub_words_ls=[]):
 
 
 # Clean up pizza categories
-def clean_venue_cat(df, cat_stop_words_ls=[], cat_sub_words_ls=[]):
+def clean_venue_cat(df, cat_stop_words_ls, cat_sub_words_ls, nlp):
+    print('Processing venue categories...', end='\r')
     # Categories: Exploding nested string into list
     cat_ls = [__explode_str(s) for s in df['categories']]
     df['categories'] = cat_ls
 
     # Categories: Remove duplicate category labels
-    df['categories'] = __post_cat_clean(df, cat_stop_words_ls, cat_sub_words_ls)
+    df['categories'] = __cat_clean(df, cat_stop_words_ls, cat_sub_words_ls, nlp)
 
     return df

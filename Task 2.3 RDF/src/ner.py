@@ -105,7 +105,7 @@ def run_ner(src_df, trn_data_file_nm, sheet_nm):
 
     src_df['spacy_ner_init'] = src_df['item description'].apply(ner_spacy)
 
-    return src_df
+    return src_df, nlp
 
 
 # Post NER cleansing for pizza topping entity tags

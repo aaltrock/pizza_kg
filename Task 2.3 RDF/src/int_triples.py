@@ -1,6 +1,6 @@
 import rdflib
 from rdflib.namespace import Namespace
-from rdflib.namespace import OWL, RDF, RDFS, FOAF, XSD
+from rdflib.namespace import OWL, RDF, RDFS, XSD
 from rdflib import URIRef, BNode, Literal
 import pandas as pd
 import spacy as sp
@@ -46,8 +46,8 @@ def add_individual_triples(ns, g, df, subj_nm, subj_cls_type, pred, obj_nm, obj_
         g.add((obj_uri, RDF.type, obj_cls_type))
 
         # Add triples - capture original value
-        g.add((subj_uri, value_ns, subj_lit))
-        g.add((obj_uri, value_ns, obj_lit))
+        g.add((subj_uri, RDFS.label, subj_lit))
+        g.add((obj_uri, RDFS.label, obj_lit))
 
         # Add triple - subject, predicate, object
         g.add((subj_uri, pred, obj_uri))
@@ -156,13 +156,6 @@ def make_g():
     """
     Create new variables for the triples
     """
-    # Categories: Exploding nested string into list and clean up, and remove specific stop words
-    cat_sub_words_ls = [('take out', 'take-out')]
-
-    cat_stop_words_ls = ['place', 'restaurants', 'pizza', ',', '&', 'and', 'venue', 'area']
-
-    clean_df = venue_cat.clean_venue_cat(clean_df, cat_stop_words_ls, cat_sub_words_ls)
-
     # Item description - set to string and replace NaN to None
     clean_df['item description'] = [None if pd.isna(v) else str(v) for v in clean_df['item description']]
 
@@ -173,9 +166,8 @@ def make_g():
     """
     Run NLP to identify pizza toppings
     """
-
     # Run NLTK and spaCy NER (inc training NER model with pizza toppings)
-    clean_df = ner.run_ner(clean_df, trn_data_file_nm='ner_training_data.xlsx', sheet_nm='trn_data_items_ingredient')
+    clean_df, nlp = ner.run_ner(clean_df, trn_data_file_nm='ner_training_data.xlsx', sheet_nm='trn_data_items_ingredient')
 
     # bespoke stop words listing to rid
     stop_words_ls = ['pizza', 'base', 'dough', 'topping', 'any', 'item', 'max', 'daily', 'whip', 'meal', 'no', 'optional',
@@ -197,6 +189,19 @@ def make_g():
     # Create new variable to make menu item specific to each venue
     clean_df['venue menu item'] = clean_df.apply(lambda row: row['menu item'] + '__' + row['venue'], axis=1)
 
+    """
+    Run NLP to clean and filter venue categories
+    """
+    # Categories: Exploding nested string into list and clean up, and remove specific stop words
+    cat_sub_words_ls = [('take out', 'take-out'), ('fast food', 'fast-food')]
+
+    cat_stop_words_ls = ['place', 'restaurants', 'pizza', ',', '&', 'and', 'venue', 'area', 'food']
+
+    clean_df = venue_cat.clean_venue_cat(clean_df, cat_stop_words_ls, cat_sub_words_ls, nlp)
+
+    """
+    Save cleaned data frame (with new features) to file for record
+    """
     # Save output to Excel file for record
     clean_df.reset_index(inplace=True, drop=True)
     clean_df.to_excel('clean_df.xlsx', index=False)
@@ -346,4 +351,13 @@ def make_g():
         int_g.add((venue, aa.postcode, postcode_lit))
         ext_g.add((venue, aa.postcode, postcode_lit))
 
+    """
+        Returns:
+        - src_df: origianl data
+        - clean_df: cleaned data with new features
+        - int_g: graph entirely from internal URIs with aa namespace
+        - ext_g: graph with internal URIs but for country, state and city to use external URI ref later
+        - aa: internal namespace for use later
+    """
     return src_df, clean_df, int_g, ext_g, aa
+

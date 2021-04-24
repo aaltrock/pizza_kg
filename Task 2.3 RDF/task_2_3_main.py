@@ -20,7 +20,7 @@ def main():
     src_df, clean_df, int_uri_g, ext_uri_g, aa = int_triples.make_g()
 
     # Save to Turtle .ttl file
-    int_uri_g.serialize(destination='2.3_python_int_uri_g.ttl', format='ttl')
+    int_uri_g.serialize(destination='2.3_rdf2_python_int_uri_g.ttl', format='ttl')
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
             TASK 2.3 SUBTASK RDF.3
@@ -33,7 +33,7 @@ def main():
     ext_uri_g = ext_triples.make_ext_g(ext_uri_g, clean_df, aa)
 
     # Save to Turtle .ttl file
-    ext_uri_g.serialize(destination='2.3_python_ext_uri_g.ttl', format='ttl')
+    ext_uri_g.serialize(destination='2.3_rdf3_python_ext_uri_g.ttl', format='ttl')
 
     print('END')
 

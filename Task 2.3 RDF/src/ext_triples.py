@@ -1,9 +1,7 @@
 import rdflib
 from rdflib.namespace import Namespace
-from rdflib.namespace import OWL, RDF, RDFS, FOAF, XSD
+from rdflib.namespace import OWL, RDF, RDFS, XSD
 from rdflib import URIRef, BNode, Literal
-import pandas as pd
-import random
 from src import int_triples
 import urllib
 
@@ -82,8 +80,8 @@ def add_ext_uri_triples(g, int_ns, ext_ns, df, subj_nm, subj_cls_type, subj_dct,
         g.add((obj_uri, RDF.type, obj_cls_type))
 
         # Add triples - capture original value
-        g.add((subj_uri, value_ns, subj_lit))
-        g.add((obj_uri, value_ns, obj_lit))
+        g.add((subj_uri, RDFS.label, subj_lit))
+        g.add((obj_uri, RDFS.label, obj_lit))
 
         # Add triple - subject, predicate, object
         g.add((subj_uri, pred, obj_uri))

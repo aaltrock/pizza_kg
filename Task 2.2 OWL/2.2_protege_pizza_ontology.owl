@@ -125,15 +125,6 @@
         <NamedIndividual IRI="AZ"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="American_Restaurant"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Bend"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Bianca_Pizza"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="CA"/>
     </Declaration>
     <Declaration>
@@ -141,9 +132,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="CT"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Cheese_Pizza"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="DC"/>
@@ -158,9 +146,6 @@
         <NamedIndividual IRI="FM"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="French_Restaurant"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="GA"/>
     </Declaration>
     <Declaration>
@@ -168,9 +153,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="HI"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Hyannis"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="IA"/>
@@ -194,16 +176,7 @@
         <NamedIndividual IRI="LA"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Little_Pizza_Paradise"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="MA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MA_2601"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="MD"/>
@@ -266,15 +239,6 @@
         <NamedIndividual IRI="OR"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="OR_97701"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="PA"/>
     </Declaration>
     <Declaration>
@@ -284,22 +248,13 @@
         <NamedIndividual IRI="PW"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="Pizza_Place"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="RI"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Roadhouse_Cafe"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="SC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="SD"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Seafood_Restaurant"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="TN"/>
@@ -333,12 +288,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="WY"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="cheese"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="tomato"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="city"/>
@@ -573,233 +522,6 @@
         <Class IRI="genericDish"/>
         <Class IRI="ingredient"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="venueStyle"/>
-        <NamedIndividual IRI="American_Restaurant"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="city"/>
-        <NamedIndividual IRI="Bend"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="genericDish"/>
-        <NamedIndividual IRI="Bianca_Pizza"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="genericDish"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="venueStyle"/>
-        <NamedIndividual IRI="French_Restaurant"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="city"/>
-        <NamedIndividual IRI="Hyannis"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="organisation"/>
-        <NamedIndividual IRI="Little_Pizza_Paradise"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="venue"/>
-        <NamedIndividual IRI="MA_2601"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="menuItem"/>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="venue"/>
-        <NamedIndividual IRI="OR_97701"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="menuItem"/>
-        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="menuItem"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="venueStyle"/>
-        <NamedIndividual IRI="Pizza_Place"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="organisation"/>
-        <NamedIndividual IRI="Roadhouse_Cafe"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="venueStyle"/>
-        <NamedIndividual IRI="Seafood_Restaurant"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ingredient"/>
-        <NamedIndividual IRI="cheese"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="ingredient"/>
-        <NamedIndividual IRI="tomato"/>
-    </ClassAssertion>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-    </DifferentIndividuals>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_followed_in_style_by"/>
-        <NamedIndividual IRI="American_Restaurant"/>
-        <NamedIndividual IRI="MA_2601"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_in_city"/>
-        <NamedIndividual IRI="Bend"/>
-        <NamedIndividual IRI="OR_97701"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_in_state"/>
-        <NamedIndividual IRI="Bend"/>
-        <NamedIndividual IRI="OR"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="derives"/>
-        <NamedIndividual IRI="Bianca_Pizza"/>
-        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="derives"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="derives"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_followed_in_style_by"/>
-        <NamedIndividual IRI="French_Restaurant"/>
-        <NamedIndividual IRI="MA_2601"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_in_city"/>
-        <NamedIndividual IRI="Hyannis"/>
-        <NamedIndividual IRI="MA_2601"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_in_state"/>
-        <NamedIndividual IRI="Hyannis"/>
-        <NamedIndividual IRI="MA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_venue_at"/>
-        <NamedIndividual IRI="Little_Pizza_Paradise"/>
-        <NamedIndividual IRI="OR_97701"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_city_of"/>
-        <NamedIndividual IRI="MA"/>
-        <NamedIndividual IRI="Hyannis"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="follows_in_style_of"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <NamedIndividual IRI="American_Restaurant"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="follows_in_style_of"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <NamedIndividual IRI="French_Restaurant"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="follows_in_style_of"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <NamedIndividual IRI="Seafood_Restaurant"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_in_organisation"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <NamedIndividual IRI="Roadhouse_Cafe"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="locates_in"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <NamedIndividual IRI="Hyannis"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="sells"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_topping"/>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-        <NamedIndividual IRI="cheese"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_derived_from"/>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_sold_by"/>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-        <NamedIndividual IRI="MA_2601"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_city_of"/>
-        <NamedIndividual IRI="OR"/>
-        <NamedIndividual IRI="Bend"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="follows_in_style_of"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <NamedIndividual IRI="Pizza_Place"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_in_organisation"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <NamedIndividual IRI="Little_Pizza_Paradise"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="locates_in"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <NamedIndividual IRI="Bend"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="sells"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <NamedIndividual IRI="Bianca_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="sells"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_derived_from"/>
-        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-        <NamedIndividual IRI="Bianca_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_sold_by"/>
-        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-        <NamedIndividual IRI="OR_97701"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="has_topping"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-        <NamedIndividual IRI="cheese"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_derived_from"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_sold_by"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-        <NamedIndividual IRI="OR_97701"/>
-    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="has_state"/>
         <NamedIndividual IRI="US"/>
@@ -810,46 +532,6 @@
         <NamedIndividual IRI="US"/>
         <NamedIndividual IRI="OR"/>
     </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="is_topping_of"/>
-        <NamedIndividual IRI="cheese"/>
-        <NamedIndividual IRI="Cheese_Pizza"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="address"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <Literal xml:lang="en">478 South St</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="postcode"/>
-        <NamedIndividual IRI="MA_2601"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2601</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="cost"/>
-        <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">8.95</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="address"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <Literal xml:lang="en">Cascade Village Mall Across From Target</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="postcode"/>
-        <NamedIndividual IRI="OR_97701"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">97701</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="cost"/>
-        <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">22.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="cost"/>
-        <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">18.95</Literal>
-    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="is_derived_from"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -1014,31 +696,6 @@
         <DataProperty IRI="description"/>
     </FunctionalDataProperty>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>American_Restaurant</IRI>
-        <Literal xml:lang="en">American Restaurant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Bianca_Pizza</IRI>
-        <Literal xml:lang="en">Bianca Pizza</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Cheese_Pizza</IRI>
-        <Literal xml:lang="en">Cheese Pizza</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>French_Restaurant</IRI>
-        <Literal xml:lang="en">French Restaurant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Little_Pizza_Paradise</IRI>
-        <Literal xml:lang="en">Little Pizza Paradise</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>MA</IRI>
         <Literal xml:lang="en">A state in North East of the US.</Literal>
@@ -1049,21 +706,6 @@
         <Literal xml:lang="en">Massachusetts</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>MA_2601</IRI>
-        <Literal xml:lang="en">Roadhouse Cafe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>MA_2601_Cheese_Pizza</IRI>
-        <Literal xml:lang="en">Cheese Pizza served at Roadhouse Cafe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>MA_2601_Cheese_Pizza</IRI>
-        <Literal xml:lang="en">Cheese Pizza from Roundhouse Cafe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>OR</IRI>
         <Literal xml:lang="en">A state in the North West of the US.</Literal>
@@ -1072,46 +714,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OR</IRI>
         <Literal xml:lang="en">Oregon</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OR_97701</IRI>
-        <Literal xml:lang="en">Little Pizza Paradise</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>OR_97701_Bianca_Pizza</IRI>
-        <Literal xml:lang="en">Bianca Pizza served at Little Pizza Paradise</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OR_97701_Bianca_Pizza</IRI>
-        <Literal xml:lang="en">Bianca Pizza from Little Pizza Paradise with zip code 97701</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>OR_97701_Cheese_Pizza</IRI>
-        <Literal xml:lang="en">Cheese Pizza served at Little Pizza Paradise</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OR_97701_Cheese_Pizza</IRI>
-        <Literal xml:lang="en">Cheese Pizza from Little Pizza Paradise with zip code 97701</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Pizza_Place</IRI>
-        <Literal xml:lang="en">Pizza Place</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Roadhouse_Cafe</IRI>
-        <Literal xml:lang="en">Roundhouse Cafe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Seafood_Restaurant</IRI>
-        <Literal xml:lang="en">Seafood Restaurant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
