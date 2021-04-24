@@ -26,6 +26,7 @@ pydantic==1.7.3
 pyparsing==2.4.7
 pyquery==1.4.3
 python-dateutil==2.8.1
+python-Levenshtein==0.12.2
 pytz==2021.1
 rdflib==5.0.0
 regex==2021.4.4
