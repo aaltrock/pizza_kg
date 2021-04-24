@@ -284,13 +284,18 @@ def make_g():
 
     # city is_in state
     print('Building and adding triples for city is_in state...', end='\r')
-    int_g = add_individual_triples(aa, int_g, clean_df, 'city_state', aa.city, aa.is_in,
+    int_g = add_individual_triples(aa, int_g, clean_df, 'city_state', aa.city, aa.is_in_state,
                                    'state_full', aa.state, aa.label)
 
     # venue locates_in city
     print('Building and adding triples for venue locates_in city...', end='\r')
     int_g = add_individual_triples(aa, int_g, clean_df, 'venue', aa.venue, aa.locates_in,
                                    'city_state', aa.city, aa.label)
+
+    # city has_in_city venue
+    print('Building and adding triples for city has_in_city venue...', end='\r')
+    int_g = add_individual_triples(aa, int_g, clean_df, 'city_state', aa.city, aa.has_in_city,
+                                   'venue', aa.venue, aa.label)
 
     """
     Data Properties Triples

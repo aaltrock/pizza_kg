@@ -26,9 +26,18 @@ def add_ext_uri_triples(g, int_ns, ext_ns, df, subj_nm, subj_cls_type, subj_dct,
 
     # For every pair of subject and object, build literals and triple to add to graph
     for i, row in __df.iterrows():
-        # Extract externally referenced URI
-        subj_uri_tup = subj_dct.get(row[subj_nm])
-        obj_uri_tup = obj_dct.get(row[obj_nm])
+
+        # If subject/object searched for external URI then use external URI
+        # If not using external URI (ie rely on internal URI) then set tuple results as None
+        if subj_dct is not None:
+            subj_uri_tup = subj_dct.get(row[subj_nm])
+        else:
+            subj_uri_tup = None
+
+        if obj_dct is not None:
+            obj_uri_tup = obj_dct.get(row[obj_nm])
+        else:
+            obj_uri_tup = None
 
         # If subject has None original values, create Blank Nodes
         if row[subj_nm] is not None:
@@ -63,7 +72,7 @@ def add_ext_uri_triples(g, int_ns, ext_ns, df, subj_nm, subj_cls_type, subj_dct,
             # If external URI is not found, use internal literal and URI
             else:
                 obj_lit = Literal(row[obj_nm])
-                obj_uri = ext_ns[urllib.parse.quote(row[obj_nm])]
+                obj_uri = int_ns[urllib.parse.quote(row[obj_nm])]
         else:
             obj_lit = BNode()
             obj_uri = BNode()
@@ -147,7 +156,6 @@ def make_ext_g(ext_uri_g, clean_df, aa):
     __uri_found = len([y for x, y in state_dct.items() if y is not None])
     print('{} states with {} external URI found'.format(len(state_ls), __uri_found))
 
-    # city_state_dct = {cy: get_ext_url(cy, return_nr, external_src) for cy in city_state_ls}
     city_state_dct = {}
     for i, cy in enumerate(city_state_ls):
         print('Looking up external URI for city: {} ({}/{})...'.format(cy, i, len(city_state_ls)), end='\r')
@@ -184,7 +192,18 @@ def make_ext_g(ext_uri_g, clean_df, aa):
 
     # city is_in state
     print('Building and adding triples for city is_in state...', end='\r')
-    ext_uri_g = add_ext_uri_triples(ext_uri_g, aa, ex, clean_df, 'city_state', aa.city, city_state_dct, aa.is_in,
+    ext_uri_g = add_ext_uri_triples(ext_uri_g, aa, ex, clean_df, 'city_state', aa.city, city_state_dct, aa.is_in_state,
                                     'state_full', aa.state, state_dct, aa.label, ext_base)
+
+    # venue locates_in city
+    print('Building and adding triples for venue locates_in city...', end='\r')
+    ext_uri_g = add_ext_uri_triples(ext_uri_g, aa, ex, clean_df, 'venue', aa.venue, None, aa.locates_in,
+                                    'city_state', aa.city, city_state_dct, aa.label, ext_base)
+
+    # city has_in_city venue
+    print('Building and adding triples for city has_in_city venue...', end='\r')
+    ext_uri_g = add_ext_uri_triples(ext_uri_g, aa, ex, clean_df, 'city_state', aa.city, city_state_dct, aa.has_in_city,
+                                    'venue', aa.venue, None, aa.label, ext_base)
+
 
     return ext_uri_g

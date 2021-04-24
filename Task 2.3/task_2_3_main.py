@@ -1,16 +1,8 @@
-import rdflib
-from rdflib.namespace import Namespace
-from rdflib.namespace import OWL, RDF, RDFS, FOAF, XSD
-from rdflib import URIRef, BNode, Literal
-import pandas as pd
 import random
 from src import int_triples, ext_triples
 
-from lab.lookup import DBpediaLookup, GoogleKGLookup, WikidataAPI
-import Levenshtein as lv
-import urllib
 
-
+# Helper func to print a graph in Turtle format
 def print_g(g):
     print(g.serialize(format='turtle').decode('utf-8'))
 
