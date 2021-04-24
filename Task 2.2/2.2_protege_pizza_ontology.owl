@@ -6,7 +6,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
-    <Prefix name="" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/"/>
+    <Prefix name="" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock#"/>
+    <Prefix name="aa" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock#"/>
+    <Prefix name="ex" IRI="http://www.wikidata.org/entity/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>

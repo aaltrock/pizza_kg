@@ -1,4 +1,6 @@
-@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock/> .
+@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
+@prefix aa: <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
+@prefix ex: <http://www.wikidata.org/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -668,7 +670,7 @@
                                 :menuItem ;
                        :is_derived_from :Bianca_Pizza ;
                        :is_sold_by :OR_97701 ;
-                       :description "22.5"^^xsd:double ;
+                       :cost "22.5"^^xsd:double ;
                        rdfs:comment "Bianca Pizza served at Little Pizza Paradise"@en ;
                        rdfs:label "Bianca Pizza from Little Pizza Paradise with zip code 97701"@en .
 
