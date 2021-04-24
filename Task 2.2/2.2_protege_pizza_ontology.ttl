@@ -562,7 +562,7 @@
                       :has_topping :cheese ;
                       :is_derived_from :Cheese_Pizza ;
                       :is_sold_by :MA_2601 ;
-                      :cost "8.95"@en ;
+                      :cost "8.95"^^xsd:double ;
                       rdfs:comment "Cheese Pizza served at Roadhouse Cafe"@en ;
                       rdfs:label "Cheese Pizza from Roundhouse Cafe"@en .
 
@@ -668,7 +668,7 @@
                                 :menuItem ;
                        :is_derived_from :Bianca_Pizza ;
                        :is_sold_by :OR_97701 ;
-                       :cost "22.50"@en ;
+                       :description "22.5"^^xsd:double ;
                        rdfs:comment "Bianca Pizza served at Little Pizza Paradise"@en ;
                        rdfs:label "Bianca Pizza from Little Pizza Paradise with zip code 97701"@en .
 
@@ -679,7 +679,7 @@
                        :has_topping :cheese ;
                        :is_derived_from :Cheese_Pizza ;
                        :is_sold_by :OR_97701 ;
-                       :cost "18.95"@en ;
+                       :cost "18.95"^^xsd:double ;
                        rdfs:comment "Cheese Pizza served at Little Pizza Paradise"@en ;
                        rdfs:label "Cheese Pizza from Little Pizza Paradise with zip code 97701"@en .
 

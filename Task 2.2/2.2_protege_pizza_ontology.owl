@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
+    <Prefix name="" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -825,7 +826,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="cost"/>
         <NamedIndividual IRI="MA_2601_Cheese_Pizza"/>
-        <Literal xml:lang="en">8.95</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">8.95</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="address"/>
@@ -840,12 +841,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="cost"/>
         <NamedIndividual IRI="OR_97701_Bianca_Pizza"/>
-        <Literal xml:lang="en">22.50</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">22.5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="cost"/>
         <NamedIndividual IRI="OR_97701_Cheese_Pizza"/>
-        <Literal xml:lang="en">18.95</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">18.95</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="is_derived_from"/>
