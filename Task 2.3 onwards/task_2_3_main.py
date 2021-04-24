@@ -1,3 +1,10 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+TASK 2.3 MAIN SCRIPT
+By Aaron Altrock
+Note: where external codes are used, these are referenced at the corresponding 
+locations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 import random
 from src import int_triples, ext_triples
 

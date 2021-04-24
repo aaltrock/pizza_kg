@@ -42,7 +42,8 @@ def add_ext_uri_triples(g, int_ns, ext_ns, df, subj_nm, subj_cls_type, subj_dct,
             # If external URI is found create URI object, else make internal URI object for subjects and objects
             if subj_uri_tup is not None:
                 # Literals to map URIRef to entity names
-                subj_lit = Literal(subj_uri_tup[2])
+                subj_lit = Literal(row[subj_nm])
+                subj_ext_lit = Literal(subj_uri_tup[2])
 
                 # Extract the ID of the entity from external URI
                 subj_uri_id = subj_uri_tup[-1].split('/')[-1]
@@ -51,17 +52,22 @@ def add_ext_uri_triples(g, int_ns, ext_ns, df, subj_nm, subj_cls_type, subj_dct,
             else:
                 subj_lit = Literal(row[subj_nm])
                 subj_uri = int_ns[urllib.parse.quote(row[subj_nm])]
+                subj_ext_lit = BNode()
         # Create Blank Nodes
         else:
             subj_lit = BNode()
             subj_uri = BNode()
+            subj_ext_lit = BNode()
 
         # If object has None original values, create Blank Nodes
         if row[obj_nm] is not None:
             # If external URI is found, use external URI
             if obj_uri_tup is not None:
                 # Literals to map URIRef to entity names
-                obj_lit = Literal(obj_uri_tup[2])
+                obj_lit = Literal(row[obj_nm])
+
+                # literal to retain the original external URI label
+                obj_ext_lit = Literal(obj_uri_tup[2])
 
                 # Extract the ID of the entity from external URI
                 obj_uri_id = obj_uri_tup[-1].split('/')[-1]
@@ -71,17 +77,23 @@ def add_ext_uri_triples(g, int_ns, ext_ns, df, subj_nm, subj_cls_type, subj_dct,
             else:
                 obj_lit = Literal(row[obj_nm])
                 obj_uri = int_ns[urllib.parse.quote(row[obj_nm])]
+                obj_ext_lit = BNode()
         else:
             obj_lit = BNode()
             obj_uri = BNode()
+            obj_ext_lit = BNode()
 
         # Add triples - define class type
         g.add((subj_uri, RDF.type, subj_cls_type))
         g.add((obj_uri, RDF.type, obj_cls_type))
 
-        # Add triples - capture original value
+        # Add triples - capture original data value
         g.add((subj_uri, RDFS.label, subj_lit))
         g.add((obj_uri, RDFS.label, obj_lit))
+
+        # Add triples - capture original external URI value
+        g.add((subj_uri, value_ns, subj_ext_lit))
+        g.add((obj_uri, value_ns, obj_ext_lit))
 
         # Add triple - subject, predicate, object
         g.add((subj_uri, pred, obj_uri))

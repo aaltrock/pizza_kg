@@ -1,4 +1,4 @@
-@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock/> .
+@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
 @prefix aa: <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
 @prefix ex: <http://www.wikidata.org/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

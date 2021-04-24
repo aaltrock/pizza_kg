@@ -153,6 +153,9 @@ def make_g():
     clean_df['postcode'] = clean_df['postcode'].apply(str)
     clean_df['postcode'] = [pcd if len(pcd) > 0 else '0' for pcd in clean_df['postcode']]
 
+    # replace city with city, state convention
+    clean_df['city'] = clean_df['city_state'].copy()
+
     """
     Create new variables for the triples
     """
