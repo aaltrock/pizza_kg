@@ -1,745 +1,745 @@
 stateName,cityName,venueCount
 Alabama,"Montgomery, AL",1
-Alabama,"Mobile, AL",1
 Alabama,"Auburn, AL",1
+Alabama,"Mobile, AL",1
 Alaska,"Fairbanks, AK",1
+Arizona,"Prescott, AZ",1
 Arizona,"Flagstaff, AZ",1
-Arizona,"Lake Havasu City, AZ",1
 Arizona,"Tempe, AZ",1
+Arizona,"Lake Havasu City, AZ",1
+Arizona,"Williams, AZ",1
+Arizona,"Cave Creek, AZ",1
+Arizona,"Prescott Valley, AZ",1
 Arizona,"Glendale, AZ",1
 Arizona,"Chandler, AZ",1
 Arizona,"Show Low, AZ",1
-Arizona,"Prescott Valley, AZ",1
 Arizona,"Sedona, AZ",1
-Arizona,"Prescott, AZ",1
-Arizona,"Cave Creek, AZ",1
-Arizona,"Williams, AZ",1
 Arizona,"Scottsdale, AZ",3
 Arizona,"Phoenix, AZ",4
-Arkansas,"Fort Smith, AR",1
-Arkansas,"Cabot, AR",1
 Arkansas,"Bentonville, AR",1
 Arkansas,"Jonesboro, AR",1
-California,"Tracy, CA",1
-California,"Dinuba, CA",1
-California,"Hollister, CA",1
-California,"Alameda, CA",1
-California,"Venice, CA",1
+Arkansas,"Fort Smith, AR",1
+Arkansas,"Cabot, AR",1
 California,"Laguna Niguel, CA",1
-California,"Rohnert Park, CA",1
-California,"Fullerton, CA",1
-California,"Redwood City, CA",1
-California,"San Jose, CA",1
-California,"Chatsworth, CA",1
-California,"Ventura, CA",1
-California,"Los Angeles, CA",1
-California,"Lakeside, CA",1
-California,"Vallejo, CA",1
-California,"Lompoc, CA",1
 California,"Hermosa Beach, CA",1
-California,"Brentwood, CA",1
-California,"Fresno, CA",1
-California,"Bakersfield, CA",1
-California,"Solana Beach, CA",1
 California,"El Segundo, CA",1
 California,"Upland, CA",1
+California,"San Jose, CA",1
+California,"Aliso Viejo, CA",1
+California,"Pleasant Hill, CA",1
+California,"Lathrop, CA",1
+California,"Los Angeles, CA",1
+California,"Chatsworth, CA",1
+California,"Alameda, CA",1
 California,"Moorpark, CA",1
 California,"Rancho Cucamonga, CA",1
-California,"Pasadena, CA",1
-California,"Danville, CA",1
-California,"Pleasant Hill, CA",1
-California,"Lake Forest, CA",1
-California,"Canoga Park, CA",1
-California,"Menifee, CA",1
-California,"Costa Mesa, CA",1
-California,"Redondo Beach, CA",1
+California,"Hollister, CA",1
+California,"Bakersfield, CA",1
+California,"Fresno, CA",1
+California,"Lakeside, CA",1
+California,"Solana Beach, CA",1
 California,"Petaluma, CA",1
-California,"Pomona, CA",1
-California,"Aliso Viejo, CA",1
-California,"Santa Cruz, CA",1
-California,"Huntington Beach, CA",1
-California,"Santa Maria, CA",1
-California,"Lathrop, CA",1
+California,"Ventura, CA",1
+California,"Costa Mesa, CA",1
+California,"Canoga Park, CA",1
+California,"Vallejo, CA",1
+California,"Brentwood, CA",1
 California,"Marina Del Rey, CA",1
+California,"Santa Maria, CA",1
+California,"Santa Cruz, CA",1
+California,"Tracy, CA",1
+California,"Huntington Beach, CA",1
+California,"Lake Forest, CA",1
+California,"Rohnert Park, CA",1
+California,"Redwood City, CA",1
 California,"Studio City, CA",1
-California,"Yucaipa, CA",2
-California,"Palm Desert, CA",2
+California,"Menifee, CA",1
+California,"Fullerton, CA",1
+California,"Pasadena, CA",1
+California,"Dinuba, CA",1
+California,"Lompoc, CA",1
+California,"Redondo Beach, CA",1
+California,"Pomona, CA",1
+California,"Danville, CA",1
+California,"Venice, CA",1
+California,"Sacramento, CA",2
 California,"Thousand Oaks, CA",2
 California,"Palo Alto, CA",2
-California,"San Francisco, CA",2
 California,"Modesto, CA",2
-California,"Sacramento, CA",2
 California,"Irvine, CA",2
+California,"San Francisco, CA",2
+California,"Palm Desert, CA",2
+California,"Yucaipa, CA",2
 California,"Corona, CA",3
 California,"San Diego, CA",5
-Colorado,"Evergreen, CO",1
-Colorado,"Idaho Springs, CO",1
 Colorado,"Johnstown, CO",1
-Colorado,"Fort Collins, CO",1
-Colorado,"Berthoud, CO",1
-Colorado,"Littleton, CO",1
+Colorado,"Evergreen, CO",1
 Colorado,"Aurora, CO",1
+Colorado,"Littleton, CO",1
+Colorado,"Idaho Springs, CO",1
+Colorado,"Berthoud, CO",1
+Colorado,"Fort Collins, CO",1
 Colorado,"Arvada, CO",2
 Colorado,"Denver, CO",5
-Connecticut,"Stamford, CT",1
-Connecticut,"Waterbury, CT",1
-Connecticut,"Hamden, CT",1
-Connecticut,"Pawcatuck, CT",1
-Connecticut,"Newtown, CT",1
-Connecticut,"Bloomfield, CT",1
-Connecticut,"Shelton, CT",1
-Connecticut,"Danbury, CT",1
-Connecticut,"Milford, CT",1
-Connecticut,"Simsbury, CT",1
-Connecticut,"Fairfield, CT",1
-Connecticut,"Wallingford, CT",1
 Connecticut,"East Granby, CT",1
+Connecticut,"Simsbury, CT",1
+Connecticut,"Danbury, CT",1
+Connecticut,"Wallingford, CT",1
+Connecticut,"Fairfield, CT",1
+Connecticut,"Hamden, CT",1
+Connecticut,"Stamford, CT",1
+Connecticut,"Bloomfield, CT",1
+Connecticut,"Waterbury, CT",1
+Connecticut,"Newtown, CT",1
+Connecticut,"Milford, CT",1
+Connecticut,"Shelton, CT",1
+Connecticut,"Pawcatuck, CT",1
 Connecticut,"Berlin, CT",1
 Connecticut,"Manchester, CT",2
-Delaware,"Newark, DE",1
 Delaware,"Middletown, DE",1
+Delaware,"Newark, DE",1
 Delaware,"Wilmington, DE",2
 District of Columbia,"Washington, DC",3
-Florida,"Arcadia, FL",1
-Florida,"Alachua, FL",1
-Florida,"Deland, FL",1
-Florida,"Clearwater, FL",1
-Florida,"Saint Petersburg, FL",1
-Florida,"Belleview, FL",1
-Florida,"Ocala, FL",1
-Florida,"Punta Gorda, FL",1
-Florida,"Palm Coast, FL",1
+Florida,"Gainesville, FL",1
 Florida,"Broward County, FL",1
-Florida,"West Palm Beach, FL",1
-Florida,"Bartow, FL",1
-Florida,"Miami Beach, FL",1
-Florida,"Bradenton Beach, FL",1
-Florida,"Dunedin, FL",1
 Florida,"Stuart, FL",1
+Florida,"Bartow, FL",1
 Florida,"North Port, FL",1
-Florida,"Hollywood, FL",1
-Florida,"Pompano Beach, FL",1
-Florida,"Lehigh Acres, FL",1
+Florida,"Clearwater, FL",1
+Florida,"Saint Cloud, FL",1
+Florida,"Sarasota, FL",1
+Florida,"Deland, FL",1
+Florida,"Destin, FL",1
+Florida,"Ocala, FL",1
 Florida,"Naples, FL",1
 Florida,"Nokomis, FL",1
-Florida,"Saint Cloud, FL",1
-Florida,"Destin, FL",1
-Florida,"Sarasota, FL",1
 Florida,"Kissimmee, FL",1
-Florida,"Gainesville, FL",1
-Florida,"Maitland, FL",2
-Florida,"Jacksonville, FL",2
+Florida,"Miami Beach, FL",1
+Florida,"Palm Coast, FL",1
+Florida,"Alachua, FL",1
+Florida,"Pompano Beach, FL",1
+Florida,"Saint Petersburg, FL",1
+Florida,"Dunedin, FL",1
+Florida,"West Palm Beach, FL",1
+Florida,"Belleview, FL",1
+Florida,"Punta Gorda, FL",1
+Florida,"Lehigh Acres, FL",1
+Florida,"Bradenton Beach, FL",1
+Florida,"Arcadia, FL",1
+Florida,"Hollywood, FL",1
 Florida,"Miami, FL",2
+Florida,"Jacksonville, FL",2
+Florida,"Maitland, FL",2
 Florida,"Orlando, FL",3
 Florida,"Altamonte Springs, FL",3
-Georgia,"Americus, GA",1
-Georgia,"Athens, GA",1
 Georgia,"Palmetto, GA",1
 Georgia,"Mcdonough, GA",1
-Georgia,"Stockbridge, GA",1
-Georgia,"Kennesaw, GA",1
-Georgia,"Lawrenceville, GA",1
 Georgia,"Augusta, GA",1
+Georgia,"Americus, GA",1
+Georgia,"Lawrenceville, GA",1
 Georgia,"Perry, GA",1
+Georgia,"Kennesaw, GA",1
+Georgia,"Stockbridge, GA",1
+Georgia,"Athens, GA",1
 Georgia,"Duluth, GA",2
 Georgia,"Atlanta, GA",3
 Hawaii,"Kamuela, HI",1
-Idaho,"Boise, ID",1
 Idaho,"Eagle, ID",1
-Illinois,"Sterling, IL",1
-Illinois,"Springfield, IL",1
-Illinois,"River Grove, IL",1
-Illinois,"Chatsworth, IL",1
-Illinois,"Woodridge, IL",1
-Illinois,"Justice, IL",1
-Illinois,"Lyons, IL",1
+Idaho,"Boise, ID",1
+Illinois,"Oak Park, IL",1
+Illinois,"Lockport, IL",1
 Illinois,"Elgin, IL",1
 Illinois,"Buffalo Grove, IL",1
-Illinois,"Berwyn, IL",1
-Illinois,"Peoria, IL",1
-Illinois,"Skokie, IL",1
-Illinois,"Mount Prospect, IL",1
-Illinois,"Peoria Heights, IL",1
-Illinois,"Minooka, IL",1
-Illinois,"Tinley Park, IL",1
-Illinois,"Vernon Hills, IL",1
-Illinois,"Lombard, IL",1
-Illinois,"Godfrey, IL",1
-Illinois,"Midlothian, IL",1
-Illinois,"Highwood, IL",1
-Illinois,"Evergreen Park, IL",1
-Illinois,"Palatine, IL",1
-Illinois,"Glenview, IL",1
 Illinois,"Chicago Ridge, IL",1
-Illinois,"Rockford, IL",1
-Illinois,"Frankfort, IL",1
-Illinois,"Lisle, IL",1
-Illinois,"Lockport, IL",1
-Illinois,"North Aurora, IL",1
-Illinois,"Decatur, IL",1
 Illinois,"Palos Hills, IL",1
-Illinois,"Oak Park, IL",1
-Illinois,"Wheeling, IL",1
+Illinois,"Lyons, IL",1
+Illinois,"Vernon Hills, IL",1
+Illinois,"Evergreen Park, IL",1
+Illinois,"North Aurora, IL",1
+Illinois,"Minooka, IL",1
 Illinois,"Urbana, IL",1
-Illinois,"Galena, IL",1
 Illinois,"Aurora, IL",1
+Illinois,"Skokie, IL",1
+Illinois,"Tinley Park, IL",1
+Illinois,"Mount Prospect, IL",1
 Illinois,"Chatham, IL",1
-Illinois,"Chicago, IL",2
-Illinois,"Bolingbrook, IL",2
-Illinois,"Freeport, IL",2
-Illinois,"Addison, IL",2
+Illinois,"Peoria Heights, IL",1
+Illinois,"Peoria, IL",1
+Illinois,"Woodridge, IL",1
+Illinois,"Glenview, IL",1
+Illinois,"River Grove, IL",1
+Illinois,"Berwyn, IL",1
+Illinois,"Rockford, IL",1
+Illinois,"Decatur, IL",1
+Illinois,"Lombard, IL",1
+Illinois,"Highwood, IL",1
+Illinois,"Wheeling, IL",1
+Illinois,"Lisle, IL",1
+Illinois,"Justice, IL",1
+Illinois,"Palatine, IL",1
+Illinois,"Chatsworth, IL",1
+Illinois,"Frankfort, IL",1
+Illinois,"Galena, IL",1
+Illinois,"Midlothian, IL",1
+Illinois,"Godfrey, IL",1
+Illinois,"Springfield, IL",1
+Illinois,"Sterling, IL",1
 Illinois,"Homer Glen, IL",2
-Indiana,"Granger, IN",1
-Indiana,"Schererville, IN",1
+Illinois,"Bolingbrook, IL",2
+Illinois,"Addison, IL",2
+Illinois,"Chicago, IL",2
+Illinois,"Freeport, IL",2
 Indiana,"Fishers, IN",1
+Indiana,"Schererville, IN",1
 Indiana,"Lafayette, IN",1
+Indiana,"Granger, IN",1
 Indiana,"Bloomington, IN",2
 Indiana,"Indianapolis, IN",4
-Iowa,"Sioux City, IA",1
 Iowa,"Des Moines, IA",1
-Iowa,"Marshalltown, IA",1
 Iowa,"Davenport, IA",1
+Iowa,"Marshalltown, IA",1
+Iowa,"Sioux City, IA",1
 Iowa,"Grinnell, IA",2
-Kansas,"Olathe, KS",1
 Kansas,"Andover, KS",1
+Kansas,"Olathe, KS",1
 Kansas,"Wichita, KS",2
-Kentucky,"Dayton, KY",1
 Kentucky,"Bowling Green, KY",1
+Kentucky,"Dayton, KY",1
 Kentucky,"Louisville, KY",2
-Louisiana,"Harvey, LA",1
-Louisiana,"Bossier City, LA",1
-Louisiana,"Farmerville, LA",1
 Louisiana,"Broussard, LA",1
-Louisiana,"Lafayette, LA",2
+Louisiana,"Bossier City, LA",1
+Louisiana,"Harvey, LA",1
+Louisiana,"Farmerville, LA",1
 Louisiana,"New Orleans, LA",2
-Maine,"Yarmouth, ME",1
+Louisiana,"Lafayette, LA",2
 Maine,"Portland, ME",1
+Maine,"Scarborough, ME",1
 Maine,"Waterville, ME",1
 Maine,"Kennebunk, ME",1
-Maine,"Scarborough, ME",1
-Maryland,"Columbia, MD",1
-Maryland,"Kensington, MD",1
-Maryland,"Frederick, MD",1
+Maine,"Yarmouth, ME",1
 Maryland,"Frostburg, MD",1
+Maryland,"Frederick, MD",1
 Maryland,"Cockeysville, MD",1
-Maryland,"Laurel, MD",1
-Maryland,"Reisterstown, MD",1
-Maryland,"Sykesville, MD",1
 Maryland,"Windsor Mill, MD",1
+Maryland,"Reisterstown, MD",1
+Maryland,"Kensington, MD",1
+Maryland,"Sykesville, MD",1
+Maryland,"Columbia, MD",1
+Maryland,"Laurel, MD",1
+Maryland,"Essex, MD",2
 Maryland,"Baltimore, MD",2
 Maryland,"Westminster, MD",2
-Maryland,"Essex, MD",2
-Massachusetts,"Peabody, MA",1
-Massachusetts,"Clinton, MA",1
-Massachusetts,"Gardner, MA",1
-Massachusetts,"Reading, MA",1
-Massachusetts,"Pittsfield, MA",1
-Massachusetts,"Marlborough, MA",1
-Massachusetts,"North Andover, MA",1
-Massachusetts,"Shrewsbury, MA",1
-Massachusetts,"Abington, MA",1
-Massachusetts,"Wareham, MA",1
-Massachusetts,"Hyannis, MA",1
-Massachusetts,"Newton Highlands, MA",1
-Massachusetts,"Tyngsboro, MA",1
-Massachusetts,"Boston, MA",1
-Massachusetts,"Swansea, MA",1
-Massachusetts,"Hopkinton, MA",1
-Massachusetts,"Medway, MA",1
-Massachusetts,"Hadley, MA",1
 Massachusetts,"Sturbridge, MA",1
 Massachusetts,"Framingham, MA",1
-Massachusetts,"Brookline, MA",1
-Massachusetts,"Burlington, MA",1
-Massachusetts,"Falmouth, MA",1
-Massachusetts,"Nantucket, MA",1
+Massachusetts,"Peabody, MA",1
+Massachusetts,"Newton Highlands, MA",1
 Massachusetts,"Chicopee, MA",1
-Massachusetts,"Franklin, MA",1
 Massachusetts,"Dennis Port, MA",1
-Massachusetts,"Marblehead, MA",2
+Massachusetts,"Burlington, MA",1
+Massachusetts,"Wareham, MA",1
+Massachusetts,"Clinton, MA",1
+Massachusetts,"Falmouth, MA",1
+Massachusetts,"Reading, MA",1
+Massachusetts,"North Andover, MA",1
+Massachusetts,"Gardner, MA",1
+Massachusetts,"Nantucket, MA",1
+Massachusetts,"Swansea, MA",1
+Massachusetts,"Hopkinton, MA",1
+Massachusetts,"Brookline, MA",1
+Massachusetts,"Franklin, MA",1
+Massachusetts,"Abington, MA",1
+Massachusetts,"Medway, MA",1
+Massachusetts,"Boston, MA",1
+Massachusetts,"Pittsfield, MA",1
+Massachusetts,"Marlborough, MA",1
+Massachusetts,"Hyannis, MA",1
+Massachusetts,"Tyngsboro, MA",1
+Massachusetts,"Hadley, MA",1
+Massachusetts,"Shrewsbury, MA",1
 Massachusetts,"Danvers, MA",2
-Michigan,"Utica, MI",1
-Michigan,"Novi, MI",1
+Massachusetts,"Marblehead, MA",2
+Michigan,"Marquette, MI",1
 Michigan,"Southgate, MI",1
-Michigan,"Fruitport, MI",1
+Michigan,"Fenton, MI",1
+Michigan,"White Lake, MI",1
+Michigan,"Utica, MI",1
+Michigan,"Redford, MI",1
 Michigan,"Detroit, MI",1
 Michigan,"Northville, MI",1
 Michigan,"Bronson, MI",1
-Michigan,"Marquette, MI",1
-Michigan,"Fenton, MI",1
-Michigan,"Redford, MI",1
+Michigan,"Fruitport, MI",1
+Michigan,"Wyoming, MI",1
+Michigan,"Novi, MI",1
+Michigan,"Plymouth, MI",1
 Michigan,"Cadillac, MI",1
-Michigan,"Petoskey, MI",1
-Michigan,"White Lake, MI",1
 Michigan,"Dearborn, MI",1
 Michigan,"Birmingham, MI",1
 Michigan,"Houghton, MI",1
-Michigan,"Wyoming, MI",1
-Michigan,"Plymouth, MI",1
+Michigan,"Petoskey, MI",1
 Michigan,"Rochester, MI",4
 Michigan,"Rochester, MN",4
-Minnesota,"Spring Park, MN",1
-Minnesota,"Isanti, MN",1
 Minnesota,"Sartell, MN",1
-Minnesota,"Detroit Lakes, MN",2
+Minnesota,"Isanti, MN",1
+Minnesota,"Spring Park, MN",1
 Minnesota,"Mankato, MN",2
+Minnesota,"Detroit Lakes, MN",2
 Minnesota,"Rochester, MI",4
 Minnesota,"Rochester, MN",4
 Minnesota,"Minneapolis, MN",5
-Mississippi,"Southaven, MS",1
 Mississippi,"Hernando, MS",1
+Mississippi,"Southaven, MS",1
 Mississippi,"Hattiesburg, MS",1
 Mississippi,"Oxford, MS",2
-Missouri,"Camdenton, MO",1
 Missouri,"Kansas City, MO",1
+Missouri,"Camdenton, MO",1
 Missouri,"Arnold, MO",1
 Missouri,"Saint Louis, MO",3
 Montana,"Bozeman, MT",1
 Montana,"Billings, MT",1
 Montana,"Missoula, MT",3
 Nebraska,"Lincoln, NE",1
+Nebraska,"Fremont, NE",1
 Nebraska,"York, NE",1
 Nebraska,"Elkhorn, NE",1
-Nebraska,"Fremont, NE",1
 Nebraska,"Omaha, NE",2
 Nevada,"Henderson, NV",3
 Nevada,"Las Vegas, NV",6
-New Hampshire,"Peterborough, NH",1
-New Hampshire,"Portsmouth, NH",1
 New Hampshire,"Milford, NH",1
-New Jersey,"East Brunswick, NJ",1
+New Hampshire,"Portsmouth, NH",1
+New Hampshire,"Peterborough, NH",1
 New Jersey,"Clifton, NJ",1
-New Jersey,"Moorestown, NJ",1
-New Jersey,"Paramus, NJ",1
-New Jersey,"Skillman, NJ",1
-New Jersey,"Fords, NJ",1
-New Jersey,"Whippany, NJ",1
-New Jersey,"Sicklerville, NJ",1
-New Jersey,"E Windsor, NJ",1
-New Jersey,"Lafayette, NJ",1
-New Jersey,"Wyckoff, NJ",1
-New Jersey,"Cliffside Park, NJ",1
-New Jersey,"Hazlet, NJ",1
-New Jersey,"Pennington, NJ",1
-New Jersey,"Allentown, NJ",1
-New Jersey,"Madison, NJ",1
-New Jersey,"Denville, NJ",1
-New Jersey,"Maple Shade, NJ",1
-New Jersey,"New Brunswick, NJ",1
-New Jersey,"Edgewater, NJ",1
-New Jersey,"Little Ferry, NJ",1
-New Jersey,"Wharton, NJ",1
-New Jersey,"Saddle Brook, NJ",1
-New Jersey,"Califon, NJ",1
-New Jersey,"Berkeley Heights, NJ",1
 New Jersey,"Clark, NJ",1
-New Jersey,"Merchantville, NJ",1
+New Jersey,"Madison, NJ",1
+New Jersey,"Califon, NJ",1
+New Jersey,"Hazlet, NJ",1
+New Jersey,"Lafayette, NJ",1
+New Jersey,"Maple Shade, NJ",1
 New Jersey,"Weehawken, NJ",1
-New Jersey,"Montclair, NJ",1
-New Jersey,"Hackettstown, NJ",1
-New Jersey,"Northfield, NJ",1
-New Jersey,"Piscataway, NJ",1
+New Jersey,"Allentown, NJ",1
+New Jersey,"Little Ferry, NJ",1
+New Jersey,"Paramus, NJ",1
 New Jersey,"Mine Hill, NJ",1
+New Jersey,"Berkeley Heights, NJ",1
 New Jersey,"Parlin, NJ",1
-New Jersey,"Summit, NJ",1
-New Jersey,"Whitehouse Station, NJ",1
+New Jersey,"Hackettstown, NJ",1
+New Jersey,"E Windsor, NJ",1
+New Jersey,"Piscataway, NJ",1
+New Jersey,"Northfield, NJ",1
+New Jersey,"Saddle Brook, NJ",1
+New Jersey,"New Brunswick, NJ",1
+New Jersey,"Whippany, NJ",1
+New Jersey,"Wharton, NJ",1
+New Jersey,"Moorestown, NJ",1
+New Jersey,"Denville, NJ",1
+New Jersey,"Merchantville, NJ",1
+New Jersey,"Sicklerville, NJ",1
 New Jersey,"Rahway, NJ",1
-New Jersey,"Morristown, NJ",2
+New Jersey,"Cliffside Park, NJ",1
+New Jersey,"East Brunswick, NJ",1
+New Jersey,"Skillman, NJ",1
+New Jersey,"Edgewater, NJ",1
+New Jersey,"Fords, NJ",1
+New Jersey,"Montclair, NJ",1
+New Jersey,"Whitehouse Station, NJ",1
+New Jersey,"Wyckoff, NJ",1
+New Jersey,"Summit, NJ",1
+New Jersey,"Pennington, NJ",1
 New Jersey,"Fairfield, NJ",2
 New Jersey,"Englishtown, NJ",2
+New Jersey,"Morristown, NJ",2
 New Mexico,"Farmington, NM",1
 New Mexico,"Albuquerque, NM",1
-New York State,"Pound Ridge, NY",1
-New York State,"Grand Island, NY",1
-New York State,"Massapequa Park, NY",1
-New York State,"Pearl River, NY",1
-New York State,"Hyde Park, NY",1
-New York State,"New City, NY",1
-New York State,"Fort Montgomery, NY",1
 New York State,"Rye, NY",1
-New York State,"Westbury, NY",1
+New York State,"Niagara Falls, NY",1
+New York State,"Pearl River, NY",1
 New York State,"Nanuet, NY",1
+New York State,"New York, NY",1
+New York State,"New City, NY",1
+New York State,"Hyde Park, NY",1
+New York State,"Westbury, NY",1
+New York State,"Pound Ridge, NY",1
 New York State,"Woodbury, NY",1
 New York State,"Lockport, NY",1
-New York State,"Niagara Falls, NY",1
-New York State,"Campbell Hall, NY",1
-New York State,"Waverly, NY",1
-New York State,"New York, NY",1
+New York State,"Fort Montgomery, NY",1
 New York State,"Centereach, NY",1
+New York State,"Waverly, NY",1
+New York State,"Massapequa Park, NY",1
+New York State,"Grand Island, NY",1
+New York State,"Campbell Hall, NY",1
 New York State,"Mount Kisco, NY",1
 New York State,"White Plains, NY",2
 New York State,"Buffalo, NY",2
-New York State,"Bronx, NY",3
 New York State,"Rochester, NY",3
 New York State,"Staten Island, NY",3
+New York State,"Bronx, NY",3
 New York State,"Brooklyn, NY",8
-North Carolina,"Kinston, NC",1
-North Carolina,"Raleigh, NC",1
 North Carolina,"Rockingham, NC",1
-North Carolina,"Cherryville, NC",1
-North Carolina,"Hendersonville, NC",1
-North Carolina,"Wake Forest, NC",1
 North Carolina,"Locust, NC",1
+North Carolina,"Hendersonville, NC",1
+North Carolina,"Raleigh, NC",1
+North Carolina,"Cherryville, NC",1
+North Carolina,"Kinston, NC",1
+North Carolina,"Wake Forest, NC",1
 North Carolina,"Cherokee, NC",1
-North Carolina,"Charlotte, NC",2
 North Carolina,"Wilson, NC",2
+North Carolina,"Charlotte, NC",2
 North Dakota,"Grand Forks, ND",1
-Ohio,"Hilliard, OH",1
-Ohio,"Toledo, OH",1
-Ohio,"N Olmsted, OH",1
-Ohio,"Medina, OH",1
-Ohio,"Bucyrus, OH",1
 Ohio,"Newark, OH",1
-Ohio,"Reynoldsburg, OH",1
-Ohio,"Upper Sandusky, OH",1
-Ohio,"Mount Vernon, OH",1
-Ohio,"Akron, OH",1
-Ohio,"Rossford, OH",1
-Ohio,"Wapakoneta, OH",1
-Ohio,"North Olmsted, OH",1
 Ohio,"Lakeview, OH",1
-Ohio,"Celina, OH",1
+Ohio,"Upper Sandusky, OH",1
+Ohio,"North Olmsted, OH",1
 Ohio,"Brookpark, OH",1
-Ohio,"Cincinnati, OH",1
 Ohio,"Strongsville, OH",1
-Ohio,"Baltimore, OH",2
+Ohio,"Mount Vernon, OH",1
+Ohio,"Wapakoneta, OH",1
+Ohio,"Bucyrus, OH",1
+Ohio,"Hilliard, OH",1
+Ohio,"Celina, OH",1
+Ohio,"Toledo, OH",1
+Ohio,"Rossford, OH",1
+Ohio,"Akron, OH",1
+Ohio,"N Olmsted, OH",1
+Ohio,"Reynoldsburg, OH",1
+Ohio,"Cincinnati, OH",1
+Ohio,"Medina, OH",1
 Ohio,"Findlay, OH",2
 Ohio,"Kent, OH",2
+Ohio,"Baltimore, OH",2
 Ohio,"Columbus, OH",3
-Oklahoma,"Edmond, OK",1
-Oklahoma,"Chickasha, OK",1
 Oklahoma,"Tulsa, OK",1
-Oklahoma,"Duncan, OK",1
 Oklahoma,"Mustang, OK",1
+Oklahoma,"Duncan, OK",1
+Oklahoma,"Chickasha, OK",1
+Oklahoma,"Edmond, OK",1
 Oklahoma,"Oklahoma City, OK",2
-Oregon,"Beaverton, OR",1
+Oregon,"Corvallis, OR",1
 Oregon,"Albany, OR",1
 Oregon,"Sandy, OR",1
+Oregon,"Beaverton, OR",1
 Oregon,"Ashland, OR",1
-Oregon,"Corvallis, OR",1
+Oregon,"Portland, OR",3
 Oregon,"Salem, OR",3
 Oregon,"Bend, OR",3
-Oregon,"Portland, OR",3
-Pennsylvania,"Luzerne, PA",1
-Pennsylvania,"Wexford, PA",1
-Pennsylvania,"Whitehall, PA",1
-Pennsylvania,"Plymouth, PA",1
-Pennsylvania,"Springfield, PA",1
-Pennsylvania,"Monroeville, PA",1
-Pennsylvania,"Lafayette Hill, PA",1
-Pennsylvania,"Allentown, PA",1
-Pennsylvania,"Chadds Ford, PA",1
-Pennsylvania,"Canonsburg, PA",1
-Pennsylvania,"Verona, PA",1
-Pennsylvania,"Willow Grove, PA",1
-Pennsylvania,"Lansdale, PA",1
-Pennsylvania,"Downingtown, PA",1
 Pennsylvania,"Titusville, PA",1
-Pennsylvania,"Ridley Park, PA",1
-Pennsylvania,"Shrewsbury, PA",1
+Pennsylvania,"Allentown, PA",1
+Pennsylvania,"Springfield, PA",1
+Pennsylvania,"Downingtown, PA",1
+Pennsylvania,"Verona, PA",1
+Pennsylvania,"Whitehall, PA",1
+Pennsylvania,"Chadds Ford, PA",1
 Pennsylvania,"Harleysville, PA",1
-Pennsylvania,"Mckeesport, PA",1
+Pennsylvania,"Wexford, PA",1
 Pennsylvania,"Skippack, PA",1
-Pennsylvania,"Bethlehem, PA",2
+Pennsylvania,"Plymouth, PA",1
+Pennsylvania,"Canonsburg, PA",1
+Pennsylvania,"Ridley Park, PA",1
+Pennsylvania,"Monroeville, PA",1
+Pennsylvania,"Luzerne, PA",1
+Pennsylvania,"Shrewsbury, PA",1
+Pennsylvania,"Mckeesport, PA",1
+Pennsylvania,"Willow Grove, PA",1
+Pennsylvania,"Lafayette Hill, PA",1
+Pennsylvania,"Lansdale, PA",1
 Pennsylvania,"State College, PA",2
 Pennsylvania,"King Of Prussia, PA",2
+Pennsylvania,"Bethlehem, PA",2
 Pennsylvania,"West Chester, PA",2
-Pennsylvania,"Pottstown, PA",3
 Pennsylvania,"Erie, PA",3
+Pennsylvania,"Pottstown, PA",3
 Pennsylvania,"Philadelphia, PA",9
-Puerto Rico,"Ayer, PR",1
-Puerto Rico,"South Weymouth, PR",1
 Puerto Rico,"Natick, PR",1
+Puerto Rico,"Medford, PR",1
 Puerto Rico,"South Yarmouth, PR",1
+Puerto Rico,"San Juan, PR",1
+Puerto Rico,"South Weymouth, PR",1
+Puerto Rico,"Providence, PR",1
+Puerto Rico,"Deerfield, PR",1
+Puerto Rico,"Ayer, PR",1
 Puerto Rico,"Great Barrington, PR",1
 Puerto Rico,"Quincy, PR",1
-Puerto Rico,"Deerfield, PR",1
-Puerto Rico,"San Juan, PR",1
-Puerto Rico,"Providence, PR",1
-Puerto Rico,"Medford, PR",1
 Puerto Rico,"Framingham, PR",2
-Rhode Island,"Providence, RI",1
-Rhode Island,"Lincoln, RI",1
+Rhode Island,"South Burlington, RI",1
+Rhode Island,"South Portland, RI",1
+Rhode Island,"West Warwick, RI",1
+Rhode Island,"Saint Albans, RI",1
 Rhode Island,"Augusta, RI",1
 Rhode Island,"Middletown, RI",1
-Rhode Island,"Saint Albans, RI",1
-Rhode Island,"South Portland, RI",1
+Rhode Island,"Lincoln, RI",1
+Rhode Island,"Providence, RI",1
 Rhode Island,"Laconia, RI",1
-Rhode Island,"South Burlington, RI",1
-Rhode Island,"West Warwick, RI",1
-Rhode Island,"East Greenwich, RI",2
-Rhode Island,"Bristol, RI",2
 Rhode Island,"Newport, RI",2
-South Carolina,"Charleston, SC",1
+Rhode Island,"Bristol, RI",2
+Rhode Island,"East Greenwich, RI",2
 South Carolina,"Greenville, SC",1
+South Carolina,"Lancaster, SC",1
 South Carolina,"Taylors, SC",1
+South Carolina,"Myrtle Beach, SC",1
+South Carolina,"Charleston, SC",1
+South Carolina,"Bennettsville, SC",1
 South Carolina,"Pickens, SC",1
 South Carolina,"Florence, SC",1
-South Carolina,"Bennettsville, SC",1
-South Carolina,"Lancaster, SC",1
-South Carolina,"Myrtle Beach, SC",1
 South Carolina,"Hilton Head Island, SC",2
 South Dakota,"Sioux Falls, SD",1
-Tennessee,"Madison, TN",1
 Tennessee,"Gatlinburg, TN",1
 Tennessee,"Paris, TN",1
+Tennessee,"Madison, TN",1
 Tennessee,"Nashville, TN",3
-Texas,"Keller, TX",1
-Texas,"Richardson, TX",1
-Texas,"Cedar Hill, TX",1
-Texas,"Fort Worth, TX",1
-Texas,"El Paso, TX",1
-Texas,"Mesquite, TX",1
-Texas,"Midland, TX",1
-Texas,"Kingwood, TX",1
-Texas,"Pasadena, TX",1
-Texas,"Katy, TX",1
-Texas,"Garland, TX",1
-Texas,"Plano, TX",1
 Texas,"Pearland, TX",1
 Texas,"Mansfield, TX",1
+Texas,"Pasadena, TX",1
+Texas,"Garland, TX",1
+Texas,"Richardson, TX",1
+Texas,"Fort Worth, TX",1
 Texas,"Allen, TX",1
+Texas,"Mesquite, TX",1
+Texas,"El Paso, TX",1
+Texas,"Midland, TX",1
+Texas,"Kingwood, TX",1
+Texas,"Keller, TX",1
+Texas,"Plano, TX",1
+Texas,"Cedar Hill, TX",1
 Texas,"Missouri City, TX",1
-Texas,"Southlake, TX",2
+Texas,"Katy, TX",1
 Texas,"Grapevine, TX",2
 Texas,"Cedar Park, TX",2
-Texas,"College Station, TX",2
 Texas,"San Antonio, TX",2
+Texas,"College Station, TX",2
+Texas,"Southlake, TX",2
 Texas,"Grand Prairie, TX",2
 Texas,"Mcallen, TX",2
 Texas,"Dallas, TX",3
 Texas,"Spring, TX",4
 Texas,"Austin, TX",5
 Texas,"Houston, TX",6
-Utah,"Gunnison, UT",1
 Utah,"Provo, UT",1
 Utah,"Cedar City, UT",1
+Utah,"Gunnison, UT",1
 Utah,"Layton, UT",2
-Vermont,"Niagara Falls, VT",1
-Vermont,"Syracuse, VT",1
-Vermont,"Flushing, VT",1
-Vermont,"Clifton Park, VT",1
-Vermont,"Middle Village, VT",1
-Vermont,"Margate City, VT",1
-Vermont,"Newark, VT",1
-Vermont,"Amsterdam, VT",1
-Vermont,"Pine Plains, VT",1
-Vermont,"Binghamton, VT",1
-Vermont,"Williamstown, VT",1
-Vermont,"Albany, VT",1
-Vermont,"Rockville Centre, VT",1
-Vermont,"West Deptford, VT",1
-Vermont,"Dover, VT",1
-Vermont,"Port Jefferson, VT",1
-Vermont,"Fair Lawn, VT",1
-Vermont,"Bellmawr, VT",1
-Vermont,"Cherry Hill, VT",1
-Vermont,"Montville, VT",1
-Vermont,"Hoboken, VT",1
-Vermont,"South Windsor, VT",1
-Vermont,"Hammonton, VT",1
-Vermont,"Ephrata, VT",1
-Vermont,"Lawrence Township, VT",1
-Vermont,"Coraopolis, VT",1
-Vermont,"Troy, VT",1
-Vermont,"Mechanicsburg, VT",1
-Vermont,"Saint James, VT",1
-Vermont,"Paradise, VT",1
-Vermont,"Fleetwood, VT",1
-Vermont,"Briarcliff Manor, VT",1
-Vermont,"Fort Lee, VT",1
-Vermont,"Mastic Beach, VT",1
-Vermont,"Newton, VT",1
-Vermont,"New Haven, VT",1
-Vermont,"Schwenksville, VT",1
-Vermont,"Bloomfield, VT",1
-Vermont,"Butler, VT",1
-Vermont,"Mahopac, VT",1
-Vermont,"Jamaica, VT",1
-Vermont,"Rome, VT",1
-Vermont,"Voorhees, VT",1
-Vermont,"Middletown, VT",1
-Vermont,"Wayne, VT",1
-Vermont,"Whitestone, VT",1
-Vermont,"Ellicott City, VT",1
-Vermont,"Garfield, VT",1
-Vermont,"Drexel Hill, VT",1
-Vermont,"Burlington, VT",1
-Vermont,"Vernon Rockville, VT",1
-Vermont,"Wheeling, VT",1
-Vermont,"Hartford, VT",1
 Vermont,"Chevy Chase, VT",1
-Vermont,"Trenton, VT",1
-Vermont,"Audubon, VT",1
-Vermont,"White Plains, VT",1
 Vermont,"Williston, VT",1
-Vermont,"Bowie, VT",1
-Vermont,"Little Falls, VT",1
-Vermont,"West Haven, VT",1
-Vermont,"East Hartford, VT",1
-Vermont,"Joppa, VT",1
-Vermont,"Marlton, VT",1
-Vermont,"Sayville, VT",1
-Vermont,"Collegeville, VT",1
-Vermont,"Connellsville, VT",1
-Vermont,"Newington, VT",1
-Vermont,"Bronx, VT",1
+Vermont,"Hammonton, VT",1
+Vermont,"Newark, VT",1
+Vermont,"Saint James, VT",1
+Vermont,"Binghamton, VT",1
 Vermont,"Wilkes Barre, VT",1
+Vermont,"Voorhees, VT",1
+Vermont,"Wayne, VT",1
+Vermont,"Marlton, VT",1
+Vermont,"Hartford, VT",1
+Vermont,"Pine Plains, VT",1
+Vermont,"Coraopolis, VT",1
+Vermont,"Butler, VT",1
+Vermont,"Jamaica, VT",1
+Vermont,"Drexel Hill, VT",1
+Vermont,"Collegeville, VT",1
+Vermont,"Ellicott City, VT",1
+Vermont,"Amsterdam, VT",1
+Vermont,"Newton, VT",1
+Vermont,"Little Falls, VT",1
+Vermont,"Sayville, VT",1
+Vermont,"West Deptford, VT",1
+Vermont,"Hoboken, VT",1
+Vermont,"Vernon Rockville, VT",1
+Vermont,"South Windsor, VT",1
+Vermont,"Troy, VT",1
+Vermont,"Audubon, VT",1
+Vermont,"Bronx, VT",1
+Vermont,"Paradise, VT",1
+Vermont,"Joppa, VT",1
+Vermont,"Burlington, VT",1
+Vermont,"Connellsville, VT",1
+Vermont,"Mahopac, VT",1
+Vermont,"West Haven, VT",1
+Vermont,"Rome, VT",1
+Vermont,"Montville, VT",1
+Vermont,"Newington, VT",1
+Vermont,"Cherry Hill, VT",1
 Vermont,"Hershey, VT",1
+Vermont,"Middle Village, VT",1
+Vermont,"Briarcliff Manor, VT",1
 Vermont,"Babylon, VT",1
-Vermont,"Hamilton, VT",1
+Vermont,"Dover, VT",1
+Vermont,"New Haven, VT",1
+Vermont,"Wheeling, VT",1
+Vermont,"Middletown, VT",1
 Vermont,"Front Royal, VT",1
-Vermont,"Endicott, VT",2
+Vermont,"East Hartford, VT",1
+Vermont,"Bowie, VT",1
+Vermont,"Fair Lawn, VT",1
+Vermont,"Schwenksville, VT",1
+Vermont,"Hamilton, VT",1
+Vermont,"Rockville Centre, VT",1
+Vermont,"Flushing, VT",1
+Vermont,"Mechanicsburg, VT",1
+Vermont,"Fort Lee, VT",1
+Vermont,"Bellmawr, VT",1
+Vermont,"Syracuse, VT",1
+Vermont,"White Plains, VT",1
+Vermont,"Albany, VT",1
+Vermont,"Williamstown, VT",1
+Vermont,"Trenton, VT",1
+Vermont,"Mastic Beach, VT",1
+Vermont,"Lawrence Township, VT",1
+Vermont,"Clifton Park, VT",1
+Vermont,"Whitestone, VT",1
+Vermont,"Bloomfield, VT",1
+Vermont,"Fleetwood, VT",1
+Vermont,"Niagara Falls, VT",1
+Vermont,"Margate City, VT",1
+Vermont,"Garfield, VT",1
+Vermont,"Port Jefferson, VT",1
+Vermont,"Ephrata, VT",1
+Vermont,"Lancaster, VT",2
 Vermont,"Westwood, VT",2
+Vermont,"Union, VT",2
 Vermont,"Port Washington, VT",2
 Vermont,"Bayonne, VT",2
-Vermont,"Lancaster, VT",2
-Vermont,"Islip, VT",2
+Vermont,"Endicott, VT",2
 Vermont,"Long Island City, VT",2
-Vermont,"Union, VT",2
+Vermont,"Islip, VT",2
+Vermont,"Astoria, VT",3
 Vermont,"Mount Laurel, VT",3
 Vermont,"Rockville, VT",3
-Vermont,"Astoria, VT",3
 Vermont,"Philadelphia, VT",4
 Vermont,"Pittsburgh, VT",5
 Vermont,"New York, VT",26
-Virginia,"Blacksburg, VA",1
-Virginia,"Suffolk, VA",1
-Virginia,"Norfolk, VA",1
+Virginia,"Henrico, VA",1
+Virginia,"Williamsburg, VA",1
+Virginia,"Harrisonburg, VA",1
+Virginia,"Springfield, VA",1
+Virginia,"Ashland, VA",1
 Virginia,"Fairfax, VA",1
 Virginia,"Chesapeake, VA",1
-Virginia,"Harrisonburg, VA",1
-Virginia,"Ashland, VA",1
-Virginia,"Daleville, VA",1
+Virginia,"Suffolk, VA",1
 Virginia,"Manassas, VA",1
-Virginia,"Henrico, VA",1
+Virginia,"Daleville, VA",1
 Virginia,"Arlington, VA",1
-Virginia,"Williamsburg, VA",1
+Virginia,"Blacksburg, VA",1
+Virginia,"Norfolk, VA",1
 Virginia,"Richmond, VA",1
-Virginia,"Springfield, VA",1
-Washington,"Langley, WA",1
-Washington,"Lynden, WA",1
-Washington,"Marysville, WA",1
-Washington,"Federal Way, WA",1
 Washington,"Auburn, WA",1
-Washington,"Bellevue, WA",1
-Washington,"Tacoma, WA",1
-Washington,"Olympia, WA",1
 Washington,"Vancouver, WA",1
+Washington,"Olympia, WA",1
+Washington,"Bellevue, WA",1
+Washington,"Marysville, WA",1
+Washington,"Langley, WA",1
 Washington,"Kent, WA",1
+Washington,"Federal Way, WA",1
+Washington,"Tacoma, WA",1
+Washington,"Lynden, WA",1
 Washington,"Pullman, WA",2
 Washington,"Seattle, WA",3
-West Virginia,"Willoughby, WV",1
-West Virginia,"Miami Beach, WV",1
-West Virginia,"Washington, WV",1
-West Virginia,"Chesterfield, WV",1
-West Virginia,"Beckley, WV",1
-West Virginia,"Louisville, WV",1
-West Virginia,"Bloomington, WV",1
-West Virginia,"Flat Rock, WV",1
-West Virginia,"Sherwood, WV",1
-West Virginia,"Jefferson City, WV",1
-West Virginia,"Round Lake, WV",1
+West Virginia,"Pompano Beach, WV",1
 West Virginia,"Excelsior, WV",1
-West Virginia,"Mount Carmel, WV",1
-West Virginia,"North Miami Beach, WV",1
-West Virginia,"Inver Grove Heights, WV",1
-West Virginia,"Cleveland, WV",1
-West Virginia,"Covington, WV",1
-West Virginia,"Birmingham, WV",1
-West Virginia,"Ashland, WV",1
-West Virginia,"Sylacauga, WV",1
-West Virginia,"Amherst, WV",1
-West Virginia,"Dayton, WV",1
+West Virginia,"Jefferson City, WV",1
+West Virginia,"Flat Rock, WV",1
+West Virginia,"Rayville, WV",1
 West Virginia,"Joliet, WV",1
-West Virginia,"Bloomfield Hills, WV",1
-West Virginia,"Indianapolis, WV",1
-West Virginia,"Weirton, WV",1
+West Virginia,"Lake Ozark, WV",1
+West Virginia,"Shawnee, WV",1
+West Virginia,"Matthews, WV",1
+West Virginia,"Loveland, WV",1
+West Virginia,"Covington, WV",1
+West Virginia,"Bloomington, WV",1
+West Virginia,"Cleveland, WV",1
+West Virginia,"Johns Island, WV",1
+West Virginia,"Miami Beach, WV",1
 West Virginia,"Wellington, WV",1
-West Virginia,"Saint Charles, WV",1
+West Virginia,"Mount Carmel, WV",1
+West Virginia,"Auburn, WV",1
+West Virginia,"Blowing Rock, WV",1
 West Virginia,"Elyria, WV",1
 West Virginia,"Jackson, WV",1
-West Virginia,"Murfreesboro, WV",1
-West Virginia,"Oxford, WV",1
-West Virginia,"Franklin, WV",1
-West Virginia,"Fort Myers, WV",1
-West Virginia,"Trenton, WV",1
-West Virginia,"Matthews, WV",1
-West Virginia,"Englewood, WV",1
-West Virginia,"Barrington, WV",1
-West Virginia,"Barboursville, WV",1
-West Virginia,"Denver, WV",1
-West Virginia,"Pompano Beach, WV",1
-West Virginia,"Rayville, WV",1
-West Virginia,"Shawnee, WV",1
-West Virginia,"Saint Louis, WV",1
-West Virginia,"Auburn, WV",1
-West Virginia,"Lake Ozark, WV",1
-West Virginia,"Saint Ann, WV",1
-West Virginia,"Hollywood, WV",1
-West Virginia,"Osseo, WV",1
-West Virginia,"Loveland, WV",1
-West Virginia,"Mc Cordsville, WV",1
-West Virginia,"Blowing Rock, WV",1
-West Virginia,"Atlanta, WV",1
-West Virginia,"Vail, WV",1
 West Virginia,"Green Bay, WV",1
-West Virginia,"Crown Point, WV",1
-West Virginia,"Grand Rapids, WV",1
-West Virginia,"Johns Island, WV",1
+West Virginia,"Sylacauga, WV",1
+West Virginia,"Vail, WV",1
+West Virginia,"Mc Cordsville, WV",1
+West Virginia,"Osseo, WV",1
+West Virginia,"Sherwood, WV",1
 West Virginia,"San Antonio, WV",1
+West Virginia,"Saint Louis, WV",1
+West Virginia,"Ashland, WV",1
+West Virginia,"Fort Myers, WV",1
+West Virginia,"Denver, WV",1
+West Virginia,"Washington, WV",1
+West Virginia,"Louisville, WV",1
+West Virginia,"Saint Ann, WV",1
+West Virginia,"Saint Charles, WV",1
+West Virginia,"Barboursville, WV",1
+West Virginia,"Willoughby, WV",1
+West Virginia,"Trenton, WV",1
+West Virginia,"Beckley, WV",1
+West Virginia,"Crown Point, WV",1
+West Virginia,"Amherst, WV",1
 West Virginia,"Macomb, WV",1
-West Virginia,"Wilmington, WV",2
-West Virginia,"Columbus, WV",2
-West Virginia,"Kernersville, WV",2
+West Virginia,"Barrington, WV",1
+West Virginia,"Indianapolis, WV",1
+West Virginia,"Atlanta, WV",1
+West Virginia,"Weirton, WV",1
+West Virginia,"Murfreesboro, WV",1
+West Virginia,"Franklin, WV",1
+West Virginia,"Englewood, WV",1
+West Virginia,"Bloomfield Hills, WV",1
+West Virginia,"Oxford, WV",1
+West Virginia,"Chesterfield, WV",1
+West Virginia,"Dayton, WV",1
+West Virginia,"Inver Grove Heights, WV",1
+West Virginia,"Round Lake, WV",1
+West Virginia,"Birmingham, WV",1
+West Virginia,"Grand Rapids, WV",1
+West Virginia,"Hollywood, WV",1
+West Virginia,"North Miami Beach, WV",1
 West Virginia,"Houston, WV",2
+West Virginia,"Cincinnati, WV",2
+West Virginia,"Charleston, WV",2
+West Virginia,"Memphis, WV",2
+West Virginia,"Stillwater, WV",2
+West Virginia,"Milwaukee, WV",2
+West Virginia,"Columbus, WV",2
 West Virginia,"Greensboro, WV",2
 West Virginia,"Winston Salem, WV",2
+West Virginia,"Hickory, WV",2
+West Virginia,"Wilmington, WV",2
 West Virginia,"Saint Petersburg, WV",2
 West Virginia,"Richmond, WV",2
-West Virginia,"Cincinnati, WV",2
-West Virginia,"Stillwater, WV",2
-West Virginia,"Memphis, WV",2
-West Virginia,"Hickory, WV",2
-West Virginia,"Milwaukee, WV",2
-West Virginia,"Charleston, WV",2
+West Virginia,"Kernersville, WV",2
 West Virginia,"Colorado Springs, WV",3
 West Virginia,"Lexington, WV",3
 West Virginia,"Chicago, WV",4
 West Virginia,"Fort Lauderdale, WV",5
-Wisconsin,"Milwaukee, WI",1
-Wisconsin,"Waukesha, WI",1
-Wisconsin,"Racine, WI",1
 Wisconsin,"Schofield, WI",1
+Wisconsin,"Waukesha, WI",1
+Wisconsin,"Milwaukee, WI",1
 Wisconsin,"Roberts, WI",1
+Wisconsin,"Racine, WI",1
 Wisconsin,"Wausau, WI",2
-Wyoming,"Spokane, WY",1
-Wyoming,"Reno, WY",1
-Wyoming,"Snohomish, WY",1
-Wyoming,"San Rafael, WY",1
-Wyoming,"Coeur D Alene, WY",1
-Wyoming,"Aptos, WY",1
-Wyoming,"Midvale, WY",1
-Wyoming,"Santa Cruz, WY",1
-Wyoming,"Rancho Palos Verdes, WY",1
 Wyoming,"Bothell, WY",1
-Wyoming,"Desert Hot Springs, WY",1
-Wyoming,"Saint George, WY",1
-Wyoming,"Santa Clarita, WY",1
-Wyoming,"Folsom, WY",1
-Wyoming,"Mill Valley, WY",1
-Wyoming,"South San Francisco, WY",1
-Wyoming,"Santa Fe, WY",1
 Wyoming,"West Linn, WY",1
-Wyoming,"Moses Lake, WY",1
-Wyoming,"Ventura, WY",1
-Wyoming,"Bonney Lake, WY",1
+Wyoming,"South San Francisco, WY",1
+Wyoming,"Aptos, WY",1
+Wyoming,"Coeur D Alene, WY",1
 Wyoming,"Novato, WY",1
+Wyoming,"Folsom, WY",1
+Wyoming,"Saint George, WY",1
+Wyoming,"Snohomish, WY",1
+Wyoming,"Ventura, WY",1
+Wyoming,"Desert Hot Springs, WY",1
+Wyoming,"Mill Valley, WY",1
+Wyoming,"Moses Lake, WY",1
+Wyoming,"Midvale, WY",1
+Wyoming,"Santa Clarita, WY",1
+Wyoming,"Santa Fe, WY",1
+Wyoming,"Spokane, WY",1
+Wyoming,"Santa Cruz, WY",1
+Wyoming,"San Rafael, WY",1
+Wyoming,"Bonney Lake, WY",1
+Wyoming,"Reno, WY",1
 Wyoming,"Pittsburg, WY",1
-Wyoming,"Long Beach, WY",2
+Wyoming,"Rancho Palos Verdes, WY",1
 Wyoming,"Encinitas, WY",2
+Wyoming,"Long Beach, WY",2
 Wyoming,"Seattle, WY",3
-Wyoming,"Kirkland, WY",3
 Wyoming,"Salt Lake City, WY",3
+Wyoming,"Kirkland, WY",3
 Wyoming,"Honolulu, WY",4
 Wyoming,"Los Angeles, WY",7

@@ -135,14 +135,6 @@ def make_ext_g(ext_uri_g, clean_df, aa):
     ex = Namespace(ext_base)
     ext_uri_g.bind('ex', ex)
 
-    # Define class triples for the fields
-    classes_ls = [ex.location, ex.genericDish, ex.ingredient,
-                  ex.menuItem, ex.organisation, ex.venue, ex.venueStyle]
-
-    # External graph to exclude country, state, city - will add later in task RDF.3
-    for cls in classes_ls:
-        ext_uri_g.add((cls, RDF.type, OWL.Class))
-
     # Get distinct lists of 'country', 'state', 'city'
     country_ls = list(clean_df['country_full'])
     state_ls = list(clean_df.apply(lambda r: r['state_full'] if r['state_full'] is not None else None, axis=1))

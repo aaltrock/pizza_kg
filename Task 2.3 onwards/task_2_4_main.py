@@ -157,7 +157,7 @@ def main():
                 GROUP BY ?stateName ?cityName
                 ORDER BY ?stateName ?venueCount
                 """
-    print('SPARQL.3 query - : Average price of a margherita pizza')
+    print('SPARQL.4 query - : Per state, city, the count of venues')
     print(query_str)
     res = extend_g.query(query_str)
     res.serialize('Task_2.4_SPARQL.4.csv', format='csv')
