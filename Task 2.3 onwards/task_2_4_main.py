@@ -185,7 +185,7 @@ def main():
                     }
                     ORDER BY ?orgName ?address
                 """
-    print('SPARQL.3 query - : Average price of a margherita pizza')
+    print('SPARQL.5 query - : No. of restaurants with missing post code')
     print(query_str)
     res = extend_g.query(query_str)
     res.serialize('Task_2.4_SPARQL.5.csv', format='csv')
