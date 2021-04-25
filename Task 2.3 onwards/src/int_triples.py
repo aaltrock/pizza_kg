@@ -246,6 +246,15 @@ def make_g():
     ext_g = add_individual_triples(aa, ext_g, __venue_style_df, 'categories', aa.category,
                                    aa.is_followed_in_style_by, 'venue', aa.venue, aa.label)
 
+    # venue follows_in_style_of venueStyle
+    __venue_style_df = explode_subj_obj_df(clean_df, ['venue', 'categories'], 'categories')
+    print('Building and adding triples for venue follows_in_style_of venueStyle...', end='\r')
+    int_g = add_individual_triples(aa, int_g, __venue_style_df, 'venue', aa.venue,
+                                   aa.follows_in_style_of, 'categories', aa.category, aa.label)
+    ext_g = add_individual_triples(aa, ext_g, __venue_style_df, 'venue', aa.venue,
+                                   aa.follows_in_style_of, 'categories', aa.category, aa.label)
+
+
     # venue is_in_organisation organisation
     print('Building and adding triples for venue is_in_organisation organisation...', end='\r')
     int_g = add_individual_triples(aa, int_g, clean_df, 'venue', aa.venue, aa.is_in_organisation,
@@ -321,7 +330,7 @@ def make_g():
     # For every row in source file, add data properties (cost, address, post code and item description)
     for i, row in clean_df.iterrows():
         # if costs is captured, venue menu item :cost cost
-        if row['item value'] is not None:
+        if row['item value'] is not None and not pd.isna(row['item value']):
             cost_lit = Literal(row['item value'], datatype=XSD.double)
         else:
             cost_lit = BNode()
@@ -347,7 +356,7 @@ def make_g():
         ext_g.add((venue, aa.address, addr_lit))
 
         # venue :postcode postcode
-        if row['postcode'] is not None:
+        if row['postcode'] is not None and row['postcode'] != 'nan':
             postcode_lit = Literal(row['postcode'], datatype=XSD.string)
         else:
             postcode_lit = BNode()
@@ -356,7 +365,7 @@ def make_g():
 
     """
         Returns:
-        - src_df: origianl data
+        - src_df: original data
         - clean_df: cleaned data with new features
         - int_g: graph entirely from internal URIs with aa namespace
         - ext_g: graph with internal URIs but for country, state and city to use external URI ref later
