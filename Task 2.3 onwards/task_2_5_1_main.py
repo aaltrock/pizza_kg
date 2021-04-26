@@ -278,7 +278,14 @@ def main():
     eqi_g.serialize(destination='2.5_oa1_equivalence_g.ttl', format='ttl')
     print('Saved the equivalence triples to 2.5_oa1_equivalence_g.ttl.')
 
+    # Save extended graph to OWL format
+    uni_g.serialize(destination='2.5_oa1_union_g.owl.xml', format='xml')
+    print('Saved the unioned graph to 2.5_oa1_union_g.owl.xml.')
+    eqi_g.serialize(destination='2.5_oa1_equivalence_g.owl.xml', format='xml')
+    print('Saved the equivalence triples to 2.5_oa1_equivalence_g.owl.xml.')
+
     print('END')
+
 
 if __name__ == '__main__':
     main()

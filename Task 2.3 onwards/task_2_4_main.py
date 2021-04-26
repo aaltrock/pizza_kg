@@ -55,6 +55,7 @@ def main():
 
     # Save extended graph to Turtle format
     extend_g.serialize(destination='2.4_sparql1_g.ttl', format='ttl')
+    extend_g.serialize(destination='2.4_sparql1_g.owl.xml', format='xml')
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
             TASK 2.4 SUBTASK SPARQL.2

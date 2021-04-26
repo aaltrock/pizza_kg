@@ -177,7 +177,7 @@ def make_g():
                      'inch', 'day', 'top', 'each', 'size', 'make', 'free', 'off', 'love', 'and', 'pricing', 'specialty',
                      'week', 'long', 'freshly', 'creation', 'add', 'combination', 'hearty', 'oven', 'pan', 'topping',
                      'menu', 'order', 'time', 'create', 'small', 'medium', 'large', 'value', 'get', 'equal', 'coupon',
-                     'offer', 'dish']
+                     'offer', 'dish', 'ingredient']
 
     # Post topping NER cleansing (lower, lemma, remove digits, remove specific stop words)
     clean_df = ner.clean_topping_ner(clean_df, stop_words_ls)

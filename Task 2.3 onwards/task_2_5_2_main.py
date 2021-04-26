@@ -84,12 +84,12 @@ if __name__ == '__main__':
     ref_onto.reason_onto(reasoner=Reasoner.PELLET)
 
     # 3) aligned ontology with data
-    file_path = '2.5_oa1_union_g.ttl'
+    file_path = '2.5_oa1_union_g.owl.xml'
     union_onto = Onto(file_path)
     union_onto.reason_onto(reasoner=Reasoner.PELLET)
 
     # 4) computed alignment (without the data)
-    file_path = '2.5_oa1_equivalence_g.ttl'
+    file_path = '2.5_oa1_equivalence_g.owl.xml'
     algn_onto = Onto(file_path)
     algn_onto.reason_onto(reasoner=Reasoner.PELLET)
 
@@ -104,12 +104,6 @@ if __name__ == '__main__':
 
     print('Alignment ontology (without data) ontology pizza.owl: {} classes; {} unsatisfiable classes;'
           .format(algn_onto.class_nr, algn_onto.class_unsat_nr))
-
-
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-                    TASK 2.5 SUBTASK OA.2.a
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    # To be performed in Protégé for pizza.owl that returned three unsatisfiable classes.
 
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                     TASK 2.5 SUBTASK OA.2.b
