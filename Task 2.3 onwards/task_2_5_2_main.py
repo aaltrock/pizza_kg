@@ -74,7 +74,7 @@ if __name__ == '__main__':
     print('TASK 2.5 SUBTASK OA.2\n')
 
     # 1) created ontology - extended ontology from task 2.4
-    file_path = '2.4_sparql1_g.ttl'
+    file_path = '2.4_sparql1_g.owl.xml'
     local_onto = Onto(file_path)
     local_onto.reason_onto(reasoner=Reasoner.PELLET)
 
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     algn_onto = Onto(file_path)
     algn_onto.reason_onto(reasoner=Reasoner.PELLET)
 
-    print('Created ontology from task 2.4 2.4_sparql1_g.ttl: {} classes; {} unsatisfiable classes;'
+    print('Created ontology from task 2.4 2.4_sparql1_g.owl.xml: {} classes; {} unsatisfiable classes;'
           .format(local_onto.class_nr, local_onto.class_unsat_nr))
 
     print('Reference ontology pizza.owl: {} classes; {} unsatisfiable classes;'
