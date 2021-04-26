@@ -29,6 +29,11 @@ def main():
 
     # Union the two graphs into extended graph
     extend_g = data_g + onto_g
+
+    # Prefix
+    aa = Namespace('http://www.city.ac.uk/ds/inm713/aaron_altrock#')
+    extend_g.bind('aa', aa)
+
     # print(extend_g.serialize(format='turtle').decode('utf-8'))
 
     # Do some reasoning

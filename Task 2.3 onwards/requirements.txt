@@ -5,6 +5,7 @@ chardet==4.0.0
 click==7.1.2
 cssselect==1.1.0
 cymem==2.0.5
+Cython==0.29.23
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl
 et-xmlfile==1.0.1
 idna==2.10
@@ -18,7 +19,7 @@ murmurhash==1.0.5
 nltk==3.6.1
 numpy==1.20.2
 openpyxl==3.0.7
-Owlready2==0.30
+Owlready2==0.26
 packaging==20.9
 pandas==1.2.4
 pathy==0.4.0
