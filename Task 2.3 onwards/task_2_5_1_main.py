@@ -10,8 +10,6 @@ import rdflib
 from rdflib.namespace import Namespace
 from rdflib.namespace import OWL, RDF, RDFS, XSD
 from rdflib import URIRef, BNode, Literal
-import logging
-from enum import Enum
 
 
 # Return ontology class name (RDFS label) and class as tuple
@@ -60,7 +58,7 @@ def main():
     print('TASK 2.5 SUBTASK SPARQL.1\n')
     # Load in reference and local (from task 2.4) ontologies
     ref_file_path = 'pizza.owl'
-    loc_file_path = '2.4_sparql1_g.owl.xml'
+    loc_file_path = '2.3_rdf2_python_int_uri_g.owl.xml'
     
     ref_onto = rdy.get_ontology(ref_file_path)
     ref_onto.load()
@@ -76,17 +74,19 @@ def main():
     ref_obj_prop_ls = get_obj_prop(ref_onto)
     loc_obj_prop_ls = get_obj_prop(loc_onto)
 
-    # Get data properties
-    ref_data_prop_ls = get_data_prop(ref_onto)
-    loc_data_prop_ls = get_data_prop(loc_onto)
+    # # Get data properties
+    # ref_data_prop_ls = get_data_prop(ref_onto)
+    # loc_data_prop_ls = get_data_prop(loc_onto)
 
     # Get individuals for all classes
     ref_cl_ind_ls = get_class_individual(ref_onto, ref_cl_ls)
     loc_cl_ind_ls = get_class_individual(loc_onto, loc_cl_ls)
 
     # Combine lists of classes, object and data properties and individuals by class
-    ref_onto_ls = ref_cl_ls + ref_obj_prop_ls + ref_data_prop_ls + ref_cl_ind_ls
-    loc_onto_ls = loc_cl_ls + loc_obj_prop_ls + loc_data_prop_ls + loc_cl_ind_ls
+    # ref_onto_ls = ref_cl_ls + ref_obj_prop_ls + ref_data_prop_ls + ref_cl_ind_ls
+    # loc_onto_ls = loc_cl_ls + loc_obj_prop_ls + loc_data_prop_ls + loc_cl_ind_ls
+    ref_onto_ls = ref_cl_ls + ref_cl_ind_ls
+    loc_onto_ls = loc_cl_ls + loc_cl_ind_ls
 
     # String based matching labels of the same (e.g. class v class) and different elements (e.g. class v individual)
     print('Performing string based matching of labels with same type and across different types...', end='\r')
@@ -103,6 +103,12 @@ def main():
     tp_subset_match_ls = []
     fp_match_ls = []
     fn_match_ls = []
+
+    print('No. of elements in local graph: {}'.format(len(loc_onto_ls)))
+    print('No. of elements in reference graph: {}'.format(len(ref_onto_ls)))
+    iter_nr = len(loc_onto_ls) * len(ref_onto_ls)
+    print('So iterate {} rounds to compare both sets of elements...'.format(iter_nr))
+
     # Compare every element in local ontology for exact or subset match (to within a tolerance)
     for l_tup in loc_onto_ls:
         __exact_match_ls = []
@@ -134,6 +140,7 @@ def main():
         # If no match found, FALSE POSITIVE, in local but not in ref ontology
         if len(__exact_match_ls) + len(__subset_match_ls) == 0:
             fp_match_ls += [l_tup]
+
     # Reverse to compare every element in the reference ontology for exact or subset match
     for r_tup in ref_onto_ls:
         __match_ls = []
@@ -199,7 +206,7 @@ def main():
         print('\t', tup)
 
     # BUILD EQUIVALENCE TO THE TWO ONTOLOGIES
-    print('Read in the refrence and local files as RDF graphs...', end='\r')
+    print('Read in the reference and local files as RDF graphs...', end='\r')
     # Load the local and reference ontologies as RDFLib graph
     ref_g = rdflib.Graph().parse(ref_file_path)
     loc_g = rdflib.Graph().parse(loc_file_path)
@@ -217,7 +224,7 @@ def main():
     eqi_g = rdflib.Graph()
     eqi_g.bind('aa', aa)
 
-    # For each match result, construct equivalence
+    # Construct equivalence between class and individuals
     for len_diff, is_diff_type, loc_tup, ref_tup in tp_exact_match_ls + tp_subset_match_ls:
         print('Constructing equivalence between {}/{} and {}/{}...'.format(loc_tup[2],
                                                                         loc_tup[1],
@@ -238,10 +245,10 @@ def main():
 
         # Class Individual v Class
         if loc_type == 'class_ind' and ref_type == 'class':
-            # class in loc owl:equivalentClass in ref
-            s = URIRef(ref_tup[2].iri)
-            p = OWL.equivalentClass
-            o = URIRef(loc_tup[2].iri)
+            # individual in loc a class in ref ref
+            s = URIRef(loc_tup[2].iri)
+            p = RDF.type
+            o = URIRef(ref_tup[2].iri)
             uni_g.add((s, p, o))
             eqi_g.add((s, p, o))
 
@@ -254,33 +261,41 @@ def main():
             uni_g.add((s, p, o))
             eqi_g.add((s, p, o))
 
-        # Class v Object Property
-        if loc_type == 'class' and ref_type == 'obj_prop':
-            # object in ref owl:equivalentProperty class in local
-            s = URIRef(ref_tup[2].iri)
+        # Object Property v Object Property
+        if loc_type == 'obj_prop' and ref_type == 'obj_prop':
+            # local object property in loc owl:equivalentProperty in ref object property
+            s = URIRef(loc_tup[2].iri)
             p = OWL.equivalentProperty
-            o = URIRef(loc_tup[2].iri)
+            o = URIRef(ref_tup[2].iri)
             uni_g.add((s, p, o))
             eqi_g.add((s, p, o))
 
-        # Class Individual v Object Property
-        if loc_type == 'class_ind' and ref_type == 'obj_prop':
-            # object in ref owl:equivalentProperty class individual in local
-            s = URIRef(ref_tup[2].iri)
-            p = OWL.equivalentProperty
-            o = URIRef(loc_tup[2].iri)
-            uni_g.add((s, p, o))
-            eqi_g.add((s, p, o))
+    # Construct equivalence for object properties manually
+    obj_prop_ls = []
+    for s, p, o in uni_g:
+        if p == RDF.type and o == OWL.ObjectProperty:
+            __tup = (s.split('#')[-1], s)
+            print(__tup)
+            obj_prop_ls += [__tup]
+
+    equi_obj_prop_ls = [(URIRef('http://www.city.ac.uk/ds/inm713/aaron_altrock#has_topping'),
+                        URIRef('http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping'))]
+    # Add manually identified equivalent object properties
+    for s, p in equi_obj_prop_ls:
+        uni_g.add((s, OWL.equivalentProperty, o))
+        eqi_g.add((s, OWL.equivalentProperty, o))
+
+    # Manually match object properties
 
     # Save extended graph to Turtle format
     uni_g.serialize(destination='2.5_oa1_union_g.ttl', format='ttl')
-    print('Saved the unioned graph to 2.5_oa1_union_g.ttl.')
+    print('Saved the union-ed graph to 2.5_oa1_union_g.ttl.')
     eqi_g.serialize(destination='2.5_oa1_equivalence_g.ttl', format='ttl')
     print('Saved the equivalence triples to 2.5_oa1_equivalence_g.ttl.')
 
     # Save extended graph to OWL format
     uni_g.serialize(destination='2.5_oa1_union_g.owl.xml', format='xml')
-    print('Saved the unioned graph to 2.5_oa1_union_g.owl.xml.')
+    print('Saved the union-ed graph to 2.5_oa1_union_g.owl.xml.')
     eqi_g.serialize(destination='2.5_oa1_equivalence_g.owl.xml', format='xml')
     print('Saved the equivalence triples to 2.5_oa1_equivalence_g.owl.xml.')
 

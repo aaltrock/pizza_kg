@@ -163,7 +163,7 @@ def make_g():
     clean_df['item description'] = [None if pd.isna(v) else str(v) for v in clean_df['item description']]
 
     # Pizza type based on top n most frequent words in menu item names, exclude common and stop words
-    pizza_type_stop_words_ls = ['and', 'with', 'large', 'medium', 'small', 'pizza']
+    pizza_type_stop_words_ls = ['and', 'with', 'large', 'medium', 'small', 'pizza', 'ingredient']
     clean_df = pizza_types.make_pizza_types(clean_df, pizza_type_stop_words_ls, top_n_cut_off=15)
 
     """
@@ -198,7 +198,7 @@ def make_g():
     # Categories: Exploding nested string into list and clean up, and remove specific stop words
     cat_sub_words_ls = [('take out', 'take-out'), ('fast food', 'fast-food')]
 
-    cat_stop_words_ls = ['place', 'restaurants', 'pizza', ',', '&', 'and', 'venue', 'area', 'food']
+    cat_stop_words_ls = ['place', 'restaurants', 'pizza', ',', '&', 'and', 'venue', 'area', 'food', 'ingredient']
 
     clean_df = venue_cat.clean_venue_cat(clean_df, cat_stop_words_ls, cat_sub_words_ls, nlp)
 

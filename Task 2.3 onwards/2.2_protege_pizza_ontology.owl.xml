@@ -1,0 +1,1023 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.city.ac.uk/ds/inm713/aaron_altrock/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
+    <Prefix name="" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/"/>
+    <Prefix name="aa" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock#"/>
+    <Prefix name="ex" IRI="http://www.wikidata.org/entity/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.city.ac.uk/ds/inm713/aaron_altrock/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology is to define restaurants and menu items in the United States.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="aa:city"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:country"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:genericDish"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:ingredient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:location"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:organisation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:state"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:venue"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aa:venueStyle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:derives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:follows_in_style_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:has_city_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:has_in_city"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:has_state"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:has_topping"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:has_venue_at"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_derived_from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_followed_in_style_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_in_country"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_in_organisation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_in_state"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:is_topping_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:locates_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aa:sells"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="aa:address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="aa:cost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="aa:description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="aa:postcode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:AK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:AL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:AR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:AS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:AZ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:CA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:CO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:CT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:DC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:DE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:FL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:FM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:GA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:GU"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:HI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:IA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:ID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:IL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:IN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:KS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:KY"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:LA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:ME"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:MT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:ND"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NJ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:NY"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:OH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:OK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:OR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:PA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:PR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:PW"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:RI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:SC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:SD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:TN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:TX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:UT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:VA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:VI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:VT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:WA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:WI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:WV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aa:WY"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:city"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="aa:is_in_state"/>
+            <Class abbreviatedIRI="aa:state"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:country"/>
+        <ObjectOneOf>
+            <NamedIndividual abbreviatedIRI="aa:US"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:country"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:has_state"/>
+            <Class abbreviatedIRI="aa:state"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:genericDish"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:derives"/>
+            <Class abbreviatedIRI="aa:menuItem"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:ingredient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:is_topping_of"/>
+            <Class abbreviatedIRI="aa:menuItem"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:state"/>
+        <ObjectOneOf>
+            <NamedIndividual abbreviatedIRI="aa:AK"/>
+            <NamedIndividual abbreviatedIRI="aa:AL"/>
+            <NamedIndividual abbreviatedIRI="aa:AR"/>
+            <NamedIndividual abbreviatedIRI="aa:AS"/>
+            <NamedIndividual abbreviatedIRI="aa:AZ"/>
+            <NamedIndividual abbreviatedIRI="aa:CA"/>
+            <NamedIndividual abbreviatedIRI="aa:CO"/>
+            <NamedIndividual abbreviatedIRI="aa:CT"/>
+            <NamedIndividual abbreviatedIRI="aa:DC"/>
+            <NamedIndividual abbreviatedIRI="aa:DE"/>
+            <NamedIndividual abbreviatedIRI="aa:FL"/>
+            <NamedIndividual abbreviatedIRI="aa:FM"/>
+            <NamedIndividual abbreviatedIRI="aa:GA"/>
+            <NamedIndividual abbreviatedIRI="aa:GU"/>
+            <NamedIndividual abbreviatedIRI="aa:HI"/>
+            <NamedIndividual abbreviatedIRI="aa:IA"/>
+            <NamedIndividual abbreviatedIRI="aa:ID"/>
+            <NamedIndividual abbreviatedIRI="aa:IL"/>
+            <NamedIndividual abbreviatedIRI="aa:IN"/>
+            <NamedIndividual abbreviatedIRI="aa:KS"/>
+            <NamedIndividual abbreviatedIRI="aa:KY"/>
+            <NamedIndividual abbreviatedIRI="aa:LA"/>
+            <NamedIndividual abbreviatedIRI="aa:MA"/>
+            <NamedIndividual abbreviatedIRI="aa:MD"/>
+            <NamedIndividual abbreviatedIRI="aa:ME"/>
+            <NamedIndividual abbreviatedIRI="aa:MH"/>
+            <NamedIndividual abbreviatedIRI="aa:MI"/>
+            <NamedIndividual abbreviatedIRI="aa:MN"/>
+            <NamedIndividual abbreviatedIRI="aa:MO"/>
+            <NamedIndividual abbreviatedIRI="aa:MP"/>
+            <NamedIndividual abbreviatedIRI="aa:MS"/>
+            <NamedIndividual abbreviatedIRI="aa:MT"/>
+            <NamedIndividual abbreviatedIRI="aa:NC"/>
+            <NamedIndividual abbreviatedIRI="aa:ND"/>
+            <NamedIndividual abbreviatedIRI="aa:NE"/>
+            <NamedIndividual abbreviatedIRI="aa:NH"/>
+            <NamedIndividual abbreviatedIRI="aa:NJ"/>
+            <NamedIndividual abbreviatedIRI="aa:NM"/>
+            <NamedIndividual abbreviatedIRI="aa:NV"/>
+            <NamedIndividual abbreviatedIRI="aa:NY"/>
+            <NamedIndividual abbreviatedIRI="aa:OH"/>
+            <NamedIndividual abbreviatedIRI="aa:OK"/>
+            <NamedIndividual abbreviatedIRI="aa:OR"/>
+            <NamedIndividual abbreviatedIRI="aa:PA"/>
+            <NamedIndividual abbreviatedIRI="aa:PR"/>
+            <NamedIndividual abbreviatedIRI="aa:PW"/>
+            <NamedIndividual abbreviatedIRI="aa:RI"/>
+            <NamedIndividual abbreviatedIRI="aa:SC"/>
+            <NamedIndividual abbreviatedIRI="aa:SD"/>
+            <NamedIndividual abbreviatedIRI="aa:TN"/>
+            <NamedIndividual abbreviatedIRI="aa:TX"/>
+            <NamedIndividual abbreviatedIRI="aa:UT"/>
+            <NamedIndividual abbreviatedIRI="aa:VA"/>
+            <NamedIndividual abbreviatedIRI="aa:VI"/>
+            <NamedIndividual abbreviatedIRI="aa:VT"/>
+            <NamedIndividual abbreviatedIRI="aa:WA"/>
+            <NamedIndividual abbreviatedIRI="aa:WI"/>
+            <NamedIndividual abbreviatedIRI="aa:WV"/>
+            <NamedIndividual abbreviatedIRI="aa:WY"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:state"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:has_city_of"/>
+            <Class abbreviatedIRI="aa:city"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:state"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="aa:is_in_country"/>
+            <Class abbreviatedIRI="aa:country"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:venue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:follows_in_style_of"/>
+            <Class abbreviatedIRI="aa:venue"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aa:venueStyle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:is_followed_in_style_by"/>
+            <Class abbreviatedIRI="aa:venue"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:city"/>
+        <Class abbreviatedIRI="aa:location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:country"/>
+        <Class abbreviatedIRI="aa:location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:genericDish"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:ingredient"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:menuItem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:has_topping"/>
+            <Class abbreviatedIRI="aa:ingredient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:menuItem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:is_derived_from"/>
+            <Class abbreviatedIRI="aa:genericDish"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:menuItem"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+            <Class abbreviatedIRI="aa:venue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:menuItem"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+            <Class abbreviatedIRI="aa:venue"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:organisation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:organisation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="aa:has_venue_at"/>
+            <Class abbreviatedIRI="aa:venue"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:state"/>
+        <Class abbreviatedIRI="aa:location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:venue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:is_in_organisation"/>
+            <Class abbreviatedIRI="aa:organisation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:venue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="aa:locates_in"/>
+            <Class abbreviatedIRI="aa:city"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:venue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="aa:is_in_organisation"/>
+            <Class abbreviatedIRI="aa:organisation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:venue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="aa:locates_in"/>
+            <Class abbreviatedIRI="aa:city"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aa:venueStyle"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="aa:city"/>
+        <Class abbreviatedIRI="aa:country"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="aa:city"/>
+        <Class abbreviatedIRI="aa:state"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="aa:country"/>
+        <Class abbreviatedIRI="aa:state"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="aa:genericDish"/>
+        <Class abbreviatedIRI="aa:ingredient"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="aa:has_state"/>
+        <NamedIndividual abbreviatedIRI="aa:US"/>
+        <NamedIndividual abbreviatedIRI="aa:MA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="aa:has_state"/>
+        <NamedIndividual abbreviatedIRI="aa:US"/>
+        <NamedIndividual abbreviatedIRI="aa:OR"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="aa:is_derived_from"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="aa:sells"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="aa:sells"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:derives"/>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:follows_in_style_of"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:has_city_of"/>
+        <Class abbreviatedIRI="aa:state"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:has_in_city"/>
+        <Class abbreviatedIRI="aa:city"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:has_state"/>
+        <Class abbreviatedIRI="aa:country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:has_topping"/>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:has_venue_at"/>
+        <Class abbreviatedIRI="aa:organisation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_derived_from"/>
+        <Class abbreviatedIRI="aa:genericDish"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_followed_in_style_by"/>
+        <Class abbreviatedIRI="aa:venueStyle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_in_country"/>
+        <Class abbreviatedIRI="aa:state"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_in_organisation"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_in_state"/>
+        <Class abbreviatedIRI="aa:city"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:is_topping_of"/>
+        <Class abbreviatedIRI="aa:ingredient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:locates_in"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aa:sells"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:derives"/>
+        <Class abbreviatedIRI="aa:genericDish"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:follows_in_style_of"/>
+        <Class abbreviatedIRI="aa:venueStyle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:has_city_of"/>
+        <Class abbreviatedIRI="aa:city"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:has_in_city"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:has_state"/>
+        <Class abbreviatedIRI="aa:state"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:has_topping"/>
+        <Class abbreviatedIRI="aa:ingredient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:has_venue_at"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_derived_from"/>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_followed_in_style_by"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_in_country"/>
+        <Class abbreviatedIRI="aa:country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_in_organisation"/>
+        <Class abbreviatedIRI="aa:organisation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_in_state"/>
+        <Class abbreviatedIRI="aa:state"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_sold_by"/>
+        <Class abbreviatedIRI="aa:venue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:is_topping_of"/>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:locates_in"/>
+        <Class abbreviatedIRI="aa:city"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aa:sells"/>
+        <Class abbreviatedIRI="aa:menuItem"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="aa:address"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="aa:cost"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="aa:description"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="aa:postcode"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="aa:description"/>
+    </FunctionalDataProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:MA</AbbreviatedIRI>
+        <Literal xml:lang="en">A state in North East of the US.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:MA</AbbreviatedIRI>
+        <Literal xml:lang="en">Massachusetts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:OR</AbbreviatedIRI>
+        <Literal xml:lang="en">A state in the North West of the US.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:OR</AbbreviatedIRI>
+        <Literal xml:lang="en">Oregon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:US</AbbreviatedIRI>
+        <Literal xml:lang="en">US as the country with US states and cities being subclasses of this.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:US</AbbreviatedIRI>
+        <Literal xml:lang="en">United States of America</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:address</AbbreviatedIRI>
+        <Literal xml:lang="en">First line of address of the venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:address</AbbreviatedIRI>
+        <Literal xml:lang="en">Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:city</AbbreviatedIRI>
+        <Literal xml:lang="en">An urban area within a state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:city</AbbreviatedIRI>
+        <Literal xml:lang="en">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:cost</AbbreviatedIRI>
+        <Literal xml:lang="en">Cost of a menu item at a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:cost</AbbreviatedIRI>
+        <Literal xml:lang="en">Price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:country</AbbreviatedIRI>
+        <Literal xml:lang="en">Country contains states and cities within.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:country</AbbreviatedIRI>
+        <Literal xml:lang="en">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:derives</AbbreviatedIRI>
+        <Literal xml:lang="en">A menu item is derived from a generic dish.  Only one generic dish is derived by a specific venue (e.g. Cheese Pizza cannot be interpreted as two for the same venue).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:derives</AbbreviatedIRI>
+        <Literal xml:lang="en">derives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:description</AbbreviatedIRI>
+        <Literal xml:lang="en">Additional comments included for the menu item at a specific venue.  Only one comment per menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:description</AbbreviatedIRI>
+        <Literal xml:lang="en">Extra description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:follows_in_style_of</AbbreviatedIRI>
+        <Literal xml:lang="en">Venue styles from a particular cuisine or ambience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:follows_in_style_of</AbbreviatedIRI>
+        <Literal xml:lang="en">follows in style of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:genericDish</AbbreviatedIRI>
+        <Literal xml:lang="en">A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:genericDish</AbbreviatedIRI>
+        <Literal xml:lang="en">Generic dish</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:has_city_of</AbbreviatedIRI>
+        <Literal xml:lang="en">A state has a city of.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:has_city_of</AbbreviatedIRI>
+        <Literal xml:lang="en">has city of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:has_in_city</AbbreviatedIRI>
+        <Literal xml:lang="en">City has venue.  Only one particular venue of an organisation with a specific post code exists in a city.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:has_in_city</AbbreviatedIRI>
+        <Literal xml:lang="en">has in city</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:has_state</AbbreviatedIRI>
+        <Literal xml:lang="en">A country has a state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:has_state</AbbreviatedIRI>
+        <Literal xml:lang="en">has state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:has_topping</AbbreviatedIRI>
+        <Literal xml:lang="en">Defines a specific venue uses which toppings to produce its specific menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:has_topping</AbbreviatedIRI>
+        <Literal xml:lang="en">cooks with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:has_venue_at</AbbreviatedIRI>
+        <Literal xml:lang="en">An organisation has at least one venue.  Each venue is a specific location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:has_venue_at</AbbreviatedIRI>
+        <Literal xml:lang="en">has venue in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:ingredient</AbbreviatedIRI>
+        <Literal xml:lang="en">Ingredients for producing a menu item in an eatery.  An ingredient cannot be a generic dish nor a menu item at a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:ingredient</AbbreviatedIRI>
+        <Literal xml:lang="en">Ingredient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_derived_from</AbbreviatedIRI>
+        <Literal xml:lang="en">Is derived from a generic dish into a menu item.  Only one menu item is derived from one generic dish for a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:is_derived_from</AbbreviatedIRI>
+        <Literal xml:lang="en">is derived as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_followed_in_style_by</AbbreviatedIRI>
+        <Literal xml:lang="en">Venue follows a style of setting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:is_followed_in_style_by</AbbreviatedIRI>
+        <Literal xml:lang="en">is followed in style by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_in_country</AbbreviatedIRI>
+        <Literal xml:lang="en">A state belongs to a country.  A state can only beong to one country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:is_in_country</AbbreviatedIRI>
+        <Literal xml:lang="en">is in country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_in_organisation</AbbreviatedIRI>
+        <Literal xml:lang="en">A venue is in an organisation.  A venue can only belong to one organisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:is_in_organisation</AbbreviatedIRI>
+        <Literal xml:lang="en">is in organisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_in_state</AbbreviatedIRI>
+        <Literal xml:lang="en">A city is in a state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_in_state</AbbreviatedIRI>
+        <Literal xml:lang="en">A city is in state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_sold_by</AbbreviatedIRI>
+        <Literal xml:lang="en">A specific menu item is sold by a specific venue.  Only one menu item can be sold by one venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:is_sold_by</AbbreviatedIRI>
+        <Literal xml:lang="en">is sold by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:is_topping_of</AbbreviatedIRI>
+        <Literal xml:lang="en">Is a pizza topping of a menu item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:is_topping_of</AbbreviatedIRI>
+        <Literal xml:lang="en">is topping of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:locates_in</AbbreviatedIRI>
+        <Literal xml:lang="en">Locates in which city.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:locates_in</AbbreviatedIRI>
+        <Literal xml:lang="en">locates in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:menuItem</AbbreviatedIRI>
+        <Literal xml:lang="en">A specific dish served in a venue that is an interpretation of a generic dish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:menuItem</AbbreviatedIRI>
+        <Literal xml:lang="en">Menu Item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:organisation</AbbreviatedIRI>
+        <Literal xml:lang="en">An organisation consisting of one or more venues.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:organisation</AbbreviatedIRI>
+        <Literal xml:lang="en">Organisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:postcode</AbbreviatedIRI>
+        <Literal xml:lang="en">post code that forms part of an address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:postcode</AbbreviatedIRI>
+        <Literal xml:lang="en">Zip code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:sells</AbbreviatedIRI>
+        <Literal xml:lang="en">sells at a specific venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:sells</AbbreviatedIRI>
+        <Literal xml:lang="en">sells</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:state</AbbreviatedIRI>
+        <Literal xml:lang="en">A state that forms part of a country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:state</AbbreviatedIRI>
+        <Literal xml:lang="en">US state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:venue</AbbreviatedIRI>
+        <Literal xml:lang="en">A venue serving food of a specific location and is part of a wider organisation.  Each venue can be eateries with different styles, serving different menu items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:venue</AbbreviatedIRI>
+        <Literal xml:lang="en">Eatery venue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aa:venueStyle</AbbreviatedIRI>
+        <Literal xml:lang="en">The settings of a venue that represents its ambience or cuisine.  A venue setting cannot be a venue itself e.g. a restaurant cannot be called &apos;American Restaurant&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aa:venueStyle</AbbreviatedIRI>
+        <Literal xml:lang="en">Venue Setting</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,86 +1,77 @@
 @prefix aa: <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
 @prefix ns1: <http://www.w3.org/2002/07/owl#> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#American> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/american> .
+aa:american a <http://www.co-ode.org/ontologies/pizza/pizza.owl#American>,
+        <http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/american> .
+aa:artichoke a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/artichoke> .
+aa:asparagus a <http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/asparagus> .
+aa:cajun a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/caper> .
+aa:caper a <http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/cheese> .
+aa:cheese a <http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping>,
+        <http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/cheese> .
+aa:chicken a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/chicken> .
+aa:country a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> ;
+    ns1:equivalentClass <http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/season> .
+aa:cream a <http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/fruit> .
+aa:fruit a <http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/garlic> .
+aa:garlic a <http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/giardiniera> .
+aa:giardiniera a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/gorgonzola> .
+aa:gorgonzola a <http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/hot> .
+aa:has_topping ns1:equivalentProperty <http://www.city.ac.uk/ds/inm713/aaron_altrock#Pizza%20D.o.c.__Davanti%20Enoteca%20-%20Little%20Italy__92101> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/cream> .
+aa:hot a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/margherita> .
+aa:margherita a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/mild> .
+aa:mild a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/mozzarella> .
+aa:mozzarella a <http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/mushroom> .
+aa:mushroom a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom>,
+        <http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/vegetarian> .
+aa:olive a <http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/olive> .
+aa:onion a <http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/onion> .
+aa:parmesan a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/parmesan> .
+aa:pepper a <http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/pepper> .
+aa:rosemary a <http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/rosemary> .
+aa:sauce a <http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/sauce> .
+aa:season a <http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/sicilian> .
+aa:shroom a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom> ;
+    ns1:sameAs <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/spicy> .
+aa:sicilian a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/spicy> .
+aa:spicy a <http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza>,
+        <http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/spinach> .
+aa:spinach a <http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/tomato> .
+aa:tomato a <http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/vegetable> .
+aa:vegetable a <http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping> .
 
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/vegetarian> .
-
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/vegetarian> .
-
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient> ns1:equivalentProperty aa:ingredient,
-        <http://www.city.ac.uk/ds/inm713/ingredient> .
-
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf> ns1:equivalentProperty aa:ingredient,
-        <http://www.city.ac.uk/ds/inm713/ingredient> .
-
-aa:country ns1:equivalentClass <http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> .
-
-<http://www.city.ac.uk/ds/inm713/shroom> ns1:sameAs <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom> .
-
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> ns1:equivalentClass aa:country .
-
-<http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom> ns1:equivalentClass <http://www.city.ac.uk/ds/inm713/mushroom>,
-        <http://www.city.ac.uk/ds/inm713/shroom> .
+aa:vegetarian a <http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza>,
+        <http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza>,
+        <http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping> .
 

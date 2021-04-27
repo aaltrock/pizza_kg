@@ -29,6 +29,9 @@ def main():
     # Save to Turtle .ttl file
     int_uri_g.serialize(destination='2.3_rdf2_python_int_uri_g.ttl', format='ttl')
 
+    # Save to XML/OWL file for task 2.5
+    int_uri_g.serialize(destination='2.3_rdf2_python_int_uri_g.owl.xml', format='xml')
+
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
             TASK 2.3 SUBTASK RDF.3
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
