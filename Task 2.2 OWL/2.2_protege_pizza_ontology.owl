@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/">
-    <Prefix name="" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock#"/>
+    <Prefix name="" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock/"/>
     <Prefix name="aa" IRI="http://www.city.ac.uk/ds/inm713/aaron_altrock#"/>
     <Prefix name="ex" IRI="http://www.wikidata.org/entity/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -289,6 +289,30 @@
     <Declaration>
         <NamedIndividual IRI="WY"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="bbq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="cheese"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="chicken"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="margherita"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="meat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="sicilian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="veggie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="white"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="city"/>
         <ObjectExactCardinality cardinality="1">
@@ -522,6 +546,38 @@
         <Class IRI="genericDish"/>
         <Class IRI="ingredient"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="bbq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="cheese"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="chicken"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="margherita"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="meat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="sicilian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="veggie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="genericDish"/>
+        <NamedIndividual IRI="white"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="has_state"/>
         <NamedIndividual IRI="US"/>
@@ -537,13 +593,46 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <AsymmetricObjectProperty>
+        <ObjectProperty IRI="has_in_city"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="has_state"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="has_topping"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="is_in_country"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="is_in_organisation"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="is_in_state"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
         <ObjectProperty IRI="is_sold_by"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="is_topping_of"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="locates_in"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="sells"/>
     </AsymmetricObjectProperty>
     <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="has_topping"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
         <ObjectProperty IRI="is_sold_by"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="is_topping_of"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="locates_in"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="sells"/>
@@ -736,6 +825,21 @@
         <Literal xml:lang="en">Address</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>bbq</IRI>
+        <Literal>bbq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>cheese</IRI>
+        <Literal>cheese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>chicken</IRI>
+        <Literal>chicken</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>city</IRI>
         <Literal xml:lang="en">An urban area within a state.</Literal>
@@ -798,7 +902,9 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>genericDish</IRI>
-        <Literal xml:lang="en">A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself.</Literal>
+        <Literal xml:lang="en">A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself.
+
+The fuller definition is to be automatically generated by text mining from the source data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -858,7 +964,9 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>ingredient</IRI>
-        <Literal xml:lang="en">Ingredients for producing a menu item in an eatery.  An ingredient cannot be a generic dish nor a menu item at a specific venue.</Literal>
+        <Literal xml:lang="en">Ingredients is exclusive for pizza topping to produce a menu item from a venue.
+
+The fuller definition is to be automatically generated by text mining from the source data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -946,6 +1054,16 @@
         <Literal xml:lang="en">locates in</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>margherita</IRI>
+        <Literal>margherita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>meat</IRI>
+        <Literal>meat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>menuItem</IRI>
         <Literal xml:lang="en">A specific dish served in a venue that is an interpretation of a generic dish.</Literal>
@@ -986,6 +1104,11 @@
         <Literal xml:lang="en">sells</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sicilian</IRI>
+        <Literal>sicilian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>state</IRI>
         <Literal xml:lang="en">A state that forms part of a country.</Literal>
@@ -994,6 +1117,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>state</IRI>
         <Literal xml:lang="en">US state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>veggie</IRI>
+        <Literal>veggie</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1014,6 +1142,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>venueStyle</IRI>
         <Literal xml:lang="en">Venue Setting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>white</IRI>
+        <Literal>white</Literal>
     </AnnotationAssertion>
 </Ontology>
 
