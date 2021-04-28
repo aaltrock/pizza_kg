@@ -3,111 +3,24 @@
    xmlns:ns1="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#margherita">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita"/>
+  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#has_topping">
+    <ns1:equivalentProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock/city"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#cream">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#spicy">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#garlic">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#season">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#vegetable">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#mozzarella">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#sicilian">
+  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/sicilian">
     <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#chicken">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#mild">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#olive">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#cajun">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#vegetarian">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza"/>
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza"/>
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#american">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#American"/>
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#mushroom">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom"/>
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#caper">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#giardiniera">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#parmesan">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#hot">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#country">
-    <ns1:equivalentClass rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#artichoke">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#rosemary">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#cheese">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese">
     <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping"/>
+    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#pepper">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping"/>
+  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/country">
+    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
+    <ns1:equivalentClass rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#shroom">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom"/>
-    <ns1:sameAs rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom"/>
+  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/margherita">
+    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#fruit">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#spinach">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#gorgonzola">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#sauce">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#has_topping">
-    <ns1:equivalentProperty rdf:resource="http://www.city.ac.uk/ds/inm713/aaron_altrock#Pizza%20D.o.c.__Davanti%20Enoteca%20-%20Little%20Italy__92101"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#onion">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#tomato">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock#asparagus">
-    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping"/>
+  <rdf:Description rdf:about="http://www.city.ac.uk/ds/inm713/aaron_altrock/chicken">
+    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping"/>
   </rdf:Description>
 </rdf:RDF>

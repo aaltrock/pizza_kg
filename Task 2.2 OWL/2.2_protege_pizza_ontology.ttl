@@ -17,7 +17,8 @@
 #################################################################
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/derives
-:derives rdf:type owl:ObjectProperty ;
+:derives rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ;
          rdfs:domain :menuItem ;
          rdfs:range :genericDish ;
          rdfs:comment "A menu item is derived from a generic dish.  Only one generic dish is derived by a specific venue (e.g. Cheese Pizza cannot be interpreted as two for the same venue)."@en ;
@@ -79,6 +80,7 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_derived_from
 :is_derived_from rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdf:type owl:AsymmetricProperty ;
                  rdfs:domain :genericDish ;
                  rdfs:range :menuItem ;
                  rdfs:comment "Is derived from a generic dish into a menu item.  Only one menu item is derived from one generic dish for a specific venue."@en ;

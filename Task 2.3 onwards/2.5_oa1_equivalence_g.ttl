@@ -1,77 +1,17 @@
 @prefix aa: <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
 @prefix ns1: <http://www.w3.org/2002/07/owl#> .
 
-aa:american a <http://www.co-ode.org/ontologies/pizza/pizza.owl#American>,
-        <http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot> .
+aa:has_topping ns1:equivalentProperty <http://www.city.ac.uk/ds/inm713/aaron_altrock/city> .
 
-aa:artichoke a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping> .
-
-aa:asparagus a <http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping> .
-
-aa:cajun a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun> .
-
-aa:caper a <http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping> .
-
-aa:cheese a <http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping>,
+<http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese> a <http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping>,
         <http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza> .
 
-aa:chicken a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping> .
+<http://www.city.ac.uk/ds/inm713/aaron_altrock/chicken> a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping> .
 
-aa:country a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> ;
+<http://www.city.ac.uk/ds/inm713/aaron_altrock/country> a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> ;
     ns1:equivalentClass <http://www.co-ode.org/ontologies/pizza/pizza.owl#Country> .
 
-aa:cream a <http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream> .
+<http://www.city.ac.uk/ds/inm713/aaron_altrock/margherita> a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita> .
 
-aa:fruit a <http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping> .
-
-aa:garlic a <http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping> .
-
-aa:giardiniera a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera> .
-
-aa:gorgonzola a <http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping> .
-
-aa:has_topping ns1:equivalentProperty <http://www.city.ac.uk/ds/inm713/aaron_altrock#Pizza%20D.o.c.__Davanti%20Enoteca%20-%20Little%20Italy__92101> .
-
-aa:hot a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot> .
-
-aa:margherita a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita> .
-
-aa:mild a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild> .
-
-aa:mozzarella a <http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping> .
-
-aa:mushroom a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom>,
-        <http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping> .
-
-aa:olive a <http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping> .
-
-aa:onion a <http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping> .
-
-aa:parmesan a <http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping> .
-
-aa:pepper a <http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping> .
-
-aa:rosemary a <http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping> .
-
-aa:sauce a <http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping> .
-
-aa:season a <http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons> .
-
-aa:shroom a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom> ;
-    ns1:sameAs <http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom> .
-
-aa:sicilian a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana> .
-
-aa:spicy a <http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza>,
-        <http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping> .
-
-aa:spinach a <http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping> .
-
-aa:tomato a <http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping> .
-
-aa:vegetable a <http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping> .
-
-aa:vegetarian a <http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza>,
-        <http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza>,
-        <http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping> .
+<http://www.city.ac.uk/ds/inm713/aaron_altrock/sicilian> a <http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana> .
 

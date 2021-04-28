@@ -1,4 +1,4 @@
-@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
+@prefix : <http://www.city.ac.uk/ds/inm713/aaron_altrock/> .
 @prefix aa: <http://www.city.ac.uk/ds/inm713/aaron_altrock#> .
 @prefix ex: <http://www.wikidata.org/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -17,7 +17,8 @@
 #################################################################
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/derives
-:derives rdf:type owl:ObjectProperty ;
+:derives rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ;
          rdfs:domain :menuItem ;
          rdfs:range :genericDish ;
          rdfs:comment "A menu item is derived from a generic dish.  Only one generic dish is derived by a specific venue (e.g. Cheese Pizza cannot be interpreted as two for the same venue)."@en ;
@@ -41,7 +42,8 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_in_city
-:has_in_city rdf:type owl:ObjectProperty ;
+:has_in_city rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ;
              rdfs:domain :city ;
              rdfs:range :venue ;
              rdfs:comment "City has venue.  Only one particular venue of an organisation with a specific post code exists in a city."@en ;
@@ -49,7 +51,8 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_state
-:has_state rdf:type owl:ObjectProperty ;
+:has_state rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ;
            rdfs:domain :country ;
            rdfs:range :state ;
            rdfs:comment "A country has a state."@en ;
@@ -57,7 +60,9 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/has_topping
-:has_topping rdf:type owl:ObjectProperty ;
+:has_topping rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ,
+                      owl:IrreflexiveProperty ;
              rdfs:domain :menuItem ;
              rdfs:range :ingredient ;
              rdfs:comment "Defines a specific venue uses which toppings to produce its specific menu item."@en ;
@@ -75,6 +80,7 @@
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_derived_from
 :is_derived_from rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdf:type owl:AsymmetricProperty ;
                  rdfs:domain :genericDish ;
                  rdfs:range :menuItem ;
                  rdfs:comment "Is derived from a generic dish into a menu item.  Only one menu item is derived from one generic dish for a specific venue."@en ;
@@ -90,7 +96,8 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_country
-:is_in_country rdf:type owl:ObjectProperty ;
+:is_in_country rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
                rdfs:domain :state ;
                rdfs:range :country ;
                rdfs:comment "A state belongs to a country.  A state can only beong to one country."@en ;
@@ -98,7 +105,8 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_organisation
-:is_in_organisation rdf:type owl:ObjectProperty ;
+:is_in_organisation rdf:type owl:ObjectProperty ,
+                             owl:AsymmetricProperty ;
                     rdfs:domain :venue ;
                     rdfs:range :organisation ;
                     rdfs:comment "A venue is in an organisation.  A venue can only belong to one organisation."@en ;
@@ -106,7 +114,8 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_in_state
-:is_in_state rdf:type owl:ObjectProperty ;
+:is_in_state rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ;
              rdfs:domain :city ;
              rdfs:range :state ;
              rdfs:comment "A city is in a state."@en ,
@@ -124,7 +133,9 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/is_topping_of
-:is_topping_of rdf:type owl:ObjectProperty ;
+:is_topping_of rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
                rdfs:domain :ingredient ;
                rdfs:range :menuItem ;
                rdfs:comment "Is a pizza topping of a menu item."@en ;
@@ -132,7 +143,9 @@
 
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/locates_in
-:locates_in rdf:type owl:ObjectProperty ;
+:locates_in rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
             rdfs:domain :venue ;
             rdfs:range :city ;
             rdfs:comment "Locates in which city."@en ;
@@ -224,7 +237,9 @@
                                  ] ;
              rdfs:subClassOf owl:Thing ;
              owl:disjointWith :ingredient ;
-             rdfs:comment "A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself."@en ;
+             rdfs:comment """A generally recgonised dish.  A venue cannot produce exactly this generic dish and must be an adaptation of it, and it cannot be an ingredient itself.
+
+The fuller definition is to be automatically generated by text mining from the source data."""@en ;
              rdfs:label "Generic dish"@en .
 
 
@@ -235,7 +250,9 @@
                                   owl:someValuesFrom :menuItem
                                 ] ;
             rdfs:subClassOf owl:Thing ;
-            rdfs:comment "Ingredients for producing a menu item in an eatery.  An ingredient cannot be a generic dish nor a menu item at a specific venue."@en ;
+            rdfs:comment """Ingredients is exclusive for pizza topping to produce a menu item from a venue.
+
+The fuller definition is to be automatically generated by text mining from the source data."""@en ;
             rdfs:label "Ingredient"@en .
 
 
@@ -645,6 +662,54 @@
 
 ###  http://www.city.ac.uk/ds/inm713/aaron_altrock/WY
 :WY rdf:type owl:NamedIndividual .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/bbq
+:bbq rdf:type owl:NamedIndividual ,
+              :genericDish ;
+     rdfs:label "bbq"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/cheese
+:cheese rdf:type owl:NamedIndividual ,
+                 :genericDish ;
+        rdfs:label "cheese"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/chicken
+:chicken rdf:type owl:NamedIndividual ,
+                  :genericDish ;
+         rdfs:label "chicken"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/margherita
+:margherita rdf:type owl:NamedIndividual ,
+                     :genericDish ;
+            rdfs:label "margherita"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/meat
+:meat rdf:type owl:NamedIndividual ,
+               :genericDish ;
+      rdfs:label "meat"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/sicilian
+:sicilian rdf:type owl:NamedIndividual ,
+                   :genericDish ;
+          rdfs:label "sicilian"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/veggie
+:veggie rdf:type owl:NamedIndividual ,
+                 :genericDish ;
+        rdfs:label "veggie"^^xsd:string .
+
+
+###  http://www.city.ac.uk/ds/inm713/aaron_altrock/white
+:white rdf:type owl:NamedIndividual ,
+                :genericDish ;
+       rdfs:label "white"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

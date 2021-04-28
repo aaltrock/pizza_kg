@@ -53,12 +53,15 @@ def get_data_prop(onto):
 
 def main():
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-            TASK 2.5 SUBTASK SPARQL.1
+            TASK 2.5 SUBTASK OA.1
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    print('TASK 2.5 SUBTASK SPARQL.1\n')
+    np.random.seed(0)
+
+
+    print('TASK 2.5 SUBTASK OA.1\n')
     # Load in reference and local (from task 2.4) ontologies
     ref_file_path = 'pizza.owl'
-    loc_file_path = '2.3_rdf2_python_int_uri_g.owl.xml'
+    loc_file_path = '2.2_protege_pizza_ontology.owl.xml'
     
     ref_onto = rdy.get_ontology(ref_file_path)
     ref_onto.load()
@@ -209,7 +212,7 @@ def main():
     print('Read in the reference and local files as RDF graphs...', end='\r')
     # Load the local and reference ontologies as RDFLib graph
     ref_g = rdflib.Graph().parse(ref_file_path)
-    loc_g = rdflib.Graph().parse(loc_file_path)
+    loc_g = rdflib.Graph().parse('2.2_protege_pizza_ontology.owl.xml')
 
     # Union the two graphs
     print('Union the two RDF graphs...', end='\r')
@@ -280,12 +283,12 @@ def main():
 
     equi_obj_prop_ls = [(URIRef('http://www.city.ac.uk/ds/inm713/aaron_altrock#has_topping'),
                         URIRef('http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping'))]
+
     # Add manually identified equivalent object properties
     for s, p in equi_obj_prop_ls:
         uni_g.add((s, OWL.equivalentProperty, o))
         eqi_g.add((s, OWL.equivalentProperty, o))
 
-    # Manually match object properties
 
     # Save extended graph to Turtle format
     uni_g.serialize(destination='2.5_oa1_union_g.ttl', format='ttl')

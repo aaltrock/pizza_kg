@@ -164,7 +164,8 @@ def make_g():
 
     # Pizza type based on top n most frequent words in menu item names, exclude common and stop words
     pizza_type_stop_words_ls = ['and', 'with', 'large', 'medium', 'small', 'pizza', 'ingredient']
-    clean_df = pizza_types.make_pizza_types(clean_df, pizza_type_stop_words_ls, top_n_cut_off=15)
+    top_n_cut_off = 30      # Number of pizza types to derive based on word frequency
+    clean_df = pizza_types.make_pizza_types(clean_df, pizza_type_stop_words_ls, top_n_cut_off=top_n_cut_off)
 
     """
     Run NLP to identify pizza toppings
